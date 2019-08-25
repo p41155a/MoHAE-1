@@ -10,6 +10,9 @@
 		110D3DE9772177A287E00FF2 /* Pods_Mohae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9574692A36D433E021A9AA /* Pods_Mohae.framework */; };
 		94E35FCD0BEC40AC0BD0B162 /* Pods_MohaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433B4A67FAB17F7F259E52BC /* Pods_MohaeTests.framework */; };
 		BC1D3D062312AAB80075A499 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC1D3D052312AAB80075A499 /* GoogleService-Info.plist */; };
+		BC1D3D092312C2BA0075A499 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1D3D072312C2B90075A499 /* ApiGatewayMac.framework */; };
+		BC1D3D0A2312C2BA0075A499 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1D3D082312C2BA0075A499 /* NMapViewerSDK.framework */; };
+		BC1D3D0C2312C2C10075A499 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC1D3D072312C2B90075A499 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
 		BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A7122F9635B007C7F67 /* ViewController.swift */; };
 		BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7322F9635B007C7F67 /* Main.storyboard */; };
@@ -37,6 +40,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BC1D3D0D2312C2C10075A499 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BC1D3D0C2312C2C10075A499 /* ApiGatewayMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		221AE879160CE7E51A699C9C /* Pods-MohaeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		433B4A67FAB17F7F259E52BC /* Pods_MohaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +62,8 @@
 		AF10575900FF460541359310 /* Pods-Mohae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.debug.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.debug.xcconfig"; sourceTree = "<group>"; };
 		B18F6C4420293A4ADD105DBE /* Pods-MohaeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.release.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BC1D3D052312AAB80075A499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC1D3D072312C2B90075A499 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
+		BC1D3D082312C2BA0075A499 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMapViewerSDK.framework; sourceTree = "<group>"; };
 		BC8D4A6C22F9635B007C7F67 /* Mohae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mohae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8D4A7122F9635B007C7F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1D3D092312C2BA0075A499 /* ApiGatewayMac.framework in Frameworks */,
 				110D3DE9772177A287E00FF2 /* Pods_Mohae.framework in Frameworks */,
+				BC1D3D0A2312C2BA0075A499 /* NMapViewerSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +182,8 @@
 		C567B0546F6201814C4EEE3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC1D3D072312C2B90075A499 /* ApiGatewayMac.framework */,
+				BC1D3D082312C2BA0075A499 /* NMapViewerSDK.framework */,
 				DB9574692A36D433E021A9AA /* Pods_Mohae.framework */,
 				433B4A67FAB17F7F259E52BC /* Pods_MohaeTests.framework */,
 				EE23FE6F9B29F12A4451334E /* Pods_MohaeUITests.framework */,
@@ -180,6 +203,7 @@
 				BC8D4A6922F9635B007C7F67 /* Frameworks */,
 				BC8D4A6A22F9635B007C7F67 /* Resources */,
 				5E948393FC5F36106D8FF472 /* [CP] Embed Pods Frameworks */,
+				BC1D3D0D2312C2C10075A499 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -569,10 +593,40 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Mohae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"nanopb\"",
+					"-lxml2",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.today.MoHae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,10 +642,40 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Mohae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseNanoPB\"",
+					"-framework",
+					"\"GoogleToolboxForMac\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"nanopb\"",
+					"-lxml2",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.today.MoHae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
