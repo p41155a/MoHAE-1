@@ -6,6 +6,8 @@ target 'Mohae' do
   use_frameworks!
 
   # Pods for Mohae
+  platform :ios, '7.0'
+  pod 'Firebase'
 
   target 'MohaeTests' do
     inherit! :search_paths
