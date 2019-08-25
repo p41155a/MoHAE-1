@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24C419811A85DB8693A2DA39 /* Pods_MohaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 324B6E47D797018611354713 /* Pods_MohaeTests.framework */; };
+		A92E3E6FEF9D2AD7BA59543B /* Pods_MohaeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EABFC6AFA641FA2152D8E7A /* Pods_MohaeUITests.framework */; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
 		BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A7122F9635B007C7F67 /* ViewController.swift */; };
 		BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7322F9635B007C7F67 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		BC8D4A7A22F9635D007C7F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */; };
 		BC8D4A8522F9635D007C7F67 /* MohaeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8422F9635D007C7F67 /* MohaeTests.swift */; };
 		BC8D4A9022F9635D007C7F67 /* MohaeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */; };
+		BEA4B571E305CFC9DF90ADF4 /* Pods_Mohae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B9059BC291099F709E6B2B /* Pods_Mohae.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05B9059BC291099F709E6B2B /* Pods_Mohae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mohae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C59F9C50A9FF71C4DA6D186 /* Pods-MohaeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		324B6E47D797018611354713 /* Pods_MohaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		605B998A024AE115AF99985A /* Pods-MohaeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.release.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6EABFC6AFA641FA2152D8E7A /* Pods_MohaeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71430FC498855CF1DA0C36F3 /* Pods-MohaeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC8D4A6C22F9635B007C7F67 /* Mohae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mohae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8D4A7122F9635B007C7F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		BC8D4A8B22F9635D007C7F67 /* MohaeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MohaeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MohaeUITests.swift; sourceTree = "<group>"; };
 		BC8D4A9122F9635D007C7F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC55511F771AFDF19B63402 /* Pods-MohaeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.release.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.release.xcconfig"; sourceTree = "<group>"; };
+		C56F826E076FFA0369A9F762 /* Pods-Mohae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.release.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.release.xcconfig"; sourceTree = "<group>"; };
+		EA13B4CC1B2FD8C6A6FABF9D /* Pods-Mohae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.debug.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA4B571E305CFC9DF90ADF4 /* Pods_Mohae.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C419811A85DB8693A2DA39 /* Pods_MohaeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92E3E6FEF9D2AD7BA59543B /* Pods_MohaeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8094CE7A68BDE86773DA22A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA13B4CC1B2FD8C6A6FABF9D /* Pods-Mohae.debug.xcconfig */,
+				C56F826E076FFA0369A9F762 /* Pods-Mohae.release.xcconfig */,
+				71430FC498855CF1DA0C36F3 /* Pods-MohaeTests.debug.xcconfig */,
+				BCC55511F771AFDF19B63402 /* Pods-MohaeTests.release.xcconfig */,
+				0C59F9C50A9FF71C4DA6D186 /* Pods-MohaeUITests.debug.xcconfig */,
+				605B998A024AE115AF99985A /* Pods-MohaeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BC8D4A6322F9635B007C7F67 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +110,8 @@
 				BC8D4A8322F9635D007C7F67 /* MohaeTests */,
 				BC8D4A8E22F9635D007C7F67 /* MohaeUITests */,
 				BC8D4A6D22F9635B007C7F67 /* Products */,
+				8094CE7A68BDE86773DA22A0 /* Pods */,
+				DEB570BC2267A7DD89FE92A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +156,16 @@
 			path = MohaeUITests;
 			sourceTree = "<group>";
 		};
+		DEB570BC2267A7DD89FE92A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05B9059BC291099F709E6B2B /* Pods_Mohae.framework */,
+				324B6E47D797018611354713 /* Pods_MohaeTests.framework */,
+				6EABFC6AFA641FA2152D8E7A /* Pods_MohaeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +173,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC8D4A9422F9635D007C7F67 /* Build configuration list for PBXNativeTarget "Mohae" */;
 			buildPhases = (
+				676E97BDC010BB2648BA4777 /* [CP] Check Pods Manifest.lock */,
 				BC8D4A6822F9635B007C7F67 /* Sources */,
 				BC8D4A6922F9635B007C7F67 /* Frameworks */,
 				BC8D4A6A22F9635B007C7F67 /* Resources */,
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC8D4A9722F9635D007C7F67 /* Build configuration list for PBXNativeTarget "MohaeTests" */;
 			buildPhases = (
+				F5024F553E9F1B94CB8CA171 /* [CP] Check Pods Manifest.lock */,
 				BC8D4A7C22F9635D007C7F67 /* Sources */,
 				BC8D4A7D22F9635D007C7F67 /* Frameworks */,
 				BC8D4A7E22F9635D007C7F67 /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC8D4A9A22F9635D007C7F67 /* Build configuration list for PBXNativeTarget "MohaeUITests" */;
 			buildPhases = (
+				85ACDD2EA03A850BB89168D9 /* [CP] Check Pods Manifest.lock */,
 				BC8D4A8722F9635D007C7F67 /* Sources */,
 				BC8D4A8822F9635D007C7F67 /* Frameworks */,
 				BC8D4A8922F9635D007C7F67 /* Resources */,
@@ -250,6 +294,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		676E97BDC010BB2648BA4777 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mohae-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85ACDD2EA03A850BB89168D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MohaeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5024F553E9F1B94CB8CA171 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MohaeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BC8D4A6822F9635B007C7F67 /* Sources */ = {
@@ -430,6 +543,7 @@
 		};
 		BC8D4A9522F9635D007C7F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA13B4CC1B2FD8C6A6FABF9D /* Pods-Mohae.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +561,7 @@
 		};
 		BC8D4A9622F9635D007C7F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C56F826E076FFA0369A9F762 /* Pods-Mohae.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +579,7 @@
 		};
 		BC8D4A9822F9635D007C7F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71430FC498855CF1DA0C36F3 /* Pods-MohaeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +600,7 @@
 		};
 		BC8D4A9922F9635D007C7F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCC55511F771AFDF19B63402 /* Pods-MohaeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +621,7 @@
 		};
 		BC8D4A9B22F9635D007C7F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C59F9C50A9FF71C4DA6D186 /* Pods-MohaeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +641,7 @@
 		};
 		BC8D4A9C22F9635D007C7F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 605B998A024AE115AF99985A /* Pods-MohaeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
