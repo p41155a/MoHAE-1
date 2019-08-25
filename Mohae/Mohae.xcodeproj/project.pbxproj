@@ -13,6 +13,7 @@
 		BC1D3D092312C2BA0075A499 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1D3D072312C2B90075A499 /* ApiGatewayMac.framework */; };
 		BC1D3D0A2312C2BA0075A499 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1D3D082312C2BA0075A499 /* NMapViewerSDK.framework */; };
 		BC1D3D0C2312C2C10075A499 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC1D3D072312C2B90075A499 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC1D3D112312C8CE0075A499 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1D3D102312C8CE0075A499 /* NMapViewResources.swift */; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
 		BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A7122F9635B007C7F67 /* ViewController.swift */; };
 		BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7322F9635B007C7F67 /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		BC1D3D052312AAB80075A499 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC1D3D072312C2B90075A499 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
 		BC1D3D082312C2BA0075A499 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMapViewerSDK.framework; sourceTree = "<group>"; };
+		BC1D3D0F2312C4CC0075A499 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		BC1D3D102312C8CE0075A499 /* NMapViewResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 		BC8D4A6C22F9635B007C7F67 /* Mohae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mohae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8D4A7122F9635B007C7F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,11 +155,13 @@
 			children = (
 				BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */,
 				BC8D4A7122F9635B007C7F67 /* ViewController.swift */,
+				BC1D3D102312C8CE0075A499 /* NMapViewResources.swift */,
 				BC8D4A7322F9635B007C7F67 /* Main.storyboard */,
 				BC8D4A7622F9635D007C7F67 /* Assets.xcassets */,
 				BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */,
 				BC8D4A7B22F9635D007C7F67 /* Info.plist */,
 				BC1D3D052312AAB80075A499 /* GoogleService-Info.plist */,
+				BC1D3D0F2312C4CC0075A499 /* Header.h */,
 			);
 			path = Mohae;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				BC8D4A6A22F9635B007C7F67 /* Resources */,
 				5E948393FC5F36106D8FF472 /* [CP] Embed Pods Frameworks */,
 				BC1D3D0D2312C2C10075A499 /* Embed Frameworks */,
+				BC1D3D0E2312C41D0075A499 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -407,6 +413,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BC1D3D0E2312C41D0075A499 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/gurwnsdl1/Downloads/maps.ios-ncp/Scripts/strip-frameworks.sh\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -415,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */,
+				BC1D3D112312C8CE0075A499 /* NMapViewResources.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +654,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.today.MoHae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/gurwnsdl1/Documents/GitHub/MoHae/Mohae/Mohae/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -679,6 +704,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.today.MoHae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/gurwnsdl1/Documents/GitHub/MoHae/Mohae/Mohae/Header.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
