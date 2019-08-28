@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "1.6.1",
+  "iOS" : [
+    {
+      "name" : "SimpleCheckbox",
+      "hash" : "fc0ab965b365ebcc864f7cd776464f4d193829675730fe569ded7f8845f97a4e",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}

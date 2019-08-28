@@ -1,0 +1,11 @@
+framework module SimpleCheckbox {
+  umbrella header "SimpleCheckbox.h"
+
+  export *
+  module * { export * }
+}
+
+module SimpleCheckbox.Swift {
+    header "SimpleCheckbox-Swift.h"
+    requires objc
+}
