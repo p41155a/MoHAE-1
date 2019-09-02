@@ -3,6 +3,12 @@
 <plist version="1.0">
     
 <dict>
+    <key>NMFClientId</key>
+    <string>r8s8v3u0v7</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>nmap</string>
+    </array>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>Used to Location&apos;s Info always for Using Beacon.</string>
     <key>NSLocationAlwaysUsageDescription</key>

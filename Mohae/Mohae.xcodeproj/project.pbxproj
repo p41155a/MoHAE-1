@@ -21,6 +21,7 @@
 		BC8D4A7A22F9635D007C7F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */; };
 		BC8D4A8522F9635D007C7F67 /* MohaeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8422F9635D007C7F67 /* MohaeTests.swift */; };
 		BC8D4A9022F9635D007C7F67 /* MohaeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */; };
+		BCCADF1F23152CF70011FD57 /* mode.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCADF1E23152CF70011FD57 /* mode.png */; };
 		BE30AAFC9B062D34B4241B02 /* Pods_MohaeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE23FE6F9B29F12A4451334E /* Pods_MohaeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		BC8D4A8B22F9635D007C7F67 /* MohaeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MohaeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MohaeUITests.swift; sourceTree = "<group>"; };
 		BC8D4A9122F9635D007C7F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCCADF1E23152CF70011FD57 /* mode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mode.png; sourceTree = "<group>"; };
 		DB9574692A36D433E021A9AA /* Pods_Mohae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mohae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E43976533672DB17912B67 /* Pods-MohaeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.release.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE23FE6F9B29F12A4451334E /* Pods_MohaeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,7 @@
 				BC8D4A7B22F9635D007C7F67 /* Info.plist */,
 				BC1D3D052312AAB80075A499 /* GoogleService-Info.plist */,
 				BC1D3D0F2312C4CC0075A499 /* Header.h */,
+				BCCADF1E23152CF70011FD57 /* mode.png */,
 			);
 			path = Mohae;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				BC1D3D062312AAB80075A499 /* GoogleService-Info.plist in Resources */,
 				BC8D4A7722F9635D007C7F67 /* Assets.xcassets in Resources */,
 				BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */,
+				BCCADF1F23152CF70011FD57 /* mode.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
