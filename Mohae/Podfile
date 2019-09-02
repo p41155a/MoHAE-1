@@ -8,7 +8,7 @@ target 'Mohae' do
   # Pods for Mohae
   platform :ios, '7.0'
   pod 'Firebase'
-
+  pod 'Alamofire', '~> 5.0.0-beta.5'
   target 'MohaeTests' do
     inherit! :search_paths
     # Pods for testing
