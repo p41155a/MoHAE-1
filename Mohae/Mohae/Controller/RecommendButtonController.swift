@@ -30,7 +30,6 @@ class RecommendButtonController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         self.view.addSubview(recommendView)
     }
 

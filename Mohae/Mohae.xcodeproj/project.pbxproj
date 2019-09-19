@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		110D3DE9772177A287E00FF2 /* Pods_Mohae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9574692A36D433E021A9AA /* Pods_Mohae.framework */; };
 		5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C36D23099591001BA2BF /* RecommendButtonController.swift */; };
-		5A40C370230995FA001BA2BF /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C36F230995FA001BA2BF /* Button.swift */; };
 		5A40C372230C0565001BA2BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C371230C0565001BA2BF /* User.swift */; };
+		5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69944723277D4F009D67D9 /* AnalysisController.swift */; };
 		5AAEBF0B23055C55004116C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */; };
 		5AC7FF71231652E60013F798 /* SimpleCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */; };
 		5AC7FF7423165AF10013F798 /* SubSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */; };
+		5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF752316674A0013F798 /* SubSurvey.swift */; };
 		5AFF7AAD2313F7E30086BBF7 /* SubSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF7AAC2313F7E30086BBF7 /* SubSurveyController.swift */; };
 		94E35FCD0BEC40AC0BD0B162 /* Pods_MohaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433B4A67FAB17F7F259E52BC /* Pods_MohaeTests.framework */; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
@@ -45,11 +46,12 @@
 		433B4A67FAB17F7F259E52BC /* Pods_MohaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4451CCAB01D20767A9CBFFE5 /* Pods-Mohae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.release.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.release.xcconfig"; sourceTree = "<group>"; };
 		5A40C36D23099591001BA2BF /* RecommendButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendButtonController.swift; sourceTree = "<group>"; };
-		5A40C36F230995FA001BA2BF /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5A40C371230C0565001BA2BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5A69944723277D4F009D67D9 /* AnalysisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisController.swift; sourceTree = "<group>"; };
 		5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleCheckbox.framework; path = Carthage/Build/iOS/SimpleCheckbox.framework; sourceTree = "<group>"; };
 		5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurveyCell.swift; sourceTree = "<group>"; };
+		5AC7FF752316674A0013F798 /* SubSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurvey.swift; sourceTree = "<group>"; };
 		5AFF7AAC2313F7E30086BBF7 /* SubSurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurveyController.swift; sourceTree = "<group>"; };
 		8FAA3A0DD477A475F039767B /* Pods-MohaeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF10575900FF460541359310 /* Pods-Mohae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.debug.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +101,6 @@
 		5A40C36A23099511001BA2BF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5A40C36F230995FA001BA2BF /* Button.swift */,
 				5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */,
 			);
 			path = View;
@@ -110,6 +111,7 @@
 			children = (
 				5A40C36D23099591001BA2BF /* RecommendButtonController.swift */,
 				5AFF7AAC2313F7E30086BBF7 /* SubSurveyController.swift */,
+				5A69944723277D4F009D67D9 /* AnalysisController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5A40C371230C0565001BA2BF /* User.swift */,
+				5AC7FF752316674A0013F798 /* SubSurvey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,12 +427,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */,
 				5A40C372230C0565001BA2BF /* User.swift in Sources */,
+				5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */,
 				5AFF7AAD2313F7E30086BBF7 /* SubSurveyController.swift in Sources */,
 				5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,
 				5AC7FF7423165AF10013F798 /* SubSurveyCell.swift in Sources */,
-				5A40C370230995FA001BA2BF /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
