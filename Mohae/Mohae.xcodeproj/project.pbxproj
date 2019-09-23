@@ -14,6 +14,9 @@
 		BC1D3D0A2312C2BA0075A499 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1D3D082312C2BA0075A499 /* NMapViewerSDK.framework */; };
 		BC1D3D0C2312C2C10075A499 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC1D3D072312C2B90075A499 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC1D3D112312C8CE0075A499 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1D3D102312C8CE0075A499 /* NMapViewResources.swift */; };
+		BC5F8E1C23276DAA00148670 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F8E1B23276DAA00148670 /* Map.swift */; };
+		BC5F8E1F2327722C00148670 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F8E1E2327722C00148670 /* MapCell.swift */; };
+		BC5F8E292333512500148670 /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F8E282333512500148670 /* AgreeViewController.swift */; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
 		BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A7122F9635B007C7F67 /* ViewController.swift */; };
 		BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7322F9635B007C7F67 /* Main.storyboard */; };
@@ -68,6 +71,9 @@
 		BC1D3D082312C2BA0075A499 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMapViewerSDK.framework; sourceTree = "<group>"; };
 		BC1D3D0F2312C4CC0075A499 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		BC1D3D102312C8CE0075A499 /* NMapViewResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
+		BC5F8E1B23276DAA00148670 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		BC5F8E1E2327722C00148670 /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		BC5F8E282333512500148670 /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
 		BC8D4A6C22F9635B007C7F67 /* Mohae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mohae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8D4A7122F9635B007C7F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,9 +136,38 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BC5F8E1D23276DCC00148670 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC1D3D102312C8CE0075A499 /* NMapViewResources.swift */,
+				BC5F8E1B23276DAA00148670 /* Map.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC5F8E202327741000148670 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC5F8E1E2327722C00148670 /* MapCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC5F8E232330AEE200148670 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D4A7122F9635B007C7F67 /* ViewController.swift */,
+				BC5F8E282333512500148670 /* AgreeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BC8D4A6322F9635B007C7F67 = {
 			isa = PBXGroup;
 			children = (
+				BC5F8E232330AEE200148670 /* Controller */,
+				BC5F8E202327741000148670 /* View */,
+				BC5F8E1D23276DCC00148670 /* Model */,
 				BC8D4A6E22F9635B007C7F67 /* Mohae */,
 				BC8D4A8322F9635D007C7F67 /* MohaeTests */,
 				BC8D4A8E22F9635D007C7F67 /* MohaeUITests */,
@@ -156,8 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */,
-				BC8D4A7122F9635B007C7F67 /* ViewController.swift */,
-				BC1D3D102312C8CE0075A499 /* NMapViewResources.swift */,
 				BC8D4A7322F9635B007C7F67 /* Main.storyboard */,
 				BC8D4A7622F9635D007C7F67 /* Assets.xcassets */,
 				BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */,
@@ -443,7 +476,10 @@
 			files = (
 				BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */,
 				BC1D3D112312C8CE0075A499 /* NMapViewResources.swift in Sources */,
+				BC5F8E1C23276DAA00148670 /* Map.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,
+				BC5F8E1F2327722C00148670 /* MapCell.swift in Sources */,
+				BC5F8E292333512500148670 /* AgreeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,8 +682,6 @@
 					"-framework",
 					"\"FirebaseInstanceID\"",
 					"-framework",
-					"\"GoogleToolboxForMac\"",
-					"-framework",
 					"\"StoreKit\"",
 					"-framework",
 					"\"SystemConfiguration\"",
@@ -692,8 +726,6 @@
 					"\"FirebaseCoreDiagnostics\"",
 					"-framework",
 					"\"FirebaseInstanceID\"",
-					"-framework",
-					"\"GoogleToolboxForMac\"",
 					"-framework",
 					"\"StoreKit\"",
 					"-framework",

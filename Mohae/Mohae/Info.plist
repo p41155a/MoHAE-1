@@ -9,6 +9,7 @@
     <array>
         <string>nmap</string>
     </array>
+    
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
     <string>Used to Location&apos;s Info always for Using Beacon.</string>
     <key>NSLocationAlwaysUsageDescription</key>
