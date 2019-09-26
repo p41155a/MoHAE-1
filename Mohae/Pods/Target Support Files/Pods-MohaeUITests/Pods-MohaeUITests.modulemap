@@ -1,0 +1,6 @@
+framework module Pods_MohaeUITests {
+  umbrella header "Pods-MohaeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

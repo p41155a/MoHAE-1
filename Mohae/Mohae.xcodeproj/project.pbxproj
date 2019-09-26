@@ -3,17 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30E144A9D11387C00661A22A /* Pods_MohaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054576D945ABD363AE3D6AE1 /* Pods_MohaeTests.framework */; };
+		97EC46BBCD4864325FB5EE9B /* Pods_MohaeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8594E011B2022F042AA66F83 /* Pods_MohaeUITests.framework */; };
+		BC006E222339DF3000C5F825 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC006E212339DF3000C5F825 /* PlacesViewController.swift */; };
+		BC1066CD233B464400C241C1 /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1066CC233B464400C241C1 /* MapSearch.swift */; };
+		BC1066CF233B4CEF00C241C1 /* MapSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1066CE233B4CEF00C241C1 /* MapSearchCell.swift */; };
+		BC1066D1233B794700C241C1 /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1066D0233B794700C241C1 /* AgreeViewController.swift */; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
-		BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A7122F9635B007C7F67 /* ViewController.swift */; };
+		BC8D4A7222F9635B007C7F67 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A7122F9635B007C7F67 /* MapViewController.swift */; };
 		BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7322F9635B007C7F67 /* Main.storyboard */; };
 		BC8D4A7722F9635D007C7F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7622F9635D007C7F67 /* Assets.xcassets */; };
 		BC8D4A7A22F9635D007C7F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */; };
 		BC8D4A8522F9635D007C7F67 /* MohaeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8422F9635D007C7F67 /* MohaeTests.swift */; };
 		BC8D4A9022F9635D007C7F67 /* MohaeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */; };
+		D81077323BD88624AB16E559 /* Pods_Mohae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F2DC33BEC75157508E6C18 /* Pods_Mohae.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +41,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		054576D945ABD363AE3D6AE1 /* Pods_MohaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12D2D4E1A9087CA72ED0C70B /* Pods-Mohae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.debug.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.debug.xcconfig"; sourceTree = "<group>"; };
+		14F2DC33BEC75157508E6C18 /* Pods_Mohae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mohae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8444E4D84DC4DCE21F4FA70F /* Pods-MohaeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8594E011B2022F042AA66F83 /* Pods_MohaeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A82B30AAD2731A695EC7C1F /* Pods-MohaeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A286331B3821405F3C0A18E1 /* Pods-MohaeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.release.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.release.xcconfig"; sourceTree = "<group>"; };
+		BC006E212339DF3000C5F825 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		BC1066CC233B464400C241C1 /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
+		BC1066CE233B4CEF00C241C1 /* MapSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchCell.swift; sourceTree = "<group>"; };
+		BC1066D0233B794700C241C1 /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
 		BC8D4A6C22F9635B007C7F67 /* Mohae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mohae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC8D4A7122F9635B007C7F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC8D4A7122F9635B007C7F67 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BC8D4A7422F9635B007C7F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC8D4A7622F9635D007C7F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8D4A7922F9635D007C7F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +65,8 @@
 		BC8D4A8B22F9635D007C7F67 /* MohaeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MohaeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MohaeUITests.swift; sourceTree = "<group>"; };
 		BC8D4A9122F9635D007C7F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBEB75CCC4C40889BA15964 /* Pods-Mohae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.release.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.release.xcconfig"; sourceTree = "<group>"; };
+		FC74313EDE56B4CBABA25380 /* Pods-MohaeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.release.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D81077323BD88624AB16E559 /* Pods_Mohae.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E144A9D11387C00661A22A /* Pods_MohaeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +90,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97EC46BBCD4864325FB5EE9B /* Pods_MohaeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EEF2B97900DF9CAEC75B5B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12D2D4E1A9087CA72ED0C70B /* Pods-Mohae.debug.xcconfig */,
+				DBBEB75CCC4C40889BA15964 /* Pods-Mohae.release.xcconfig */,
+				9A82B30AAD2731A695EC7C1F /* Pods-MohaeTests.debug.xcconfig */,
+				A286331B3821405F3C0A18E1 /* Pods-MohaeTests.release.xcconfig */,
+				8444E4D84DC4DCE21F4FA70F /* Pods-MohaeUITests.debug.xcconfig */,
+				FC74313EDE56B4CBABA25380 /* Pods-MohaeUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AA74E14B97318AF4CB5573C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14F2DC33BEC75157508E6C18 /* Pods_Mohae.framework */,
+				054576D945ABD363AE3D6AE1 /* Pods_MohaeTests.framework */,
+				8594E011B2022F042AA66F83 /* Pods_MohaeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC1066C7233B45FA00C241C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC1066CE233B4CEF00C241C1 /* MapSearchCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC1066C8233B460100C241C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC1066D0233B794700C241C1 /* AgreeViewController.swift */,
+				BC8D4A7122F9635B007C7F67 /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC1066C9233B460800C241C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC1066CC233B464400C241C1 /* MapSearch.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BC8D4A6322F9635B007C7F67 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +152,8 @@
 				BC8D4A8322F9635D007C7F67 /* MohaeTests */,
 				BC8D4A8E22F9635D007C7F67 /* MohaeUITests */,
 				BC8D4A6D22F9635B007C7F67 /* Products */,
+				9EEF2B97900DF9CAEC75B5B3 /* Pods */,
+				AA74E14B97318AF4CB5573C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +170,11 @@
 		BC8D4A6E22F9635B007C7F67 /* Mohae */ = {
 			isa = PBXGroup;
 			children = (
+				BC1066C9233B460800C241C1 /* Model */,
+				BC1066C8233B460100C241C1 /* Controller */,
+				BC1066C7233B45FA00C241C1 /* View */,
 				BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */,
-				BC8D4A7122F9635B007C7F67 /* ViewController.swift */,
+				BC006E212339DF3000C5F825 /* PlacesViewController.swift */,
 				BC8D4A7322F9635B007C7F67 /* Main.storyboard */,
 				BC8D4A7622F9635D007C7F67 /* Assets.xcassets */,
 				BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */,
@@ -132,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC8D4A9422F9635D007C7F67 /* Build configuration list for PBXNativeTarget "Mohae" */;
 			buildPhases = (
+				BD509CFBA2599D655DF2D7AF /* [CP] Check Pods Manifest.lock */,
 				BC8D4A6822F9635B007C7F67 /* Sources */,
 				BC8D4A6922F9635B007C7F67 /* Frameworks */,
 				BC8D4A6A22F9635B007C7F67 /* Resources */,
+				BBD06E5503C21087A756CDC0 /* [CP] Copy Pods Resources */,
+				B77AC53D1B80345E58D2463D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC8D4A9722F9635D007C7F67 /* Build configuration list for PBXNativeTarget "MohaeTests" */;
 			buildPhases = (
+				67FB1A17C6D310BE8CFEC1A3 /* [CP] Check Pods Manifest.lock */,
 				BC8D4A7C22F9635D007C7F67 /* Sources */,
 				BC8D4A7D22F9635D007C7F67 /* Frameworks */,
 				BC8D4A7E22F9635D007C7F67 /* Resources */,
@@ -167,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC8D4A9A22F9635D007C7F67 /* Build configuration list for PBXNativeTarget "MohaeUITests" */;
 			buildPhases = (
+				25CDABC13CC80C9638C8DC22 /* [CP] Check Pods Manifest.lock */,
 				BC8D4A8722F9635D007C7F67 /* Sources */,
 				BC8D4A8822F9635D007C7F67 /* Frameworks */,
 				BC8D4A8922F9635D007C7F67 /* Resources */,
@@ -251,13 +332,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25CDABC13CC80C9638C8DC22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MohaeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67FB1A17C6D310BE8CFEC1A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MohaeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B77AC53D1B80345E58D2463D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBD06E5503C21087A756CDC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD509CFBA2599D655DF2D7AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mohae-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC8D4A6822F9635B007C7F67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */,
+				BC006E222339DF3000C5F825 /* PlacesViewController.swift in Sources */,
+				BC8D4A7222F9635B007C7F67 /* MapViewController.swift in Sources */,
+				BC1066CF233B4CEF00C241C1 /* MapSearchCell.swift in Sources */,
+				BC1066CD233B464400C241C1 /* MapSearch.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,
+				BC1066D1233B794700C241C1 /* AgreeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +618,7 @@
 		};
 		BC8D4A9522F9635D007C7F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12D2D4E1A9087CA72ED0C70B /* Pods-Mohae.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,7 +627,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.today.mohae.Mohae;
+				PRODUCT_BUNDLE_IDENTIFIER = com.today.MoHae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,6 +636,7 @@
 		};
 		BC8D4A9622F9635D007C7F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBBEB75CCC4C40889BA15964 /* Pods-Mohae.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,7 +645,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.today.mohae.Mohae;
+				PRODUCT_BUNDLE_IDENTIFIER = com.today.MoHae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,6 +654,7 @@
 		};
 		BC8D4A9822F9635D007C7F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A82B30AAD2731A695EC7C1F /* Pods-MohaeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +675,7 @@
 		};
 		BC8D4A9922F9635D007C7F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A286331B3821405F3C0A18E1 /* Pods-MohaeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +696,7 @@
 		};
 		BC8D4A9B22F9635D007C7F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8444E4D84DC4DCE21F4FA70F /* Pods-MohaeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +716,7 @@
 		};
 		BC8D4A9C22F9635D007C7F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC74313EDE56B4CBABA25380 /* Pods-MohaeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
