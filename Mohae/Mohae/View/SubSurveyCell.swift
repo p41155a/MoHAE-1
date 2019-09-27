@@ -8,8 +8,7 @@
 
 import UIKit
 import SimpleCheckbox
-
-var count = 0
+import DropDown
 
 class SubSurveyCell: UICollectionViewCell{
     
@@ -24,36 +23,55 @@ class SubSurveyCell: UICollectionViewCell{
         return tv
     }()
     
-    let checkBox: Checkbox = {
-        let checkBox = Checkbox(frame: CGRect(x: 30, y: 80, width: 25, height: 25))
-        checkBox.tintColor = .black
-        checkBox.borderStyle = .square
-        checkBox.checkmarkStyle = .tick
-        checkBox.uncheckedBorderColor = .lightGray
-        checkBox.borderWidth = 1
-        checkBox.translatesAutoresizingMaskIntoConstraints = false
+    func makeCheckBox() -> Checkbox {
+        let checkBox: Checkbox = {
+            let cb = Checkbox(frame: CGRect(x: 30, y: 80, width: 25, height: 25))
+            cb.tintColor = .black
+            cb.borderStyle = .square
+            cb.checkmarkStyle = .tick
+            cb.uncheckedBorderColor = .lightGray
+            cb.borderWidth = 1
+            cb.translatesAutoresizingMaskIntoConstraints = false
+            
+            return cb
+        }()
         
         return checkBox
+    }
+    
+    func makeLabel() -> UILabel {
+        let label: UILabel = {
+            let lb = UILabel()
+            lb.translatesAutoresizingMaskIntoConstraints = false
+            lb.font = UIFont.systemFont(ofSize: 20)
+            lb.textColor = .black
+            
+            return lb
+        }()
+        
+        return label
+    }
+
+    //question.2 함께하는 인원은 몇 명인가요? segment
+    let personCount: UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["1 ~ 2 명", "3 ~ 5 명", "6명 이상"])
+        sc.translatesAutoresizingMaskIntoConstraints = false
+        sc.selectedSegmentIndex = 0
+        
+        return sc
     }()
- 
+
+    //question.5 현재 당신의 기분은 어떤가요? checkbox and text label
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         addSubview(textView)
-        addSubview(checkBox)
         
         textView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
         textView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
         textView.widthAnchor.constraint(equalToConstant: 400).isActive = true
         textView.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        
-        checkBox.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
-        checkBox.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
-        checkBox.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        checkBox.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

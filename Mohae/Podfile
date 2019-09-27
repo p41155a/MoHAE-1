@@ -6,13 +6,14 @@ target 'Mohae' do
   use_frameworks! 
 
   # Pods for Mohae
-  platform :ios, '9.0'
+  platform :ios, '10.0'
   pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'DropDown', '2.3.13'
+  pod 'SnapKit', '5.0'
 
   target 'MohaeTests' do
     inherit! :search_paths

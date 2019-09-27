@@ -11,6 +11,7 @@
 		5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C36D23099591001BA2BF /* RecommendButtonController.swift */; };
 		5A40C372230C0565001BA2BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C371230C0565001BA2BF /* User.swift */; };
 		5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69944723277D4F009D67D9 /* AnalysisController.swift */; };
+		5A8D42602338BCA000A83BBC /* TestDropBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D425F2338BCA000A83BBC /* TestDropBox.swift */; };
 		5AAEBF0B23055C55004116C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */; };
 		5AC7FF71231652E60013F798 /* SimpleCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */; };
 		5AC7FF7423165AF10013F798 /* SubSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */; };
@@ -48,6 +49,7 @@
 		5A40C36D23099591001BA2BF /* RecommendButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendButtonController.swift; sourceTree = "<group>"; };
 		5A40C371230C0565001BA2BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A69944723277D4F009D67D9 /* AnalysisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisController.swift; sourceTree = "<group>"; };
+		5A8D425F2338BCA000A83BBC /* TestDropBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDropBox.swift; sourceTree = "<group>"; };
 		5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleCheckbox.framework; path = Carthage/Build/iOS/SimpleCheckbox.framework; sourceTree = "<group>"; };
 		5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurveyCell.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				5A40C36D23099591001BA2BF /* RecommendButtonController.swift */,
 				5AFF7AAC2313F7E30086BBF7 /* SubSurveyController.swift */,
 				5A69944723277D4F009D67D9 /* AnalysisController.swift */,
+				5A8D425F2338BCA000A83BBC /* TestDropBox.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 			files = (
 				5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */,
 				5A40C372230C0565001BA2BF /* User.swift in Sources */,
+				5A8D42602338BCA000A83BBC /* TestDropBox.swift in Sources */,
 				5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */,
 				5AFF7AAD2313F7E30086BBF7 /* SubSurveyController.swift in Sources */,
 				5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */,

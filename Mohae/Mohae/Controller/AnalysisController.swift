@@ -3,13 +3,14 @@
 //  Mohae
 //
 //  Created by 이주영 on 10/09/2019.
-//  Copyright © 2019 권혁준. All rights reserved.
+//  Copyright © 2019 이주영. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
 class AnalysisController: UIViewController {
+    
     
     let text: UILabel = {
         let tv = UILabel()
@@ -24,10 +25,10 @@ class AnalysisController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(text)
+        //view.addSubview(text)
         view.backgroundColor = .yellow
-        text.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        text.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        //text.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        //text.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
     }
