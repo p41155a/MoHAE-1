@@ -55,6 +55,15 @@ class MapViewController: UIViewController, UICollectionViewDataSource, UICollect
         return CV
     }()
     
+    lazy var button: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.addTarget(self, action: #selector(menuBtnTapped), for: .touchUpInside)
+        
+        return btn
+    }()
+
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -135,6 +144,5 @@ extension MapViewController {
             googleMapView.leftAnchor.constraint(equalTo: self.listView.rightAnchor).isActive = true
             googleMapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
             googleMapView.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
-        
     }
 }

@@ -1,0 +1,6 @@
+framework module Arale {
+  umbrella header "Arale-umbrella.h"
+
+  export *
+  module * { export * }
+}
