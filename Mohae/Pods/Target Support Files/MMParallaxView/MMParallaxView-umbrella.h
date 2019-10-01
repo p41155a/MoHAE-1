@@ -10,8 +10,7 @@
 #endif
 #endif
 
-#import "Arale.h"
 
-FOUNDATION_EXPORT double AraleVersionNumber;
-FOUNDATION_EXPORT const unsigned char AraleVersionString[];
+FOUNDATION_EXPORT double MMParallaxViewVersionNumber;
+FOUNDATION_EXPORT const unsigned char MMParallaxViewVersionString[];
 

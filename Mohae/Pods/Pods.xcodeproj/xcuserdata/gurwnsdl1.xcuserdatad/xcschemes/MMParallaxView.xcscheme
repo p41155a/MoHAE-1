@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "44F0D62E1A8B15263E16C9DD5FF59939"
-               BuildableName = "Arale.framework"
-               BlueprintName = "Arale"
+               BlueprintIdentifier = "88A91B04E96C8A43EA3E6B22219DFDF7"
+               BuildableName = "MMParallaxView.framework"
+               BlueprintName = "MMParallaxView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
