@@ -131,7 +131,6 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
         
         cell.addSubview(cell.checkSeg)
         
-        //reason: 'Unable to activate constraint with anchors <NSLayoutYAxisAnchor:0x600001624e00 "UISegmentedControl:0x7fd34701e6f0.top"> and <NSLayoutYAxisAnchor:0x600001624d40 "UITextView:0x7fd346076200'새로운 사람을 만나는 것을 즐기나요?'.bottom"> because they have no common ancestor.  Does the constraint or its anchors reference items in different view hierarchies?  That's illegal.'
         cell.checkSeg.snp.makeConstraints { (make) in
             make.top.equalTo(cell.textView.snp.bottom).offset(8)
             make.left.equalTo(cell.snp.left).offset(8)
