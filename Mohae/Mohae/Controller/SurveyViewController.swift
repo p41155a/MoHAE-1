@@ -61,7 +61,10 @@ class SurveyViewController: UIViewController {
         view.addSubview(collectionView)
         view.addSubview(sendButton)
         
-        collectionView.backgroundColor = .white
+        let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+        layout?.minimumLineSpacing = 2
+        
+        collectionView.backgroundColor = .lightGray
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -78,8 +81,11 @@ class SurveyViewController: UIViewController {
     
     func loadSurvey() {
         print("start load DB")
+        //FIRDatabaseReference 가져오기
         let dbRef = Database.database().reference().child("surveys").child("mainSurvey")
-        
+        //Firebase DB의 변경사항을 관찰하고 있다가 데이터를 실시간으로 받아오는 observe메소드
+        //childAdded: 이벤트 타입으로서 항목 목록을 검색하거나 항목 목록에 대한 추가를 수신 대기합니다.
+        //snapshot: 하위 데이터를 포함하여 해당 위치의 모든 데이터를 포함
         dbRef.observe(.childAdded) { (snapshot) in
             guard let dictionary = snapshot.value as? [String: Any] else {
                 return
@@ -125,11 +131,18 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("cellForItemAt")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MainSurveyCell
-        let MainSurvey = mainSurveys[indexPath.item]
-        cell.textView.text = MainSurvey.question
-        cell.backgroundColor = .yellow
-        
+        let mainSurvey = mainSurveys[indexPath.item]
+        cell.backgroundColor = .white
+        cell.textView.text = mainSurvey.question
         cell.addSubview(cell.checkSeg)
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
+        
+        cell.textView.snp.makeConstraints { (make) in
+            make.left.equalTo(cell.snp.left).offset(8)
+            make.right.equalTo(cell.snp.right).offset(-8)
+        }
         
         cell.checkSeg.snp.makeConstraints { (make) in
             make.top.equalTo(cell.textView.snp.bottom).offset(8)
@@ -138,6 +151,6 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
         }
         
         return cell
-    }
  
+    }
 }
