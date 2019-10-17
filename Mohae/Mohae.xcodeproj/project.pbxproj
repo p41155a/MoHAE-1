@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E57EAE649761EA8EC501E4A /* Pods_Mohae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1389490B80B37D0A593DE0D /* Pods_Mohae.framework */; };
+		AFB3515323431F6F00CB304A /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3515223431F6F00CB304A /* SurveyViewController.swift */; };
+		AFB351862344C6AE00CB304A /* MainSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB351852344C6AE00CB304A /* MainSurvey.swift */; };
+		AFB351AC2349C73100CB304A /* MainSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB351AB2349C73100CB304A /* MainSurveyCell.swift */; };
+		AFB351BE2349CA3A00CB304A /* AnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB351BD2349CA3A00CB304A /* AnalysisController.swift */; };
+		AFB351C0234B12D600CB304A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFB351BF234B12D600CB304A /* GoogleService-Info.plist */; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
 		BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A7122F9635B007C7F67 /* ViewController.swift */; };
 		BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7322F9635B007C7F67 /* Main.storyboard */; };
@@ -17,6 +23,83 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AFB3517E2344ADDB00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5CA91AD3A7A524D48D63005738375728;
+			remoteInfo = "Pods-Mohae";
+		};
+		AFB351802344ADDB00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 979486118B3E90C08386079D57962701;
+			remoteInfo = SnapKit;
+		};
+		AFB351972344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2B63D462DB7F827C4B11FD51E4F8E2D;
+			remoteInfo = FirebaseCore;
+		};
+		AFB351992344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CC9178C366942FD6FF6A115604EAD58;
+			remoteInfo = FirebaseCoreDiagnostics;
+		};
+		AFB3519B2344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51671C73F008B5C0C3751B3855999213;
+			remoteInfo = FirebaseDatabase;
+		};
+		AFB3519D2344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DA0D814DFCB860D31D7BCD63D795858;
+			remoteInfo = FirebaseInstanceID;
+		};
+		AFB3519F2344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 856B5CD56F194FAD26EA91620B66D614;
+			remoteInfo = GoogleDataTransport;
+		};
+		AFB351A12344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6942351307BC1F54575D9853307EAE0E;
+			remoteInfo = GoogleDataTransportCCTSupport;
+		};
+		AFB351A32344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B43874C6CBB50E7134FBEC24BABFE14F;
+			remoteInfo = GoogleUtilities;
+		};
+		AFB351A52344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0A9F46A999C47653013D3AD854352507;
+			remoteInfo = "leveldb-library";
+		};
+		AFB351A72344C6AF00CB304A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06FC5C9CF96D60C50FCD47D339C91951;
+			remoteInfo = nanopb;
+		};
 		BC8D4A8122F9635D007C7F67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC8D4A6422F9635B007C7F67 /* Project object */;
@@ -34,6 +117,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9ABE04658614A27B1D5977D9 /* Pods-Mohae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.release.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.release.xcconfig"; sourceTree = "<group>"; };
+		AD55273E82D96CD590FD42F3 /* Pods-Mohae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.debug.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.debug.xcconfig"; sourceTree = "<group>"; };
+		AFB3515223431F6F00CB304A /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		AFB351792344ADDB00CB304A /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		AFB351852344C6AE00CB304A /* MainSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSurvey.swift; sourceTree = "<group>"; };
+		AFB351AB2349C73100CB304A /* MainSurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSurveyCell.swift; sourceTree = "<group>"; };
+		AFB351BD2349CA3A00CB304A /* AnalysisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisController.swift; sourceTree = "<group>"; };
+		AFB351BF234B12D600CB304A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BC8D4A6C22F9635B007C7F67 /* Mohae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mohae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC8D4A7122F9635B007C7F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +138,7 @@
 		BC8D4A8B22F9635D007C7F67 /* MohaeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MohaeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MohaeUITests.swift; sourceTree = "<group>"; };
 		BC8D4A9122F9635D007C7F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1389490B80B37D0A593DE0D /* Pods_Mohae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mohae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E57EAE649761EA8EC501E4A /* Pods_Mohae.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +167,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		359F8EB4E08B0D052B6E2A68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD55273E82D96CD590FD42F3 /* Pods-Mohae.debug.xcconfig */,
+				9ABE04658614A27B1D5977D9 /* Pods-Mohae.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		41FE5790A7BF4494BD4A3021 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFB351792344ADDB00CB304A /* Pods.xcodeproj */,
+				C1389490B80B37D0A593DE0D /* Pods_Mohae.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFB3515423431F8F00CB304A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFB3515223431F6F00CB304A /* SurveyViewController.swift */,
+				AFB351BD2349CA3A00CB304A /* AnalysisController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AFB351552343355600CB304A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFB351AB2349C73100CB304A /* MainSurveyCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFB3517A2344ADDB00CB304A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFB351982344C6AF00CB304A /* FirebaseCore.framework */,
+				AFB3519A2344C6AF00CB304A /* FirebaseCoreDiagnostics.framework */,
+				AFB3519C2344C6AF00CB304A /* FirebaseDatabase.framework */,
+				AFB3519E2344C6AF00CB304A /* FirebaseInstanceID.framework */,
+				AFB351A02344C6AF00CB304A /* GoogleDataTransport.framework */,
+				AFB351A22344C6AF00CB304A /* GoogleDataTransportCCTSupport.framework */,
+				AFB351A42344C6AF00CB304A /* GoogleUtilities.framework */,
+				AFB351A62344C6AF00CB304A /* leveldb.framework */,
+				AFB351A82344C6AF00CB304A /* nanopb.framework */,
+				AFB3517F2344ADDB00CB304A /* Pods_Mohae.framework */,
+				AFB351812344ADDB00CB304A /* SnapKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFB351822344AE0F00CB304A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFB351852344C6AE00CB304A /* MainSurvey.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BC8D4A6322F9635B007C7F67 = {
 			isa = PBXGroup;
 			children = (
+				AFB351BF234B12D600CB304A /* GoogleService-Info.plist */,
 				BC8D4A6E22F9635B007C7F67 /* Mohae */,
 				BC8D4A8322F9635D007C7F67 /* MohaeTests */,
 				BC8D4A8E22F9635D007C7F67 /* MohaeUITests */,
 				BC8D4A6D22F9635B007C7F67 /* Products */,
+				359F8EB4E08B0D052B6E2A68 /* Pods */,
+				41FE5790A7BF4494BD4A3021 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +254,9 @@
 		BC8D4A6E22F9635B007C7F67 /* Mohae */ = {
 			isa = PBXGroup;
 			children = (
+				AFB351822344AE0F00CB304A /* Model */,
+				AFB351552343355600CB304A /* View */,
+				AFB3515423431F8F00CB304A /* Controller */,
 				BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */,
 				BC8D4A7122F9635B007C7F67 /* ViewController.swift */,
 				BC8D4A7322F9635B007C7F67 /* Main.storyboard */,
@@ -132,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BC8D4A9422F9635D007C7F67 /* Build configuration list for PBXNativeTarget "Mohae" */;
 			buildPhases = (
+				D3421842559403B1125F19C8 /* [CP] Check Pods Manifest.lock */,
 				BC8D4A6822F9635B007C7F67 /* Sources */,
 				BC8D4A6922F9635B007C7F67 /* Frameworks */,
 				BC8D4A6A22F9635B007C7F67 /* Resources */,
+				97800F17A50977C607247FCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -215,6 +377,12 @@
 			mainGroup = BC8D4A6322F9635B007C7F67;
 			productRefGroup = BC8D4A6D22F9635B007C7F67 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AFB3517A2344ADDB00CB304A /* Products */;
+					ProjectRef = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BC8D4A6B22F9635B007C7F67 /* Mohae */,
@@ -224,12 +392,93 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		AFB3517F2344ADDB00CB304A /* Pods_Mohae.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Mohae.framework;
+			remoteRef = AFB3517E2344ADDB00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB351812344ADDB00CB304A /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = AFB351802344ADDB00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB351982344C6AF00CB304A /* FirebaseCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseCore.framework;
+			remoteRef = AFB351972344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB3519A2344C6AF00CB304A /* FirebaseCoreDiagnostics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseCoreDiagnostics.framework;
+			remoteRef = AFB351992344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB3519C2344C6AF00CB304A /* FirebaseDatabase.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseDatabase.framework;
+			remoteRef = AFB3519B2344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB3519E2344C6AF00CB304A /* FirebaseInstanceID.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseInstanceID.framework;
+			remoteRef = AFB3519D2344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB351A02344C6AF00CB304A /* GoogleDataTransport.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleDataTransport.framework;
+			remoteRef = AFB3519F2344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB351A22344C6AF00CB304A /* GoogleDataTransportCCTSupport.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleDataTransportCCTSupport.framework;
+			remoteRef = AFB351A12344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB351A42344C6AF00CB304A /* GoogleUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleUtilities.framework;
+			remoteRef = AFB351A32344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB351A62344C6AF00CB304A /* leveldb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = leveldb.framework;
+			remoteRef = AFB351A52344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFB351A82344C6AF00CB304A /* nanopb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = nanopb.framework;
+			remoteRef = AFB351A72344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		BC8D4A6A22F9635B007C7F67 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BC8D4A7A22F9635D007C7F67 /* LaunchScreen.storyboard in Resources */,
+				AFB351C0234B12D600CB304A /* GoogleService-Info.plist in Resources */,
 				BC8D4A7722F9635D007C7F67 /* Assets.xcassets in Resources */,
 				BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */,
 			);
@@ -251,13 +500,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		97800F17A50977C607247FCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3421842559403B1125F19C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mohae-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BC8D4A6822F9635B007C7F67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BC8D4A7222F9635B007C7F67 /* ViewController.swift in Sources */,
+				AFB3515323431F6F00CB304A /* SurveyViewController.swift in Sources */,
+				AFB351AC2349C73100CB304A /* MainSurveyCell.swift in Sources */,
+				AFB351862344C6AE00CB304A /* MainSurvey.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,
+				AFB351BE2349CA3A00CB304A /* AnalysisController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +725,7 @@
 		};
 		BC8D4A9522F9635D007C7F67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD55273E82D96CD590FD42F3 /* Pods-Mohae.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +743,7 @@
 		};
 		BC8D4A9622F9635D007C7F67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABE04658614A27B1D5977D9 /* Pods-Mohae.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
