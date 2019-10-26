@@ -30,7 +30,7 @@ class SubSurveyCell: UICollectionViewCell{
             cb.borderStyle = .square
             cb.checkmarkStyle = .tick
             cb.uncheckedBorderColor = .lightGray
-            cb.borderWidth = 1
+            cb.borderLineWidth = 1
             cb.translatesAutoresizingMaskIntoConstraints = false
             
             return cb
@@ -56,7 +56,7 @@ class SubSurveyCell: UICollectionViewCell{
     let personCount: UISegmentedControl = {
         let sc = UISegmentedControl(items: ["1 ~ 2 명", "3 ~ 5 명", "6명 이상"])
         sc.translatesAutoresizingMaskIntoConstraints = false
-        sc.selectedSegmentIndex = 0
+        //sc.selectedSegmentIndex = 0
         
         return sc
     }()

@@ -11,7 +11,10 @@
 		5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C36D23099591001BA2BF /* RecommendButtonController.swift */; };
 		5A40C372230C0565001BA2BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C371230C0565001BA2BF /* User.swift */; };
 		5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69944723277D4F009D67D9 /* AnalysisController.swift */; };
+		5A7F48F52348E28E0020545F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F48F42348E28E0020545F /* MapViewController.swift */; };
+		5A7F48F72348E3950020545F /* MapSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F48F62348E3950020545F /* MapSearchCell.swift */; };
 		5A8D42602338BCA000A83BBC /* TestDropBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D425F2338BCA000A83BBC /* TestDropBox.swift */; };
+		5A8FC7C52344C8ED00A33EB5 /* TestSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */; };
 		5AAEBF0B23055C55004116C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */; };
 		5AC7FF71231652E60013F798 /* SimpleCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */; };
 		5AC7FF7423165AF10013F798 /* SubSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */; };
@@ -49,7 +52,10 @@
 		5A40C36D23099591001BA2BF /* RecommendButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendButtonController.swift; sourceTree = "<group>"; };
 		5A40C371230C0565001BA2BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A69944723277D4F009D67D9 /* AnalysisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisController.swift; sourceTree = "<group>"; };
+		5A7F48F42348E28E0020545F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5A7F48F62348E3950020545F /* MapSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchCell.swift; sourceTree = "<group>"; };
 		5A8D425F2338BCA000A83BBC /* TestDropBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDropBox.swift; sourceTree = "<group>"; };
+		5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSurveyController.swift; sourceTree = "<group>"; };
 		5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleCheckbox.framework; path = Carthage/Build/iOS/SimpleCheckbox.framework; sourceTree = "<group>"; };
 		5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurveyCell.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */,
+				5A7F48F62348E3950020545F /* MapSearchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +122,8 @@
 				5AFF7AAC2313F7E30086BBF7 /* SubSurveyController.swift */,
 				5A69944723277D4F009D67D9 /* AnalysisController.swift */,
 				5A8D425F2338BCA000A83BBC /* TestDropBox.swift */,
+				5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */,
+				5A7F48F42348E28E0020545F /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -201,6 +210,7 @@
 				BC8D4A6A22F9635B007C7F67 /* Resources */,
 				5E948393FC5F36106D8FF472 /* [CP] Embed Pods Frameworks */,
 				5AC7FF722316560B0013F798 /* Carthage Run Script */,
+				E0BE9D28E7582E946551CB4F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,6 +433,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E0BE9D28E7582E946551CB4F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -433,7 +460,10 @@
 				5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */,
 				5A40C372230C0565001BA2BF /* User.swift in Sources */,
 				5A8D42602338BCA000A83BBC /* TestDropBox.swift in Sources */,
+				5A7F48F72348E3950020545F /* MapSearchCell.swift in Sources */,
+				5A8FC7C52344C8ED00A33EB5 /* TestSurveyController.swift in Sources */,
 				5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */,
+				5A7F48F52348E28E0020545F /* MapViewController.swift in Sources */,
 				5AFF7AAD2313F7E30086BBF7 /* SubSurveyController.swift in Sources */,
 				5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,

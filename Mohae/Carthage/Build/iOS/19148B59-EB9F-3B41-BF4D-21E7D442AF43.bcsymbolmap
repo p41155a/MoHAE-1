@@ -1,0 +1,253 @@
+BCSymbolMap Version: 2.0
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOSQAASQ2eeoiySbx_xtFZTW
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOSHAASH9hashValueSivgTW
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOSHAASH4hash4intoys6HasherVz_tFTW
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOSHAASH13_rawHashValue4seedS2i_tFTW
+_$s14SimpleCheckbox0B0C11BorderStyleOSQAASQ2eeoiySbx_xtFZTW
+_$s14SimpleCheckbox0B0C11BorderStyleOSHAASH9hashValueSivgTW
+_$s14SimpleCheckbox0B0C11BorderStyleOSHAASH4hash4intoys6HasherVz_tFTW
+_$s14SimpleCheckbox0B0C11BorderStyleOSHAASH13_rawHashValue4seedS2i_tFTW
+_$s14SimpleCheckbox0B0C11borderStyleAC06BorderD0OvM.resume.0
+_$s14SimpleCheckbox0B0C20uncheckedBorderColorSo7UIColorCSgvgTm
+_$s14SimpleCheckbox0B0C20uncheckedBorderColorSo7UIColorCSgvsTm
+_$s14SimpleCheckbox0B0C15borderLineWidth12CoreGraphics7CGFloatVvgTm
+_$s14SimpleCheckbox0B0C15borderLineWidth12CoreGraphics7CGFloatVvsTm
+_$s14SimpleCheckbox0B0C9isCheckedSbvM.resume.0
+_$s14SimpleCheckbox0B0C9isCheckedSbvgTm
+_$s14SimpleCheckbox0B0C5frameACSo6CGRectV_tcfcTo
+_$s14SimpleCheckbox0B0C5coderACSgSo7NSCoderC_tcfcTo
+_$s14SimpleCheckbox0B0C13setupDefaults33_FEF2F6420437EF8E44277DB3E2EA3144LLyyF
+_$s14SimpleCheckbox0B0C4drawyySo6CGRectVFTo
+_$s14SimpleCheckbox0B0C12squareBorder33_FEF2F6420437EF8E44277DB3E2EA3144LL4rectySo6CGRectV_tF
+_$s14SimpleCheckbox0B0C12circleBorder33_FEF2F6420437EF8E44277DB3E2EA3144LL4rectySo6CGRectV_tF
+_$s14SimpleCheckbox0B0C14crossCheckmark33_FEF2F6420437EF8E44277DB3E2EA3144LL4rectySo6CGRectV_tF
+_$s14SimpleCheckbox0B0C13tickCheckmark33_FEF2F6420437EF8E44277DB3E2EA3144LL4rectySo6CGRectV_tF
+_$s14SimpleCheckbox0B0C16handleTapGesture33_FEF2F6420437EF8E44277DB3E2EA3144LL10recognizerySo05UITapE10RecognizerC_tFTo
+_$s14SimpleCheckbox0B0C5point6inside4withSbSo7CGPointV_So7UIEventCSgtFTo
+_$s14SimpleCheckbox0B0CfETo
+_$s14SimpleCheckbox0B0CIetMg_TC
+_$sSbIegy_SgWOy
+_$sSbIegy_SgWOe
+_$s14SimpleCheckbox0B0C5coderACSgSo7NSCoderC_tcfcTf4gn_n
+_UIEdgeInsetsInsetRect
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOSHAASQWb
+_$s14SimpleCheckbox0B0C11BorderStyleOSHAASQWb
+___swift_memcpy1_1
+___swift_noop_void_return
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOwet
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOwst
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOwug
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOwup
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOwui
+_$s14SimpleCheckbox0B0C11BorderStyleOwet
+_$s14SimpleCheckbox0B0C11BorderStyleOwst
+_$s14SimpleCheckbox0B0C11BorderStyleOwug
+_$s14SimpleCheckbox0B0C11BorderStyleOwup
+_$s14SimpleCheckbox0B0C11BorderStyleOwui
+__swift_FORCE_LOAD_$_swiftCompatibility50
+__swift_FORCE_LOAD_$_swiftCompatibilityDynamicReplacements
+_$s14SimpleCheckbox0B0C16handleTapGesture33_FEF2F6420437EF8E44277DB3E2EA3144LL10recognizerySo05UITapE10RecognizerC_tFTf4dn_n
+___swift_project_boxed_opaque_existential_0
+___swift_destroy_boxed_opaque_existential_0
+_$s14SimpleCheckbox0B0C14checkmarkStyleAC09CheckmarkD0OvM.resume.0
+_$s14SimpleCheckbox0B0C15borderLineWidth12CoreGraphics7CGFloatVvM.resume.0
+_$s14SimpleCheckbox0B0C13checkmarkSize12CoreGraphics7CGFloatVvM.resume.0
+_$s14SimpleCheckbox0B0C20uncheckedBorderColorSo7UIColorCSgvM.resume.0
+_$s14SimpleCheckbox0B0C18checkedBorderColorSo7UIColorCSgvM.resume.0
+_$s14SimpleCheckbox0B0C14checkmarkColorSo7UIColorCSgvM.resume.0
+_$s14SimpleCheckbox0B0C23checkboxBackgroundColorSo7UIColorCSgvM.resume.0
+_$s14SimpleCheckbox0B0C17checkboxFillColorSo7UIColorCvM.resume.0
+_$s14SimpleCheckbox0B0C18borderCornerRadius12CoreGraphics7CGFloatVvM.resume.0
+_$s14SimpleCheckbox0B0C20increasedTouchRadius12CoreGraphics7CGFloatVvM.resume.0
+_$s14SimpleCheckbox0B0C12valueChangedySbcSgvM.resume.0
+_$s14SimpleCheckbox0B0C17useHapticFeedbackSbvM.resume.0
+_$s14SimpleCheckbox0B0C17feedbackGenerator33_FEF2F6420437EF8E44277DB3E2EA3144LLSo016UIImpactFeedbackD0CSgvpWvd
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOAESQAAWL
+_associated conformance 14SimpleCheckbox0B0C14CheckmarkStyleOSHAASQ
+_$s14SimpleCheckbox0B0C11BorderStyleOAESQAAWL
+_associated conformance 14SimpleCheckbox0B0C11BorderStyleOSHAASQ
+_$s14SimpleCheckboxMXM
+_symbolic So9UIControlC
+_$s14SimpleCheckbox0B0CML
+_$s14SimpleCheckbox0B0CMf
+_symbolic _____ 14SimpleCheckbox0B0C
+_symbolic _____ 14SimpleCheckbox0B0C14CheckmarkStyleO
+_symbolic _____ 14SimpleCheckbox0B0C11BorderStyleO
+_symbolic 12CoreGraphics7CGFloatV
+_symbolic So7UIColorCSg
+_symbolic So7UIColorC
+_symbolic ySbcSg
+_symbolic Sb
+_symbolic So25UIImpactFeedbackGeneratorCSg
+_$s14SimpleCheckbox0B0CMF
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOWV
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOMf
+_$s14SimpleCheckbox0B0C14CheckmarkStyleOMF
+_$s14SimpleCheckbox0B0C11BorderStyleOWV
+_$s14SimpleCheckbox0B0C11BorderStyleOMf
+_$s14SimpleCheckbox0B0C11BorderStyleOMF
+__swift_FORCE_LOAD_$_swiftCompatibility50_$_SimpleCheckbox
+__swift_FORCE_LOAD_$_swiftCompatibilityDynamicReplacements_$_SimpleCheckbox
+___swift_reflection_version
+_objc_classes
+Apple clang version 11.0.0 (clang-1100.0.33.7)
+<swift-imported-modules>
+/Users/ijuyeong/Desktop/Dev/iOS Dev/Fork Mohae/MoHae/Mohae/Carthage/Checkouts/SimpleCheckbox
+Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)
+/Users/ijuyeong/Desktop/Dev/iOS Dev/Fork Mohae/MoHae/Mohae/Carthage/Checkouts/SimpleCheckbox/checkbox/Checkbox.swift
+__swift_destroy_boxed_opaque_existential_0
+<compiler-generated>
+__swift_project_boxed_opaque_existential_0
+handleTapGesture
+feedbackGenerator.get
+useHapticFeedback.get
+isChecked.get
+valueChanged.get
+isChecked.set
+isChecked.didset
+$s14SimpleCheckbox0B0C11BorderStyleOMa
+$s14SimpleCheckbox0B0C11BorderStyleOwui
+$s14SimpleCheckbox0B0C11BorderStyleOwup
+$s14SimpleCheckbox0B0C11BorderStyleOwug
+$s14SimpleCheckbox0B0C11BorderStyleOwst
+$s14SimpleCheckbox0B0C11BorderStyleOwet
+$s14SimpleCheckbox0B0C14CheckmarkStyleOMa
+$s14SimpleCheckbox0B0C14CheckmarkStyleOwui
+$s14SimpleCheckbox0B0C14CheckmarkStyleOwup
+$s14SimpleCheckbox0B0C14CheckmarkStyleOwug
+$s14SimpleCheckbox0B0C14CheckmarkStyleOwst
+$s14SimpleCheckbox0B0C14CheckmarkStyleOwet
+__swift_noop_void_return
+__swift_memcpy1_1
+$s14SimpleCheckbox0B0C11BorderStyleOSHAASQWb
+$s14SimpleCheckbox0B0C11BorderStyleOAESQAAWl
+$s14SimpleCheckbox0B0C14CheckmarkStyleOSHAASQWb
+$s14SimpleCheckbox0B0C14CheckmarkStyleOAESQAAWl
+UIEdgeInsetsInsetRect
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIGeometry.h
+init
+$s14SimpleCheckbox0B0CMa
+deinit
+point
+increasedTouchRadius.get
+tickCheckmark
+checkmarkSize.get
+checkmarkColor.get
+crossCheckmark
+circleBorder
+checkboxFillColor.get
+borderLineWidth.get
+uncheckedBorderColor.get
+checkedBorderColor.get
+squareBorder
+borderCornerRadius.get
+draw
+drawCheckmark
+circleCheckmark
+squareCheckmark
+checkmarkStyle.get
+checkmarkRect
+drawBorder
+borderStyle.get
+setupDefaults
+feedbackGenerator.set
+checkmarkColor.set
+checkedBorderColor.set
+uncheckedBorderColor.set
+$s14SimpleCheckbox0B0C17feedbackGenerator33_FEF2F6420437EF8E44277DB3E2EA3144LLSo016UIImpactFeedbackD0CSgvpfi
+useHapticFeedback.modify
+useHapticFeedback.set
+$s14SimpleCheckbox0B0C17useHapticFeedbackSbvpfi
+isChecked.modify
+$s14SimpleCheckbox0B0C9isCheckedSbvpfi
+valueChanged.modify
+valueChanged.set
+$s14SimpleCheckbox0B0C12valueChangedySbcSgvpfi
+increasedTouchRadius.modify
+borderLineWidth.set
+$s14SimpleCheckbox0B0C20increasedTouchRadius12CoreGraphics7CGFloatVvpfi
+borderCornerRadius.modify
+$s14SimpleCheckbox0B0C18borderCornerRadius12CoreGraphics7CGFloatVvpfi
+checkboxFillColor.modify
+checkboxFillColor.set
+$s14SimpleCheckbox0B0C17checkboxFillColorSo7UIColorCvpfi
+checkboxBackgroundColor.modify
+$s14SimpleCheckbox0B0C23checkboxBackgroundColorSo7UIColorCSgvpfi
+checkmarkColor.modify
+$s14SimpleCheckbox0B0C14checkmarkColorSo7UIColorCSgvpfi
+checkedBorderColor.modify
+$s14SimpleCheckbox0B0C18checkedBorderColorSo7UIColorCSgvpfi
+uncheckedBorderColor.modify
+$s14SimpleCheckbox0B0C20uncheckedBorderColorSo7UIColorCSgvpfi
+checkmarkSize.modify
+$s14SimpleCheckbox0B0C13checkmarkSize12CoreGraphics7CGFloatVvpfi
+borderLineWidth.modify
+$s14SimpleCheckbox0B0C15borderLineWidth12CoreGraphics7CGFloatVvpfi
+borderStyle.modify
+borderStyle.set
+$s14SimpleCheckbox0B0C11borderStyleAC06BorderD0Ovpfi
+checkmarkStyle.modify
+checkmarkStyle.set
+$s14SimpleCheckbox0B0C14checkmarkStyleAC09CheckmarkD0Ovpfi
+_rawHashValue
+hash
+combine
+$sSiSHsSH4hash4intoys6HasherVz_tFTW
+hashValue.get
+_hashValue
+__derived_enum_equals
+Apple clang version 11.0.0 (clang-1100.0.33.8)
+/Users/ijuyeong/Library/Caches/org.carthage.CarthageKit/DerivedData/11.0_11A420a/SimpleCheckbox/2.0.0/Build/Intermediates.noindex/ArchiveIntermediates/SimpleCheckbox/IntermediateBuildFilesPath/CheckboxDemo.build/Release-iphoneos/SimpleCheckbox.build/DerivedSources/SimpleCheckbox_vers.c
+_swift_getFunctionReplacement50
+_swift_getOrigOfReplaceable50
+/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/bin/clang-11 --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/CompatibilityDynamicReplacements -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/CompatibilityDynamicReplacements -I include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/llvm/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/llvm/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/cmark/src -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -std=c++11 -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -fno-sanitize=all -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -O2 -D NDEBUG -isysroot /BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fno-exceptions -fno-rtti -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -Wall -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibilityDynamicReplacements -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk -arch arm64 -F/BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk/../../../Developer/Library/Frameworks -F/BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -MD -MT stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -MF stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o.d -o stdlib/toolchain/CompatibilityDynamicReplacements/CMakeFiles/swiftCompatibilityDynamicReplacements-iphoneos-arm64.dir/DynamicReplaceable.cpp.o -c /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -mlinker-version=512.4 -stdlib=libc++
+/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
+/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/swift-macosx-x86_64
+swift_getOrigOfReplaceable50
+Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/CompatibilityDynamicReplacements/DynamicReplaceable.cpp
+/BuildRoot/Library/Caches/com.apple.xbs
+swift_getFunctionReplacement50
+__ZN5swift17getRootSuperclassEv
+__ZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_E
+__ZL24registerAddImageCallbackPv
+__ZZZN5swift17getRootSuperclassEvENK3$_0clEvENUlPvE_8__invokeES1_
+__ZL16addImageCallbackPK11mach_headerl
+__ZZN5swift34swift50override_conformsToProtocolEPKNS_14TargetMetadataINS_9InProcessEEEPKNS_24TargetProtocolDescriptorIS1_EEPFPKNS_18TargetWitnessTableIS1_EES4_S8_EE5token
+__ZZZN5swift17getRootSuperclassEvENK3$_0clEvE7TheLazy
+__ZL27ProtocolConformancesSection
+_DummyTargetContextDescriptor
+/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/bin/clang-11 --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/Compatibility50 -I include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/llvm/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/llvm/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/cmark/src -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -std=c++11 -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -fno-sanitize=all -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -O2 -D NDEBUG -isysroot /BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fno-exceptions -fno-rtti -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -Wall -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk -arch arm64 -F/BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk/../../../Developer/Library/Frameworks -F/BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/ProtocolConformance.cpp.o -c /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -mlinker-version=512.4 -stdlib=libc++
+/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
+addImageCallback
+Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/Compatibility50/ProtocolConformance.cpp
+_getTypeDescriptorLocation
+Sources/swiftlang/swiftlang-1100.0.270.13/swift/include/swift/ABI/Metadata.h
+get
+Sources/swiftlang/swiftlang-1100.0.270.13/swift/include/swift/Basic/RelativePointer.h
+getTypeKind
+getTypeReferenceKind
+Sources/swiftlang/swiftlang-1100.0.270.13/swift/include/swift/ABI/MetadataValues.h
+applyRelativeOffset<const swift::RelativeDirectPointerImpl<swift::TargetProtocolConformanceDescriptor<swift::InProcess>, false, int>, int>
+__invoke
+operator()
+registerAddImageCallback
+swift50override_conformsToProtocol
+_swift50override_class_getSuperclass
+getMetadataForClass
+Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/Compatibility50/../../public/runtime/Private.h
+dyn_cast<swift::TargetForeignClassMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> >
+Sources/swiftlang/swiftlang-1100.0.270.13/llvm/include/llvm/Support/Casting.h
+isa<swift::TargetForeignClassMetadata<swift::InProcess>, const swift::TargetMetadata<swift::InProcess> *>
+doit
+classof
+getKind
+getEnumeratedMetadataKind
+classHasSuperclass
+getClassObject
+CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk/usr/include/dispatch/once.h
+/BuildRoot
+getRootSuperclass
+Sources/swiftlang/swiftlang-1100.0.270.13/swift/include/swift/Basic/Lazy.h
+_Overrides
+/BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/bin/clang-11 --driver-mode=g++ -D CMARK_STATIC_DEFINE -D GTEST_HAS_RTTI=0 -D __STDC_CONSTANT_MACROS -D __STDC_FORMAT_MACROS -D __STDC_LIMIT_MACROS -I stdlib/toolchain/Compatibility50 -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/Compatibility50 -I include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/llvm/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/llvm/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/llvm-macosx-x86_64/tools/clang/include -I /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/cmark/src -I /BuildRoot/Library/Caches/com.apple.xbs/Binaries/swiftlang/install/TempContent/Objects/BNI_assert_lightweight/cmark-macosx-x86_64/src -Wno-unknown-warning-option -Werror=unguarded-availability-new -fno-stack-protector -fPIC -fvisibility-inlines-hidden -Werror=date-time -Werror=unguarded-availability-new -std=c++11 -Wall -Wextra -Wno-unused-parameter -Wwrite-strings -Wcast-qual -Wmissing-field-initializers -Wimplicit-fallthrough -Wcovered-switch-default -Wno-class-memaccess -Wno-noexcept-type -Wnon-virtual-dtor -Wdelete-non-virtual-dtor -Wstring-conversion -fdiagnostics-color -Werror=switch -Wdocumentation -Wimplicit-fallthrough -Wunreachable-code -Woverloaded-virtual -D OBJC_OLD_DISPATCH_PROTOTYPES=0 -fno-sanitize=all -D LLVM_DISABLE_ABI_BREAKING_CHECKS_ENFORCING=1 -O2 -D NDEBUG -isysroot /BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -fno-exceptions -fno-rtti -Wall -Wglobal-constructors -Wexit-time-destructors -fvisibility=hidden -Wall -D SWIFT_TARGET_LIBRARY_NAME=swiftCompatibility50 -fembed-bitcode=all --target=arm64-apple-ios7.0 -isysroot /BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk -arch arm64 -F/BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk/../../../Developer/Library/Frameworks -F/BuildRoot/CrossTrain_SwiftOverlays/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.0.sdk/../../../Developer/AppleInternal/Library/Frameworks -miphoneos-version-min=7.0 -O2 -g -D NDEBUG -MD -MT stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -MF stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o.d -o stdlib/toolchain/Compatibility50/CMakeFiles/swiftCompatibility50-iphoneos-arm64.dir/Overrides.cpp.o -c /BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/Compatibility50/Overrides.cpp -Wno-framework-include-private-from-public -Wno-atimport-in-framework-header -Wno-extra-semi-stmt -Wno-quoted-include-in-framework-header -mlinker-version=512.4 -stdlib=libc++
+/BuildRoot/Library/Caches/com.apple.xbs/Sources/swiftlang/swiftlang-1100.0.270.13/swift/stdlib/toolchain/Compatibility50/Overrides.cpp

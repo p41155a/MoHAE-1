@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let circleBox = Checkbox(frame: CGRect(x: 30, y: 40, width: 25, height: 25))
         circleBox.borderStyle = .circle
         circleBox.checkmarkStyle = .circle
-        circleBox.borderWidth = 1
+        circleBox.borderLineWidth = 1
         circleBox.uncheckedBorderColor = .lightGray
         circleBox.checkedBorderColor = .blue
         circleBox.checkmarkSize = 0.8
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         squareBox.borderStyle = .square
         squareBox.checkmarkStyle = .square
         squareBox.uncheckedBorderColor = .lightGray
-        squareBox.borderWidth = 1
+        squareBox.borderLineWidth = 1
         squareBox.valueChanged = { (value) in
             print("squarebox value change: \(value)")
         }
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         crossBox.borderStyle = .square
         crossBox.checkmarkStyle = .cross
         crossBox.checkmarkSize = 0.7
-        crossBox.cornerRadius = 5
+        crossBox.borderCornerRadius = 5
         crossBox.valueChanged = { (value) in
             print("crossBox value change: \(value)")
         }

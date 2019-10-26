@@ -8,12 +8,12 @@
   "tvOS" : [
 
   ],
-  "commitish" : "1.6.1",
+  "commitish" : "2.0.0",
   "iOS" : [
     {
       "name" : "SimpleCheckbox",
-      "hash" : "fc0ab965b365ebcc864f7cd776464f4d193829675730fe569ded7f8845f97a4e",
-      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+      "hash" : "ee6b7073143122bf8b945d488c60ea1225cdef44cea9aa4fa2d81f477b62598a",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
     }
   ]
 }

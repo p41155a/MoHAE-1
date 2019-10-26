@@ -7,56 +7,65 @@
 //
 
 import UIKit
-import DropDown
+import SnapKit
 
 class TestDropBox: UIViewController {
-    let chooseArticleButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.setTitle("Test DropDown", for: .normal)
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.addTarget(self, action: #selector(chooseArticle), for: .touchUpInside)
+    var buttons = [UIButton]()
+    // 3. 사용할 돈은 얼마 정도 생각하고 계신가요? -> 무료, 1 ~ 5, 6 ~ 10, 10 이상 => 4 개
+    lazy var question: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.text = "사용할 돈은 얼마 정도 생각하고 계신가요?"
         
-        return btn
+        return tf
     }()
     
-    let chooseArticleDropDown = DropDown()
-    
-    @objc func chooseArticle() {
-        chooseArticleDropDown.show()
-    }
-    
-    func setupChooseArticleDropDown() {
-        chooseArticleDropDown.anchorView = chooseArticleButton
-        chooseArticleDropDown.direction = .any
-        chooseArticleDropDown.dismissMode = .onTap
-        chooseArticleDropDown.bottomOffset = CGPoint(x: 0, y: chooseArticleButton.bounds.height)
-        chooseArticleDropDown.dataSource = [
-            "iPhone SE | Black | 64G",
-            "Samsung S7",
-            "Huawei P8 Lite Smartphone 4G",
-            "Asus Zenfone Max 4G",
-            "Apple Watwh | Sport Edition"
-        ]
+    func makeButtons() -> UIButton {
+        let btn = UIButton(type: .roundedRect)
+        btn.translatesAutoresizingMaskIntoConstraints = false
         
-        chooseArticleDropDown.selectionAction = { [weak self] (index, item) in
-            self?.chooseArticleButton.setTitle(item, for: .normal)
-        }
-        
-        /*
-        chooseArticleDropDown.multiSelectionAction = { [weak self] (indices, items) in
-            print("Muti selection action called with: \(items)")
-            if items.isEmpty {
-                self?.chooseArticleButton.setTitle("", for: .normal)
-            }
-        }
-         */
+        return btn
     }
     
     override func viewDidLoad() {
-        self.view.addSubview(chooseArticleButton)
-        chooseArticleButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        chooseArticleButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        view.addSubview(question)
+       
         
-        setupChooseArticleDropDown()
+        question.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view.snp.centerX)
+            make.centerY.equalTo(view.snp.centerY)
+        }
+        
+        for i in 0 ... 3 {
+            buttons.append(makeButtons())
+             view.addSubview(buttons[i])
+        }
+        
+        buttons[0].setTitle("무료", for: .normal)
+        buttons[1].setTitle("1 ~ 5 명", for: .normal)
+        buttons[2].setTitle("6 ~ 10 명", for: .normal)
+        buttons[3].setTitle("10 명 이상", for: .normal)
+        
+        buttons[0].snp.makeConstraints { (make) in
+            make.top.equalTo(question.snp.bottom).offset(50)
+            make.centerX.equalTo(view.snp.centerX)
+        }
+        
+        buttons[1].snp.makeConstraints { (make) in
+            make.top.equalTo(buttons[0].snp.bottom)
+            make.centerX.equalTo(view.snp.centerX)
+        }
+        
+        buttons[2].snp.makeConstraints { (make) in
+            make.top.equalTo(buttons[1].snp.bottom)
+            make.centerX.equalTo(view.snp.centerX)
+        }
+        
+        buttons[3].snp.makeConstraints { (make) in
+            make.top.equalTo(buttons[2].snp.bottom)
+            make.centerX.equalTo(view.snp.centerX)
+        }
     }
 }

@@ -14,6 +14,12 @@ target 'Mohae' do
   pod 'Firebase/Auth'
   pod 'DropDown', '2.3.13'
   pod 'SnapKit', '5.0'
+  pod 'M13Checkbox'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+
 
   target 'MohaeTests' do
     inherit! :search_paths

@@ -12,9 +12,8 @@ import SimpleCheckbox
 import DropDown
 import SnapKit
 
-let cellId = "surveyCell"
-
 class SubSurveyController: UIViewController {
+    let cellId = "surveyCell"
     
     var delegate = AnalysisController()
     var subSurveyCell = SubSurveyCell()
@@ -24,7 +23,18 @@ class SubSurveyController: UIViewController {
     var count = 0
     var dropBoxData: String?
     
-    let collectionView: UICollectionView = {
+    enum Wheather: String {
+        case sunny = "맑음"
+        case cloudy = "흐림"
+        case rain = "비"
+        case snow = "눈"
+        case disasters = "자연재해"
+    }
+    
+    //Data to be sent
+    var dataToBeSent: [String] = ["", "", "", "", "", ""]
+    
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -36,11 +46,10 @@ class SubSurveyController: UIViewController {
     
     let sendButton: UIButton = {
         let btn = UIButton(type: .system)
-        btn.setTitle("완료", for: .normal)
         btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.setTitle("완료", for: .normal)
         btn.addTarget(self, action: #selector(complete), for: .touchUpInside)
         
-  
         return btn
     }()
     
@@ -48,6 +57,7 @@ class SubSurveyController: UIViewController {
         super.viewDidLoad()
         print("viewDidLoad start")
         
+        view.backgroundColor = .white
         setView()
         loadSurvey()
         setupMoneyDropDown()
@@ -62,13 +72,18 @@ class SubSurveyController: UIViewController {
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: sendButton.topAnchor).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
-        sendButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        sendButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20).isActive = true
+        collectionView.snp.makeConstraints { (make) in
+            make.top.equalTo(view.snp.top)
+            make.bottom.equalTo(sendButton.snp.top)
+            make.left.equalTo(view.snp.left)
+            make.right.equalTo(view.snp.right)
+        }
+        
+        sendButton.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.view.snp.centerX)
+            make.bottom.equalTo(self.view.snp.bottom).offset(-20)
+        }
         
         navigationItem.title = "설문"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
@@ -100,7 +115,7 @@ class SubSurveyController: UIViewController {
     
     @objc func complete() {
         print(count)
-        delegate.reciveData(data: String(count))
+        delegate.reciveData(data: dataToBeSent)
         
         let navController = UINavigationController(rootViewController: delegate)
         present(navController, animated: true, completion: nil)
@@ -116,7 +131,7 @@ class SubSurveyController: UIViewController {
     
     let moneyDropDown = DropDown()
     
-    @objc func moneyDrop() { //moneyDropButton을 눌렀을 때 실행되는 함수
+    @objc func moneyDrop() {
         moneyDropDown.show()
     }
     
@@ -134,7 +149,35 @@ class SubSurveyController: UIViewController {
         
         moneyDropDown.selectionAction = { [weak self] (index, item) in
             self?.moneyDropButton.setTitle(item, for: .normal)
+            self?.dataToBeSent[2] = item
             print(item)
+        }
+    }
+    
+    let personCount: UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["1 ~ 2 명", "3 ~ 5 명", "6명 이상"])
+        sc.translatesAutoresizingMaskIntoConstraints = false
+        sc.selectedSegmentIndex = 0
+        
+        return sc
+    }()
+    
+    @objc func changeSegValue() {
+        switch personCount.selectedSegmentIndex {
+          case 0:
+              print("segment index : 0")
+              self.dataToBeSent[1] = "1 ~ 2 명"
+
+          case 1:
+              print("segment index : 1")
+              self.dataToBeSent[1] = "3 ~ 5 명"
+          
+          case 2:
+              print("segment index : 2")
+              self.dataToBeSent[1] = "6명 이상"
+          
+          default:
+              break
         }
     }
 }
@@ -146,9 +189,7 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("numberOfItemsInSection start")
         print("collectionView value count = > \(self.subSurveys.count)")
-        print("numberOfItemsInSection end")
         
         return self.subSurveys.count
     }
@@ -167,7 +208,6 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
         
         if subSurvey.id == "id1" {
             print(subSurvey.id)
-            
             for i in 5 ... 6 {
                 cell.addSubview(checkBox[i])
                 cell.addSubview(label[i])
@@ -179,15 +219,16 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
                 make.width.equalTo(25)
                 make.height.equalTo(25)
             }
+            
             checkBox[5].valueChanged = { (isChecked) in
                 if isChecked {
                     self.count = self.count + 1
                     self.checkBox[6].isChecked = false
+                    self.dataToBeSent[0] = "예"
                 } else {
                     self.count = self.count - 1
                 }
                 print("count => \(self.count)")
-                
             }
             
             label[5].text = "예"
@@ -206,11 +247,11 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
                 if isChecked {
                     self.count = self.count + 1
                     self.checkBox[5].isChecked = false
+                    self.dataToBeSent[0] = "아니오"
                 } else {
                     self.count = self.count - 1
                 }
                 print("count => \(self.count)")
-                
             }
             
             label[6].text = "아니오"
@@ -221,13 +262,16 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
             
         } else if subSurvey.id == "id2" {
             print(subSurvey.id)
-            cell.addSubview(cell.personCount)
+            cell.addSubview(personCount)
             
-            cell.personCount.snp.makeConstraints { (make) in
+            personCount.snp.makeConstraints { (make) in
                 make.top.equalTo(cell.textView.snp.bottom).offset(8)
                 make.left.equalTo(cell.snp.left).offset(8)
                 make.right.equalTo(cell.snp.right).offset(-8)
             }
+            
+            personCount.addTarget(self, action: #selector(changeSegValue), for: .touchUpInside)
+            
         } else if subSurvey.id == "id3" {
             print(subSurvey.id)
             cell.addSubview(moneyDropButton)
@@ -250,13 +294,15 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
                 make.width.equalTo(25)
                 make.height.equalTo(25)
             }
-            cell.checkBox1.valueChanged = { (isChecked) in
+            checkBox[0].valueChanged = { (isChecked) in
                 if isChecked {
                     self.count = self.count + 1
-                    self.checkBox[1].isChecked = false
-                    self.checkBox[2].isChecked = false
-                    self.checkBox[3].isChecked = false
-                    self.checkBox[4].isChecked = false
+                    for i in 0 ... 4 {
+                        if (i != 0) {
+                            self.checkBox[i].isChecked = false
+                        }
+                    }
+                    self.dataToBeSent[3] = Wheather.sunny.rawValue
                 } else {
                     self.count = self.count - 1
                 }
@@ -275,6 +321,7 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
                 make.width.equalTo(25)
                 make.height.equalTo(25)
             }
+            
             checkBox[1].valueChanged = { (isChecked) in
                 if isChecked {
                     self.count = self.count + 1
@@ -283,6 +330,7 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
                             self.checkBox[i].isChecked = false
                         }
                     }
+                    self.dataToBeSent[3] = Wheather.cloudy.rawValue
                 } else {
                     self.count = self.count - 1
                 }
@@ -309,6 +357,7 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
                             self.checkBox[i].isChecked = false
                         }
                     }
+                    self.dataToBeSent[3] = Wheather.rain.rawValue
                 } else {
                     self.count = self.count - 1
                 }
@@ -335,6 +384,7 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
                             self.checkBox[i].isChecked = false
                         }
                     }
+                    self.dataToBeSent[3] = Wheather.snow.rawValue
                 } else {
                     self.count = self.count - 1
                 }
@@ -355,12 +405,13 @@ extension SubSurveyController: UICollectionViewDelegateFlowLayout, UICollectionV
             }
             checkBox[4].valueChanged = { (isChecked) in
                 if isChecked {
-                    self.count = self.count + 1
+                    self.count = self.count + 19
                     for i in 0 ... 4 {
                         if (i != 4) {
                             self.checkBox[i].isChecked = false
                         }
                     }
+                    self.dataToBeSent[3] = Wheather.disasters.rawValue
                 } else {
                     self.count = self.count - 1
                 }

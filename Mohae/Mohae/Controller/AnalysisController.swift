@@ -11,7 +11,6 @@ import Firebase
 
 class AnalysisController: UIViewController {
     
-    
     let text: UILabel = {
         let tv = UILabel()
         tv.translatesAutoresizingMaskIntoConstraints = false
@@ -25,16 +24,18 @@ class AnalysisController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //view.addSubview(text)
+        view.addSubview(text)
         view.backgroundColor = .yellow
-        //text.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        //text.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        text.snp.makeConstraints { (make) in
+            make.centerX.equalTo(view.snp.centerX)
+            make.centerY.equalTo(view.snp.centerY)
+        }
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
     }
     
-    func reciveData(data: String) {
-        self.text.text = data
+    func reciveData(data: [String]) {
+        self.text.text = data[0] + data[1] + data[2] + data[3]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
