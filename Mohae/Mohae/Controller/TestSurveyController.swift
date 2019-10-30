@@ -67,6 +67,7 @@ class TestSurveyController: UIViewController {
     }()
     
     @objc func moveToNextView() {
+        print("click!!")
         if rightConstraints?.constant == 0 { // 화면에 나와있을 때
             rightConstraints?.constant = -slideWidth // 다시 왼쪽으로 보냄
         } else { // 화면에 없을 때
@@ -102,7 +103,8 @@ class TestSurveyController: UIViewController {
                 make.top.equalTo(view.snp.top)
                 make.bottom.equalTo(view.snp.bottom)
             }
-            rightConstraints = subSurveyViews[index].rightAnchor.constraint(equalTo: view.rightAnchor)
+            
+            rightConstraints = subSurveyViews[index].leftAnchor.constraint(equalTo: view.leftAnchor)
             rightConstraints?.isActive = true
             
             subSurveyViews[index].addSubview(questionText[index])

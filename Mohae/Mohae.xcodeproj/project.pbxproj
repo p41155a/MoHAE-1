@@ -8,14 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		110D3DE9772177A287E00FF2 /* Pods_Mohae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9574692A36D433E021A9AA /* Pods_Mohae.framework */; };
+		5A246C482369548B006F52BA /* PeopleQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C472369548B006F52BA /* PeopleQuestionController.swift */; };
+		5A246C4A236954A1006F52BA /* PeopleQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C49236954A1006F52BA /* PeopleQuestionView.swift */; };
+		5A246C4C2369605B006F52BA /* MoneyQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C4B2369605B006F52BA /* MoneyQuestionController.swift */; };
+		5A246C4E23696068006F52BA /* MoneyQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C4D23696068006F52BA /* MoneyQuestionView.swift */; };
+		5A246C5023697201006F52BA /* WeatherQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C4F23697201006F52BA /* WeatherQuestionController.swift */; };
+		5A246C5223697211006F52BA /* WeatherQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C5123697211006F52BA /* WeatherQuestionView.swift */; };
+		5A246C5423697B11006F52BA /* FeelingQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C5323697B11006F52BA /* FeelingQuestionController.swift */; };
+		5A246C5623697B21006F52BA /* FeelingQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C5523697B21006F52BA /* FeelingQuestionView.swift */; };
 		5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C36D23099591001BA2BF /* RecommendButtonController.swift */; };
 		5A40C372230C0565001BA2BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C371230C0565001BA2BF /* User.swift */; };
 		5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69944723277D4F009D67D9 /* AnalysisController.swift */; };
-		5A7F48F52348E28E0020545F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F48F42348E28E0020545F /* MapViewController.swift */; };
-		5A7F48F72348E3950020545F /* MapSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7F48F62348E3950020545F /* MapSearchCell.swift */; };
 		5A8D42602338BCA000A83BBC /* TestDropBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8D425F2338BCA000A83BBC /* TestDropBox.swift */; };
 		5A8FC7C52344C8ED00A33EB5 /* TestSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */; };
 		5AAEBF0B23055C55004116C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */; };
+		5AC5DFF523681629007BA547 /* CoupleQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5DFF423681629007BA547 /* CoupleQuestionView.swift */; };
+		5AC5DFF723681865007BA547 /* CoupleQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5DFF623681865007BA547 /* CoupleQuestionController.swift */; };
 		5AC7FF71231652E60013F798 /* SimpleCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */; };
 		5AC7FF7423165AF10013F798 /* SubSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */; };
 		5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF752316674A0013F798 /* SubSurvey.swift */; };
@@ -49,14 +57,22 @@
 		221AE879160CE7E51A699C9C /* Pods-MohaeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		433B4A67FAB17F7F259E52BC /* Pods_MohaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4451CCAB01D20767A9CBFFE5 /* Pods-Mohae.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.release.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.release.xcconfig"; sourceTree = "<group>"; };
+		5A246C472369548B006F52BA /* PeopleQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleQuestionController.swift; sourceTree = "<group>"; };
+		5A246C49236954A1006F52BA /* PeopleQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleQuestionView.swift; sourceTree = "<group>"; };
+		5A246C4B2369605B006F52BA /* MoneyQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyQuestionController.swift; sourceTree = "<group>"; };
+		5A246C4D23696068006F52BA /* MoneyQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyQuestionView.swift; sourceTree = "<group>"; };
+		5A246C4F23697201006F52BA /* WeatherQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherQuestionController.swift; sourceTree = "<group>"; };
+		5A246C5123697211006F52BA /* WeatherQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherQuestionView.swift; sourceTree = "<group>"; };
+		5A246C5323697B11006F52BA /* FeelingQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingQuestionController.swift; sourceTree = "<group>"; };
+		5A246C5523697B21006F52BA /* FeelingQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeelingQuestionView.swift; sourceTree = "<group>"; };
 		5A40C36D23099591001BA2BF /* RecommendButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendButtonController.swift; sourceTree = "<group>"; };
 		5A40C371230C0565001BA2BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A69944723277D4F009D67D9 /* AnalysisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisController.swift; sourceTree = "<group>"; };
-		5A7F48F42348E28E0020545F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		5A7F48F62348E3950020545F /* MapSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchCell.swift; sourceTree = "<group>"; };
 		5A8D425F2338BCA000A83BBC /* TestDropBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDropBox.swift; sourceTree = "<group>"; };
 		5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSurveyController.swift; sourceTree = "<group>"; };
 		5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5AC5DFF423681629007BA547 /* CoupleQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleQuestionView.swift; sourceTree = "<group>"; };
+		5AC5DFF623681865007BA547 /* CoupleQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleQuestionController.swift; sourceTree = "<group>"; };
 		5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleCheckbox.framework; path = Carthage/Build/iOS/SimpleCheckbox.framework; sourceTree = "<group>"; };
 		5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurveyCell.swift; sourceTree = "<group>"; };
 		5AC7FF752316674A0013F798 /* SubSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurvey.swift; sourceTree = "<group>"; };
@@ -110,7 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */,
-				5A7F48F62348E3950020545F /* MapSearchCell.swift */,
+				5AC5DFF423681629007BA547 /* CoupleQuestionView.swift */,
+				5A246C49236954A1006F52BA /* PeopleQuestionView.swift */,
+				5A246C4D23696068006F52BA /* MoneyQuestionView.swift */,
+				5A246C5123697211006F52BA /* WeatherQuestionView.swift */,
+				5A246C5523697B21006F52BA /* FeelingQuestionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,7 +143,11 @@
 				5A69944723277D4F009D67D9 /* AnalysisController.swift */,
 				5A8D425F2338BCA000A83BBC /* TestDropBox.swift */,
 				5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */,
-				5A7F48F42348E28E0020545F /* MapViewController.swift */,
+				5AC5DFF623681865007BA547 /* CoupleQuestionController.swift */,
+				5A246C472369548B006F52BA /* PeopleQuestionController.swift */,
+				5A246C4B2369605B006F52BA /* MoneyQuestionController.swift */,
+				5A246C4F23697201006F52BA /* WeatherQuestionController.swift */,
+				5A246C5323697B11006F52BA /* FeelingQuestionController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -458,15 +482,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */,
+				5A246C5623697B21006F52BA /* FeelingQuestionView.swift in Sources */,
 				5A40C372230C0565001BA2BF /* User.swift in Sources */,
 				5A8D42602338BCA000A83BBC /* TestDropBox.swift in Sources */,
-				5A7F48F72348E3950020545F /* MapSearchCell.swift in Sources */,
+				5A246C4E23696068006F52BA /* MoneyQuestionView.swift in Sources */,
+				5AC5DFF523681629007BA547 /* CoupleQuestionView.swift in Sources */,
 				5A8FC7C52344C8ED00A33EB5 /* TestSurveyController.swift in Sources */,
+				5A246C5223697211006F52BA /* WeatherQuestionView.swift in Sources */,
 				5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */,
-				5A7F48F52348E28E0020545F /* MapViewController.swift in Sources */,
+				5A246C5023697201006F52BA /* WeatherQuestionController.swift in Sources */,
+				5A246C482369548B006F52BA /* PeopleQuestionController.swift in Sources */,
+				5AC5DFF723681865007BA547 /* CoupleQuestionController.swift in Sources */,
 				5AFF7AAD2313F7E30086BBF7 /* SubSurveyController.swift in Sources */,
+				5A246C5423697B11006F52BA /* FeelingQuestionController.swift in Sources */,
+				5A246C4A236954A1006F52BA /* PeopleQuestionView.swift in Sources */,
 				5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,
+				5A246C4C2369605B006F52BA /* MoneyQuestionController.swift in Sources */,
 				5AC7FF7423165AF10013F798 /* SubSurveyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
