@@ -11,6 +11,8 @@ import SnapKit
 // 2. 함께하는 인원은 몇 명인가요? -> 1 ~ 2명/ 3 ~ 5명/ 6명 이상 => 3 개
 class PeopleQuestionController: UIViewController {
     var peopleQuestionView: PeopleQuestionView?
+    let nextViewDelegate = MoneyQuestionController()
+    var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,12 @@ class PeopleQuestionController: UIViewController {
     
     @objc func goBack() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func reciveData(data: [String]) {
+        print("recived data => \(data)")
+        self.data = data
+        print("inserted data => \(self.data)")
     }
     
     func setView() {
@@ -65,27 +73,29 @@ class PeopleQuestionController: UIViewController {
             }
         }
     }
+    
+    func changeView(insert: String) {
+        self.data.append(insert)
+        nextViewDelegate.reciveData(data: self.data)
+        let moneyQuestionController = MoneyQuestionController()
+        let navConteroller = UINavigationController(rootViewController: moneyQuestionController)
+        present(navConteroller, animated: true, completion: nil)
+    }
 }
 
 extension PeopleQuestionController: PeopleQuestionButtonDelegat {
     func touchOneToTwo() {
         print("one ~ two")
-        let moneyQuestionController = MoneyQuestionController()
-        let navController = UINavigationController(rootViewController: moneyQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "1 ~ 2 명")
     }
     
     func touchThreeToFive() {
         print("three ~ five")
-        let moneyQuestionController = MoneyQuestionController()
-        let navController = UINavigationController(rootViewController: moneyQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "3 ~ 5 명")
     }
     
     func touchMoreThanSix() {
         print("more than six")
-        let moneyQuestionController = MoneyQuestionController()
-        let navController = UINavigationController(rootViewController: moneyQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "6 명 이상")
     }
 }

@@ -11,6 +11,8 @@ import SnapKit
 // 3. 사용할 돈은 얼마 정도 생각하고 계신가요? -> 무료, 1 ~ 5, 6 ~ 10, 10 이상 => 4 개
 class MoneyQuestionController: UIViewController {
     var moneyQuestionView: MoneyQuestionView?
+    let nextViewDelegate = WeatherQuestionController()
+    var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,12 @@ class MoneyQuestionController: UIViewController {
     
     @objc func goBack() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func reciveData(data: [String]) {
+        print("recived data => \(data)")
+        self.data = data
+        print("inserted data => \(self.data)")
     }
     
     func setView() {
@@ -70,34 +78,34 @@ class MoneyQuestionController: UIViewController {
             }
         }
     }
+    
+    func changeView(insert: String) {
+        self.data.append(insert)
+        nextViewDelegate.reciveData(data: self.data)
+        let weatherQuestionController = WeatherQuestionController()
+        let navController = UINavigationController(rootViewController: weatherQuestionController)
+        present(navController, animated: true, completion: nil)
+    }
 }
 
 extension MoneyQuestionController: MoneyQuestionButtonDelegate {
     func touchFree() {
         print("Free!!")
-        let weatherQuestionController = WeatherQuestionController()
-        let navController = UINavigationController(rootViewController: weatherQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "무료")
     }
     
     func touchOneToFive() {
         print("1 ~ 5 만")
-        let weatherQuestionController = WeatherQuestionController()
-        let navController = UINavigationController(rootViewController: weatherQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "1 ~ 5 만 원")
     }
     
     func touchSixToTen() {
         print("6 ~ 10 만")
-        let weatherQuestionController = WeatherQuestionController()
-        let navController = UINavigationController(rootViewController: weatherQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "6 ~ 10 만 원")
     }
     
     func touchMoreThanTen() {
         print("10 만 이상")
-        let weatherQuestionController = WeatherQuestionController()
-        let navController = UINavigationController(rootViewController: weatherQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "10 만 원 이상")
     }
 }

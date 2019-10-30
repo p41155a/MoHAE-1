@@ -11,6 +11,7 @@ import SnapKit
 
 class CoupleQuestionController: UIViewController {
     var coupleQuestionView: CoupleQuestionView?
+    let nextViewDelegate = PeopleQuestionController()
     var data = [String]()
     
     override func viewDidLoad() {
@@ -53,20 +54,24 @@ class CoupleQuestionController: UIViewController {
             }
         }
     }
+    
+    func changeView(insert: String) {
+        self.data.append(insert)
+        nextViewDelegate.reciveData(data: self.data)
+        let peopleQuestionController = PeopleQuestionController()
+        let navController = UINavigationController(rootViewController: peopleQuestionController)
+        present(navController, animated: true, completion: nil)
+    }
 }
 
 extension CoupleQuestionController: CoupleQuestionButtonDelegate {
     func touchYes() {
         print("Yes !!")
-        let peopleQuestionController = PeopleQuestionController()
-        let navController = UINavigationController(rootViewController: peopleQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "Y")
     }
     
     func touchNo() {
         print("No...")
-        let peopleQuestionController = PeopleQuestionController()
-        let navController = UINavigationController(rootViewController: peopleQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "N")
     }
 }

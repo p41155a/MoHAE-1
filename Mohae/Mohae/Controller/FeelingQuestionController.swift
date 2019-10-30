@@ -11,6 +11,7 @@ import SnapKit
 // 5. 현재 기분은 어떤가요? -> 행복, 슬픔, 차분, 흥분 등 => 4 개 이상
 class FeelingQuestionController: UIViewController {
     var feelingQuestionView: FeelingQuestionView?
+    var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,12 @@ class FeelingQuestionController: UIViewController {
     
     @objc func goBack() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func reciveData(data: [String]) {
+        print("recived data => \(data)")
+        self.data = data
+        print("inserted data => \(self.data)")
     }
     
     func setView() {
@@ -71,22 +78,31 @@ class FeelingQuestionController: UIViewController {
             }
         }
     }
+    
+    func changeView(insert: String) {
+        self.data.append(insert)
+        print(self.data)
+    }
 }
 
 extension FeelingQuestionController: FeelingQuestionButtonDelegate {
     func touchHappy() {
         print("I'm So Happy")
+        changeView(insert: "행복")
     }
     
     func touchSad() {
         print("ㅠㅠ")
+        changeView(insert: "슬픔")
     }
     
     func touchCalm() {
         print("Keep Calm")
+        changeView(insert: "차분")
     }
     
     func touchExciting() {
         print("SOOOOOOO Exciting")
+        changeView(insert: "흥분")
     }
 }

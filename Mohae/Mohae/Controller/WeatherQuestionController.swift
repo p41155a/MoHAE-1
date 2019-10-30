@@ -11,6 +11,8 @@ import SnapKit
 // 4. 현재 날씨는 어떤가요? -> 맑음, 흐림, 비, 눈, 자연재해 => 5 개
 class WeatherQuestionController: UIViewController {
     var weatherQuestionView: WeatherQuestionView?
+    let nextViewDelegate = FeelingQuestionController()
+    var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,12 @@ class WeatherQuestionController: UIViewController {
     
     @objc func goBack() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func reciveData(data: [String]) {
+        print("recived data => \(data)")
+        self.data = data
+        print("inserted data => \(self.data)")
     }
     
     func setView() {
@@ -76,41 +84,39 @@ class WeatherQuestionController: UIViewController {
             }
         }
     }
+    
+    func changeView(insert: String) {
+        self.data.append(insert)
+        nextViewDelegate.reciveData(data: self.data)
+        let feelingQuestionController = FeelingQuestionController()
+        let navController = UINavigationController(rootViewController: feelingQuestionController)
+        present(navController, animated: true, completion: nil)
+    }
 }
 
 extension WeatherQuestionController: WeatherQuestionButtonDelegate {
     func touchSunny() {
         print("sunny <<~ ^ㅡ^ ~>>")
-        let feelingQuestionController = FeelingQuestionController()
-        let navController = UINavigationController(rootViewController: feelingQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "맑음")
     }
     
     func touchCloudy() {
         print("cloud -_-")
-        let feelingQuestionController = FeelingQuestionController()
-        let navController = UINavigationController(rootViewController: feelingQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "흐림")
     }
     
     func touchRain() {
         print("rain ;ㅇ")
-        let feelingQuestionController = FeelingQuestionController()
-        let navController = UINavigationController(rootViewController: feelingQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "비")
     }
     
     func touchSnow() {
         print("~~~ snow ~~~")
-        let feelingQuestionController = FeelingQuestionController()
-        let navController = UINavigationController(rootViewController: feelingQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "눈")
     }
     
     func touchDisaster() {
         print("OMG THIS IS DISASTER!!")
-        let feelingQuestionController = FeelingQuestionController()
-        let navController = UINavigationController(rootViewController: feelingQuestionController)
-        present(navController, animated: true, completion: nil)
+        changeView(insert: "자연재해")
     }
 }
