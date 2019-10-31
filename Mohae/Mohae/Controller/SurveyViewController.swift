@@ -14,18 +14,18 @@ let cellId = "surveyCell"
 
 class SurveyViewController: UIViewController {
     
+    var ref : DatabaseReference!
+    
     var delegate = AnalysisController()
     var SurveyCell = MainSurveyCell()
     var mainSurveys = [MainSurvey]()
-    var label = [UILabel]()
     var count = 0
     var dropBoxData: String?
-    
     var mainSurveyCell = MainSurveyCell()
     
     let collectionView: UICollectionView = {
         // 각 섹션에 대한 선택적 머리글 및 바닥 글보기를 사용하여 항목을 그리드로 구성하는 콘크리트 레이아웃 객체
-        // https://developer.apple.com/documentation/uikit/uicollectionviewflowlayout
+      //https://developer.apple.com/documentation/uikit/uicollectionviewflowlayout
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -45,6 +45,38 @@ class SurveyViewController: UIViewController {
         
         
         return btn
+    }()
+    
+    // 타이틀뷰 설정
+    let titleView: UIView = {
+        /*
+        let titleLabel = UILabel()
+        titleLabel.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        titleLabel.text = "설문지"
+        titleLabel.font = UIFont(name: "NanumSquareR", size:15)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        titleLabel.textColor = UIColor(red:0.27, green:0.27, blue:0.27, alpha:1.0)
+        */
+        let titleLabel = UILabel()
+        
+        titleLabel.backgroundColor = UIColor.clear
+        titleLabel.textColor = UIColor.gray
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 22)
+        titleLabel.text = "설문지"
+        titleLabel.sizeToFit()
+        titleLabel.textColor = UIColor.black
+        
+        let subtitleLabel = UILabel(frame: CGRect(x:0, y:24, width:0, height:0))
+        subtitleLabel.backgroundColor = UIColor.clear
+        subtitleLabel.textColor = UIColor.darkGray
+        subtitleLabel.font = UIFont.systemFont(ofSize: 12)
+        subtitleLabel.text = "추천을 위한 설문"
+        subtitleLabel.sizeToFit()
+        
+        let titleView = UIView(frame: CGRect(x:0, y:0, width:max(titleLabel.frame.size.width, subtitleLabel.frame.size.width), height:50))
+        titleView.addSubview(titleLabel)
+        titleView.addSubview(subtitleLabel)
+        return titleView
     }()
     
     override func viewDidLoad() {
@@ -75,13 +107,15 @@ class SurveyViewController: UIViewController {
         sendButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         sendButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20).isActive = true
         
-        navigationItem.title = "설문"
+        navigationController?.navigationBar.barTintColor = UIColor.systemTeal
+        navigationItem.titleView = titleView
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
     }
     
     func loadSurvey() {
         print("start load DB")
         //FIRDatabaseReference 가져오기
+        self.mainSurveys.removeAll()
         let dbRef = Database.database().reference().child("surveys").child("mainSurvey")
         //Firebase DB의 변경사항을 관찰하고 있다가 데이터를 실시간으로 받아오는 observe메소드
         //childAdded: 이벤트 타입으로서 항목 목록을 검색하거나 항목 목록에 대한 추가를 수신 대기합니다.
@@ -116,25 +150,21 @@ class SurveyViewController: UIViewController {
 extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: 110)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        print("numberOfItemsInSection start")
         print("collectionView value count = > \(self.mainSurveys.count)")
-        print("numberOfItemsInSection end")
  
         return self.mainSurveys.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print("cellForItemAt")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MainSurveyCell
         let mainSurvey = mainSurveys[indexPath.item]
         cell.backgroundColor = .white
         cell.textView.text = mainSurvey.question
-        cell.addSubview(cell.checkSeg)
         cell.layer.borderColor = UIColor.gray.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
@@ -144,13 +174,147 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
             make.right.equalTo(cell.snp.right).offset(-8)
         }
         
-        cell.checkSeg.snp.makeConstraints { (make) in
-            make.top.equalTo(cell.textView.snp.bottom).offset(8)
-            make.left.equalTo(cell.snp.left).offset(8)
-            make.right.equalTo(cell.snp.right).offset(-8)
+        // 색 변환 소스
+        if(mainSurvey.value == 0){
+            cell.button[0].backgroundColor = .gray
+            for i in 1 ... 4 {
+                cell.button[i].backgroundColor = .white
+            }
+            // 색변환 후 셀 위치 조정
+            self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
+        }
+        else if(mainSurvey.value == 1){
+            cell.button[0].backgroundColor = .white
+            cell.button[1].backgroundColor = .gray
+            for i in 2 ... 4 {
+                cell.button[i].backgroundColor = .white
+            }
+            // 색변환 후 셀 위치 조정
+            self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
+        }
+        else if(mainSurvey.value == 2){
+            for i in 0 ... 1 {
+                cell.button[i].backgroundColor = .white
+            }
+            cell.button[2].backgroundColor = .gray
+            for i in 3 ... 4 {
+                cell.button[i].backgroundColor = .white
+            }
+            // 색변환 후 셀 위치 조정
+            self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
+        }
+        else if(mainSurvey.value == 3){
+            for i in 0 ... 2 {
+                cell.button[i].backgroundColor = .white
+            }
+            cell.button[3].backgroundColor = .gray
+            cell.button[4].backgroundColor = .white
+            // 색변환 후 셀 위치 조정
+            self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
+        }
+        else if(mainSurvey.value == 4){
+            for i in 0 ... 3 {
+                cell.button[i].backgroundColor = .white
+            }
+            cell.button[4].backgroundColor = .gray
+            // 색변환 후 셀 위치 조정
+            self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
+        }
+        else if(mainSurvey.value == 5){
+            for i in 0 ... 4 {
+                cell.button[i].backgroundColor = .white
+            }
         }
         
+        let cell_width = cell.frame.width // 넓이를 정해주기 위한 셀 크기 계산
+        
+        // 제약조건 소스
+        for i in 0 ... 4 {
+            cell.button[i].snp.makeConstraints { (make) in
+                make.top.equalTo(cell.textView.snp.bottom).offset(1)
+                make.width.equalTo(cell_width/5-1)
+                make.height.equalTo(40)
+            }
+            cell.button[i].tag = mainSurvey.id!
+        }
+        cell.button[0].addTarget(self, action: #selector(clickButton0), for: .touchUpInside)
+        cell.button[1].addTarget(self, action: #selector(clickButton1), for: .touchUpInside)
+        cell.button[2].addTarget(self, action: #selector(clickButton2), for: .touchUpInside)
+        cell.button[3].addTarget(self, action: #selector(clickButton3), for: .touchUpInside)
+        cell.button[4].addTarget(self, action: #selector(clickButton4), for: .touchUpInside)
+        
+        cell.button[0].snp.makeConstraints { (make) in
+            make.left.equalTo(cell.snp.left).offset(2.5)
+        }
+        for i in 1 ... 3 {
+            cell.button[i].snp.makeConstraints { (make) in
+                make.left.equalTo(cell.button[i-1].snp.right).offset(0)
+            }
+        }
+        cell.button[4].snp.makeConstraints { (make) in
+            make.right.equalTo(cell.snp.right).offset(-2.5)
+        }
         return cell
- 
+    }
+    
+    // 클릭 시 액션
+    @objc func clickButton0(sender: UIButton) {
+        self.ref = Database.database().reference()
+        let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(sender.tag)")
+        let childUpdate = ["value": 0]
+        itemsRef.updateChildValues(childUpdate)
+        count = 0
+        loadSurvey()
+        print("reload")
+    }
+    
+    @objc func clickButton1(sender: UIButton) {
+        self.ref = Database.database().reference()
+        let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(sender.tag)")
+        let childUpdate = ["value": 1]
+        itemsRef.updateChildValues(childUpdate)
+        count = 0
+        loadSurvey()
+        print("reload")
+    }
+    
+    @objc func clickButton2(sender: UIButton) {
+        self.ref = Database.database().reference()
+        let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(sender.tag)")
+        let childUpdate = ["value": 2]
+        itemsRef.updateChildValues(childUpdate)
+        count = 0
+        loadSurvey()
+        print("reload")
+    }
+    
+    @objc func clickButton3(sender: UIButton) {
+        self.ref = Database.database().reference()
+        let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(sender.tag)")
+        let childUpdate = ["value": 3]
+        itemsRef.updateChildValues(childUpdate)
+        count = 0
+        loadSurvey()
+        print("reload")
+    }
+    
+    @objc func clickButton4(sender: UIButton) {
+        self.ref = Database.database().reference()
+        let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(sender.tag)")
+        let childUpdate = ["value": 4]
+        itemsRef.updateChildValues(childUpdate)
+        count = 0
+        loadSurvey()
+        print("reload")
+    }
+    // 테스트 초기화 코드
+    @objc func clickReset(sender: UIButton) {
+        sender.backgroundColor = .lightGray
+        self.ref = Database.database().reference()
+        for i in 1 ... 40 {
+            let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(i)")
+            let childUpdate = ["value": 5]
+            itemsRef.updateChildValues(childUpdate)
+        }
     }
 }

@@ -20,6 +20,7 @@
 		BC8D4A7A22F9635D007C7F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */; };
 		BC8D4A8522F9635D007C7F67 /* MohaeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8422F9635D007C7F67 /* MohaeTests.swift */; };
 		BC8D4A9022F9635D007C7F67 /* MohaeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */; };
+		FF3917A1236AB71500875EA7 /* ResultSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3917A0236AB71500875EA7 /* ResultSurvey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MohaeUITests.swift; sourceTree = "<group>"; };
 		BC8D4A9122F9635D007C7F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1389490B80B37D0A593DE0D /* Pods_Mohae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mohae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3917A0236AB71500875EA7 /* ResultSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSurvey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB351AB2349C73100CB304A /* MainSurveyCell.swift */,
+				FF3917A0236AB71500875EA7 /* ResultSurvey.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				TargetAttributes = {
 					BC8D4A6B22F9635B007C7F67 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1110;
 					};
 					BC8D4A7F22F9635D007C7F67 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -553,6 +557,7 @@
 				AFB351862344C6AE00CB304A /* MainSurvey.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,
 				AFB351BE2349CA3A00CB304A /* AnalysisController.swift in Sources */,
+				FF3917A1236AB71500875EA7 /* ResultSurvey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +733,7 @@
 			baseConfigurationReference = AD55273E82D96CD590FD42F3 /* Pods-Mohae.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Mohae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -736,6 +742,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.today.mohae.Mohae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mohae/View/Mohae-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -746,6 +754,7 @@
 			baseConfigurationReference = 9ABE04658614A27B1D5977D9 /* Pods-Mohae.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Mohae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -754,6 +763,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.today.mohae.Mohae;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mohae/View/Mohae-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

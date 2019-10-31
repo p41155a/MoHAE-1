@@ -8,13 +8,15 @@
 
 import Foundation
 class MainSurvey: NSObject {
-    var id: String?
+    var id: Int?
     var question: String?
+    var value: Int?
     
     init(dictionary: [String: AnyObject]) {
         super.init()
         
-        id = dictionary["id"] as? String
+        id = dictionary["id"] as? Int
         question = dictionary["question"] as? String
+        value = dictionary["value"] as? Int
     }
 }
