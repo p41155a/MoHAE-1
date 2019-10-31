@@ -3,7 +3,7 @@
 //  Mohae
 //
 //  Created by 이주영 on 2019/10/29.
-//  Copyright © 2019 권혁준. All rights reserved.
+//  Copyright © 2019 이주영. All rights reserved.
 //
 
 import UIKit
@@ -11,12 +11,13 @@ import SnapKit
 
 class CoupleQuestionController: UIViewController {
     var coupleQuestionView: CoupleQuestionView?
-    let nextViewDelegate = PeopleQuestionController()
+    var peopleQuestionController: PeopleQuestionController?
     var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         coupleQuestionView = CoupleQuestionView()
+        peopleQuestionController = PeopleQuestionController()
         setView()
     }
     
@@ -56,11 +57,13 @@ class CoupleQuestionController: UIViewController {
     }
     
     func changeView(insert: String) {
-        self.data.append(insert)
-        nextViewDelegate.reciveData(data: self.data)
-        let peopleQuestionController = PeopleQuestionController()
-        let navController = UINavigationController(rootViewController: peopleQuestionController)
-        present(navController, animated: true, completion: nil)
+        data.append(insert)
+        if let peopleQuestion = peopleQuestionController {
+            peopleQuestion.data = self.data
+            let navController = UINavigationController(rootViewController: peopleQuestion)
+            present(navController, animated: true, completion: nil)
+        }
+        //let peopleQuestionController = PeopleQuestionController()
     }
 }
 
@@ -68,10 +71,12 @@ extension CoupleQuestionController: CoupleQuestionButtonDelegate {
     func touchYes() {
         print("Yes !!")
         changeView(insert: "Y")
+        print(self.data)
     }
     
     func touchNo() {
         print("No...")
         changeView(insert: "N")
+        print(self.data)
     }
 }

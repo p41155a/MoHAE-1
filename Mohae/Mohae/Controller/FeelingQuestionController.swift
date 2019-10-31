@@ -23,13 +23,7 @@ class FeelingQuestionController: UIViewController {
     @objc func goBack() {
         dismiss(animated: true, completion: nil)
     }
-    
-    func reciveData(data: [String]) {
-        print("recived data => \(data)")
-        self.data = data
-        print("inserted data => \(self.data)")
-    }
-    
+
     func setView() {
         if let feelingQuestion = feelingQuestionView {
             let surveyBoard = feelingQuestion.surveyScreen

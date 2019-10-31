@@ -11,24 +11,19 @@ import SnapKit
 // 4. 현재 날씨는 어떤가요? -> 맑음, 흐림, 비, 눈, 자연재해 => 5 개
 class WeatherQuestionController: UIViewController {
     var weatherQuestionView: WeatherQuestionView?
-    let nextViewDelegate = FeelingQuestionController()
+    var feelingQuestionController: FeelingQuestionController?
     var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
         weatherQuestionView = WeatherQuestionView()
+        feelingQuestionController = FeelingQuestionController()
         setView()
     }
     
     @objc func goBack() {
         dismiss(animated: true, completion: nil)
-    }
-    
-    func reciveData(data: [String]) {
-        print("recived data => \(data)")
-        self.data = data
-        print("inserted data => \(self.data)")
     }
     
     func setView() {
@@ -87,10 +82,11 @@ class WeatherQuestionController: UIViewController {
     
     func changeView(insert: String) {
         self.data.append(insert)
-        nextViewDelegate.reciveData(data: self.data)
-        let feelingQuestionController = FeelingQuestionController()
-        let navController = UINavigationController(rootViewController: feelingQuestionController)
-        present(navController, animated: true, completion: nil)
+        if let feelingQuestion = feelingQuestionController {
+            feelingQuestion.data = self.data
+            let navController = UINavigationController(rootViewController: feelingQuestion)
+            present(navController, animated: true, completion: nil)
+        }
     }
 }
 
@@ -98,25 +94,30 @@ extension WeatherQuestionController: WeatherQuestionButtonDelegate {
     func touchSunny() {
         print("sunny <<~ ^ㅡ^ ~>>")
         changeView(insert: "맑음")
+        print(data)
     }
     
     func touchCloudy() {
         print("cloud -_-")
         changeView(insert: "흐림")
+        print(data)
     }
     
     func touchRain() {
         print("rain ;ㅇ")
         changeView(insert: "비")
+        print(data)
     }
     
     func touchSnow() {
         print("~~~ snow ~~~")
         changeView(insert: "눈")
+        print(data)
     }
     
     func touchDisaster() {
         print("OMG THIS IS DISASTER!!")
         changeView(insert: "자연재해")
+        print(data)
     }
 }

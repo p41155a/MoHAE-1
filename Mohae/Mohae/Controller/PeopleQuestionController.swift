@@ -11,24 +11,19 @@ import SnapKit
 // 2. 함께하는 인원은 몇 명인가요? -> 1 ~ 2명/ 3 ~ 5명/ 6명 이상 => 3 개
 class PeopleQuestionController: UIViewController {
     var peopleQuestionView: PeopleQuestionView?
-    let nextViewDelegate = MoneyQuestionController()
+    var moneyQuestionController: MoneyQuestionController?
     var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
         peopleQuestionView = PeopleQuestionView()
+        moneyQuestionController = MoneyQuestionController()
         setView()
     }
     
     @objc func goBack() {
         dismiss(animated: true, completion: nil)
-    }
-    
-    func reciveData(data: [String]) {
-        print("recived data => \(data)")
-        self.data = data
-        print("inserted data => \(self.data)")
     }
     
     func setView() {
@@ -76,10 +71,12 @@ class PeopleQuestionController: UIViewController {
     
     func changeView(insert: String) {
         self.data.append(insert)
-        nextViewDelegate.reciveData(data: self.data)
-        let moneyQuestionController = MoneyQuestionController()
-        let navConteroller = UINavigationController(rootViewController: moneyQuestionController)
-        present(navConteroller, animated: true, completion: nil)
+        if let moneyQuestion = moneyQuestionController {
+            moneyQuestion.data = self.data
+            let navConteroller = UINavigationController(rootViewController: moneyQuestion)
+            present(navConteroller, animated: true, completion: nil)
+        }
+        //let moneyQuestionController = MoneyQuestionController()
     }
 }
 
@@ -87,15 +84,18 @@ extension PeopleQuestionController: PeopleQuestionButtonDelegat {
     func touchOneToTwo() {
         print("one ~ two")
         changeView(insert: "1 ~ 2 명")
+        print(self.data)
     }
     
     func touchThreeToFive() {
         print("three ~ five")
         changeView(insert: "3 ~ 5 명")
+        print(self.data)
     }
     
     func touchMoreThanSix() {
         print("more than six")
         changeView(insert: "6 명 이상")
+        print(self.data)
     }
 }
