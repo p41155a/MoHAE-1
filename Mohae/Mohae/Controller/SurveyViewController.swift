@@ -17,7 +17,6 @@ class SurveyViewController: UIViewController {
     var ref : DatabaseReference!
     
     var delegate = AnalysisController()
-    var SurveyCell = MainSurveyCell()
     var mainSurveys = [MainSurvey]()
     var count = 0
     var dropBoxData: String?
@@ -112,6 +111,7 @@ class SurveyViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
     }
     
+    /* ---------- 설문 데이터베이스 로드 ----------*/
     func loadSurvey() {
         print("start load DB")
         //FIRDatabaseReference 가져오기
@@ -138,12 +138,59 @@ class SurveyViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    /*  --------- 완료 버튼 후 계산, 이동 --------- */
     @objc func complete() {
-        print(count)
-        delegate.reciveData(data: String(count))
+        var active: Double = 0 // 외향 .vs 내향
+        var artistic: Double = 0 // 감각 .vs 외향
+        var experience: Double = 0 // 학습형 .vs 경험형
+        for i in 0 ... 38{
+            let mainSurvey = mainSurveys[i]
+            if(mainSurvey.type == 1)
+                { active += Double(mainSurvey.value ?? 0) }
+            else if(mainSurvey.type == 2)
+                { artistic += Double(mainSurvey.value ?? 0) }
+            else if(mainSurvey.type == 3)
+                { experience += Double(mainSurvey.value ?? 0) }
+            else if(mainSurvey.type == 4){
+                if(mainSurvey.value == 1){ active += 5.0 }
+                if(mainSurvey.value == 2){ active += 4.0 }
+                if(mainSurvey.value == 3){ active += 3.0 }
+                if(mainSurvey.value == 4){ active += 2.0 }
+                if(mainSurvey.value == 5){ active += 1.0 }
+            }
+            else if(mainSurvey.type == 5){
+                if(mainSurvey.value == 1){ artistic += 5.0 }
+                if(mainSurvey.value == 2){ artistic += 4.0 }
+                if(mainSurvey.value == 3){ artistic += 3.0 }
+                if(mainSurvey.value == 4){ artistic += 2.0 }
+                if(mainSurvey.value == 5){ artistic += 1.0 }
+            }
+            else if(mainSurvey.type == 6){
+                if(mainSurvey.value == 1){ experience += 5.0 }
+                if(mainSurvey.value == 2){ experience += 4.0 }
+                if(mainSurvey.value == 3){ experience += 3.0 }
+                if(mainSurvey.value == 4){ experience += 2.0 }
+                if(mainSurvey.value == 5){ experience += 1.0 }
+            }
+        }
+        active = active*1.5
+        artistic = artistic*1.5
+        experience = experience*1.5
         
-        let navController = UINavigationController(rootViewController: delegate)
+        let result = "\(active) \(artistic) \(experience)"
+        delegate.reciveData(data: String(result)) // analysiscontroller에 값 전달
+        let navController = UINavigationController(rootViewController: delegate) //네비게이션으로 analysiscontroller로 가자고 하는 화면
         present(navController, animated: true, completion: nil)
+        
+        /* 테스트시 일일히 선택하지 않기 위한 주석 시작
+        /* ------------ 다음을 위한 선택 초기화 코드 --------- */
+        self.ref = Database.database().reference()
+        for i in 1 ... 39 {
+            let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(i)")
+            let childUpdate = ["value": 0]
+            itemsRef.updateChildValues(childUpdate)
+        }
+        테스트시 일일히 선택하지 않기 위한 주석 끝 */
     }
 }
 
@@ -175,7 +222,7 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
         }
         
         // 색 변환 소스
-        if(mainSurvey.value == 0){
+        if(mainSurvey.value == 1){
             cell.button[0].backgroundColor = .gray
             for i in 1 ... 4 {
                 cell.button[i].backgroundColor = .white
@@ -183,7 +230,7 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
             // 색변환 후 셀 위치 조정
             self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
         }
-        else if(mainSurvey.value == 1){
+        else if(mainSurvey.value == 2){
             cell.button[0].backgroundColor = .white
             cell.button[1].backgroundColor = .gray
             for i in 2 ... 4 {
@@ -192,7 +239,7 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
             // 색변환 후 셀 위치 조정
             self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
         }
-        else if(mainSurvey.value == 2){
+        else if(mainSurvey.value == 3){
             for i in 0 ... 1 {
                 cell.button[i].backgroundColor = .white
             }
@@ -203,7 +250,7 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
             // 색변환 후 셀 위치 조정
             self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
         }
-        else if(mainSurvey.value == 3){
+        else if(mainSurvey.value == 4){
             for i in 0 ... 2 {
                 cell.button[i].backgroundColor = .white
             }
@@ -212,7 +259,7 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
             // 색변환 후 셀 위치 조정
             self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
         }
-        else if(mainSurvey.value == 4){
+        else if(mainSurvey.value == 5){
             for i in 0 ... 3 {
                 cell.button[i].backgroundColor = .white
             }
@@ -220,7 +267,7 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
             // 색변환 후 셀 위치 조정
             self.collectionView.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
         }
-        else if(mainSurvey.value == 5){
+        else if(mainSurvey.value == 0){
             for i in 0 ... 4 {
                 cell.button[i].backgroundColor = .white
             }
@@ -237,11 +284,11 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
             }
             cell.button[i].tag = mainSurvey.id!
         }
-        cell.button[0].addTarget(self, action: #selector(clickButton0), for: .touchUpInside)
-        cell.button[1].addTarget(self, action: #selector(clickButton1), for: .touchUpInside)
-        cell.button[2].addTarget(self, action: #selector(clickButton2), for: .touchUpInside)
-        cell.button[3].addTarget(self, action: #selector(clickButton3), for: .touchUpInside)
-        cell.button[4].addTarget(self, action: #selector(clickButton4), for: .touchUpInside)
+        cell.button[0].addTarget(self, action: #selector(clickReset), for: .touchUpInside)
+        cell.button[1].addTarget(self, action: #selector(clickButton2), for: .touchUpInside)
+        cell.button[2].addTarget(self, action: #selector(clickButton3), for: .touchUpInside)
+        cell.button[3].addTarget(self, action: #selector(clickButton4), for: .touchUpInside)
+        cell.button[4].addTarget(self, action: #selector(clickButton5), for: .touchUpInside)
         
         cell.button[0].snp.makeConstraints { (make) in
             make.left.equalTo(cell.snp.left).offset(2.5)
@@ -258,16 +305,6 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
     }
     
     // 클릭 시 액션
-    @objc func clickButton0(sender: UIButton) {
-        self.ref = Database.database().reference()
-        let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(sender.tag)")
-        let childUpdate = ["value": 0]
-        itemsRef.updateChildValues(childUpdate)
-        count = 0
-        loadSurvey()
-        print("reload")
-    }
-    
     @objc func clickButton1(sender: UIButton) {
         self.ref = Database.database().reference()
         let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(sender.tag)")
@@ -307,11 +344,21 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
         loadSurvey()
         print("reload")
     }
+    
+    @objc func clickButton5(sender: UIButton) {
+        self.ref = Database.database().reference()
+        let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(sender.tag)")
+        let childUpdate = ["value": 5]
+        itemsRef.updateChildValues(childUpdate)
+        count = 0
+        loadSurvey()
+        print("reload")
+    }
     // 테스트 초기화 코드
     @objc func clickReset(sender: UIButton) {
         sender.backgroundColor = .lightGray
         self.ref = Database.database().reference()
-        for i in 1 ... 40 {
+        for i in 1 ... 39 {
             let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(i)")
             let childUpdate = ["value": 5]
             itemsRef.updateChildValues(childUpdate)

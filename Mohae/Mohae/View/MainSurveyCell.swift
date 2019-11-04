@@ -13,17 +13,6 @@ class MainSurveyCell: UICollectionViewCell {
     var button = [UIButton(),UIButton(),UIButton(),UIButton(),UIButton()]
     let buttonArray = ["그렇지않음","그렇지않은편","보통","그런편","그렇다"]
     
-    let checkView: UIView = {
-        let cv = UIView()
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        let buttonArray = ["그렇지 않음","그렇지 않은 편","보통","그런 편","그렇다"]
-        for buttonName in buttonArray{
-            let checkbutton = UIButton()
-            checkbutton.setTitle(buttonName, for:. normal)
-        }
-        return cv
-    }()
-    
     let textView: UITextView = {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false

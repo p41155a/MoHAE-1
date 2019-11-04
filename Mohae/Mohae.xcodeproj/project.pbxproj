@@ -115,6 +115,13 @@
 			remoteGlobalIDString = BC8D4A6B22F9635B007C7F67;
 			remoteInfo = Mohae;
 		};
+		FF3917B92370433400875EA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB351792344ADDB00CB304A /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1C1B977ED8804E8AEEC884E7359EE58;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +215,7 @@
 		AFB3517A2344ADDB00CB304A /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				FF3917BA2370433400875EA7 /* Charts.framework */,
 				AFB351982344C6AF00CB304A /* FirebaseCore.framework */,
 				AFB3519A2344C6AF00CB304A /* FirebaseCoreDiagnostics.framework */,
 				AFB3519C2344C6AF00CB304A /* FirebaseDatabase.framework */,
@@ -472,6 +480,13 @@
 			fileType = wrapper.framework;
 			path = nanopb.framework;
 			remoteRef = AFB351A72344C6AF00CB304A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FF3917BA2370433400875EA7 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = FF3917B92370433400875EA7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
