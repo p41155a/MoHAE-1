@@ -12,13 +12,15 @@ import SnapKit
 class CoupleQuestionController: UIViewController {
     var coupleQuestionView: CoupleQuestionView?
     var peopleQuestionController: PeopleQuestionController?
-    var data = [String]()
+    var data = ["", "", "", "", "", ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         coupleQuestionView = CoupleQuestionView()
         peopleQuestionController = PeopleQuestionController()
         setView()
+        navigationItem.title = "현재 상태"
+        print("현재 데이터 상태 => \(self.data)")
     }
     
     func setView() {
@@ -57,13 +59,13 @@ class CoupleQuestionController: UIViewController {
     }
     
     func changeView(insert: String) {
-        data.append(insert)
+        self.data[0] = insert
         if let peopleQuestion = peopleQuestionController {
             peopleQuestion.data = self.data
-            let navController = UINavigationController(rootViewController: peopleQuestion)
-            present(navController, animated: true, completion: nil)
+            //let navController = UINavigationController(rootViewController: peopleQuestion)
+            navigationController?.pushViewController(peopleQuestion, animated: true)
+            //present(navController, animated: true, completion: nil)
         }
-        //let peopleQuestionController = PeopleQuestionController()
     }
 }
 

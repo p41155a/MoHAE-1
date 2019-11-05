@@ -12,6 +12,7 @@ import SnapKit
 class WeatherQuestionController: UIViewController {
     var weatherQuestionView: WeatherQuestionView?
     var feelingQuestionController: FeelingQuestionController?
+    var moneyQuestionController: MoneyQuestionController?
     var data = [String]()
     
     override func viewDidLoad() {
@@ -19,11 +20,19 @@ class WeatherQuestionController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
         weatherQuestionView = WeatherQuestionView()
         feelingQuestionController = FeelingQuestionController()
+        moneyQuestionController = MoneyQuestionController()
         setView()
+        navigationItem.title = "현재 상태"
+        print("현재 데이터 상태 => \(self.data)")
     }
     
     @objc func goBack() {
-        dismiss(animated: true, completion: nil)
+        self.data[2] = ""
+        if let moneyQuestion = moneyQuestionController {
+            moneyQuestion.data = self.data
+            self.navigationController?.popViewController(animated: true)
+            print("removed array status = > \(moneyQuestion.data)")
+        }
     }
     
     func setView() {
@@ -81,11 +90,10 @@ class WeatherQuestionController: UIViewController {
     }
     
     func changeView(insert: String) {
-        self.data.append(insert)
+        self.data[3] = insert
         if let feelingQuestion = feelingQuestionController {
             feelingQuestion.data = self.data
-            let navController = UINavigationController(rootViewController: feelingQuestion)
-            present(navController, animated: true, completion: nil)
+            navigationController?.pushViewController(feelingQuestion, animated: true)
         }
     }
 }

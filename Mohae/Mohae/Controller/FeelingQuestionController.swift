@@ -11,17 +11,28 @@ import SnapKit
 // 5. 현재 기분은 어떤가요? -> 행복, 슬픔, 차분, 흥분 등 => 4 개 이상
 class FeelingQuestionController: UIViewController {
     var feelingQuestionView: FeelingQuestionView?
+    var dataAnalysisController: DataAnalysisController?
+    var weatherQuestionController: WeatherQuestionController?
     var data = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
         feelingQuestionView = FeelingQuestionView()
+        dataAnalysisController = DataAnalysisController()
+        weatherQuestionController = WeatherQuestionController()
         setView()
+        navigationItem.title = "현재 상태"
+        print("현재 데이터 상태 => \(self.data)")
     }
     
     @objc func goBack() {
-        dismiss(animated: true, completion: nil)
+        self.data[3] = ""
+        if let weatherQuestion = weatherQuestionController {
+            weatherQuestion.data = self.data
+            self.navigationController?.popViewController(animated: true)
+            print("removed array status = > \(weatherQuestion.data)")
+        }
     }
 
     func setView() {
@@ -73,9 +84,23 @@ class FeelingQuestionController: UIViewController {
         }
     }
     
+    func loadTime() -> String {
+        let time: NSNumber = NSNumber(value: Int(NSDate().timeIntervalSince1970))
+        let dateFormatter = DateFormatter()
+        let timestampDate = NSDate(timeIntervalSince1970: TimeInterval(truncating: time))
+        
+        dateFormatter.dateFormat = "hh:mm:ss a"
+        
+        return dateFormatter.string(from: timestampDate as Date)
+    }
+    
     func changeView(insert: String) {
-        self.data.append(insert)
-        print(self.data)
+        self.data[4] = insert
+        self.data[5] = loadTime()
+        if let dataAnalysis = dataAnalysisController {
+            dataAnalysis.data = self.data
+            navigationController?.pushViewController(dataAnalysis, animated: true)
+        }
     }
 }
 
