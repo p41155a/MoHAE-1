@@ -7,20 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30E144A9D11387C00661A22A /* Pods_MohaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054576D945ABD363AE3D6AE1 /* Pods_MohaeTests.framework */; };
-		97EC46BBCD4864325FB5EE9B /* Pods_MohaeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8594E011B2022F042AA66F83 /* Pods_MohaeUITests.framework */; };
-		BC006E222339DF3000C5F825 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC006E212339DF3000C5F825 /* PlacesViewController.swift */; };
+		0F1A5ABC45AB717212BCFAE0 /* libPods-MohaeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 784DBB9284FE2D03B8A406A2 /* libPods-MohaeUITests.a */; };
+		24751D351A9334294A91E58D /* libPods-MohaeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4EAAF238C9ECB388247514 /* libPods-MohaeTests.a */; };
+		3EB94FCB0F3E294F2C1A8CCF /* libPods-Mohae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F9E13BE5E3A8BAFC994D26 /* libPods-Mohae.a */; };
 		BC1066CD233B464400C241C1 /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1066CC233B464400C241C1 /* MapSearch.swift */; };
 		BC1066CF233B4CEF00C241C1 /* MapSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1066CE233B4CEF00C241C1 /* MapSearchCell.swift */; };
 		BC1066D1233B794700C241C1 /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1066D0233B794700C241C1 /* AgreeViewController.swift */; };
+		BC44DB0D2361731300C82D80 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44DB0C2361731300C82D80 /* LoadingCell.swift */; };
+		BC44DB17236987F100C82D80 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC44DB16236987F100C82D80 /* MapViewController.swift */; };
+		BC44DB18236989EB00C82D80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */; };
+		BC53F44D23713DB8001CAF5D /* NumberOfPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44223713DB5001CAF5D /* NumberOfPeople.swift */; };
+		BC53F44E23713DB8001CAF5D /* SubSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44323713DB6001CAF5D /* SubSurvey.swift */; };
+		BC53F44F23713DB8001CAF5D /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44423713DB6001CAF5D /* Feeling.swift */; };
+		BC53F45023713DB8001CAF5D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44523713DB6001CAF5D /* Weather.swift */; };
+		BC53F45123713DB8001CAF5D /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44623713DB7001CAF5D /* Money.swift */; };
+		BC53F45223713DB8001CAF5D /* DataForAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44723713DB7001CAF5D /* DataForAnalysis.swift */; };
+		BC53F45323713DB8001CAF5D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44823713DB7001CAF5D /* Category.swift */; };
+		BC53F45423713DB8001CAF5D /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44923713DB8001CAF5D /* Couple.swift */; };
+		BC53F45523713DB8001CAF5D /* Personality.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44A23713DB8001CAF5D /* Personality.swift */; };
+		BC53F45623713DB8001CAF5D /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44B23713DB8001CAF5D /* Time.swift */; };
+		BC53F45723713DB8001CAF5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F44C23713DB8001CAF5D /* User.swift */; };
+		BC53F46323713DCA001CAF5D /* AnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F45823713DC5001CAF5D /* AnalysisController.swift */; };
+		BC53F46423713DCA001CAF5D /* MoneyQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F45923713DC6001CAF5D /* MoneyQuestionController.swift */; };
+		BC53F46523713DCA001CAF5D /* WeatherQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F45A23713DC6001CAF5D /* WeatherQuestionController.swift */; };
+		BC53F46623713DCA001CAF5D /* DataAnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F45B23713DC7001CAF5D /* DataAnalysisController.swift */; };
+		BC53F46823713DCA001CAF5D /* CoupleQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F45D23713DC7001CAF5D /* CoupleQuestionController.swift */; };
+		BC53F46923713DCA001CAF5D /* PeopleQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F45E23713DC8001CAF5D /* PeopleQuestionController.swift */; };
+		BC53F46A23713DCA001CAF5D /* RecommendButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F45F23713DC8001CAF5D /* RecommendButtonController.swift */; };
+		BC53F46B23713DCA001CAF5D /* TestSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F46023713DC9001CAF5D /* TestSurveyController.swift */; };
+		BC53F46C23713DCA001CAF5D /* RecommendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F46123713DC9001CAF5D /* RecommendingController.swift */; };
+		BC53F46D23713DCA001CAF5D /* FeelingQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F46223713DCA001CAF5D /* FeelingQuestionController.swift */; };
+		BC53F47423713DD3001CAF5D /* CoupleQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F46E23713DD0001CAF5D /* CoupleQuestionView.swift */; };
+		BC53F47523713DD3001CAF5D /* SubSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F46F23713DD1001CAF5D /* SubSurveyCell.swift */; };
+		BC53F47623713DD3001CAF5D /* MoneyQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F47023713DD1001CAF5D /* MoneyQuestionView.swift */; };
+		BC53F47723713DD3001CAF5D /* FeelingQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F47123713DD2001CAF5D /* FeelingQuestionView.swift */; };
+		BC53F47823713DD3001CAF5D /* WeatherQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F47223713DD2001CAF5D /* WeatherQuestionView.swift */; };
+		BC53F47923713DD3001CAF5D /* PeopleQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC53F47323713DD3001CAF5D /* PeopleQuestionView.swift */; };
+		BC53F48123714329001CAF5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC53F48023714328001CAF5D /* GoogleService-Info.plist */; };
+		BC58B5BA235EBDF6002B5144 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58B5B9235EBDF6002B5144 /* Extension.swift */; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
-		BC8D4A7222F9635B007C7F67 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A7122F9635B007C7F67 /* MapViewController.swift */; };
-		BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7322F9635B007C7F67 /* Main.storyboard */; };
 		BC8D4A7722F9635D007C7F67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7622F9635D007C7F67 /* Assets.xcassets */; };
-		BC8D4A7A22F9635D007C7F67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */; };
 		BC8D4A8522F9635D007C7F67 /* MohaeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8422F9635D007C7F67 /* MohaeTests.swift */; };
 		BC8D4A9022F9635D007C7F67 /* MohaeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A8F22F9635D007C7F67 /* MohaeUITests.swift */; };
-		D81077323BD88624AB16E559 /* Pods_Mohae.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14F2DC33BEC75157508E6C18 /* Pods_Mohae.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,21 +69,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		054576D945ABD363AE3D6AE1 /* Pods_MohaeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D2D4E1A9087CA72ED0C70B /* Pods-Mohae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.debug.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.debug.xcconfig"; sourceTree = "<group>"; };
-		14F2DC33BEC75157508E6C18 /* Pods_Mohae.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mohae.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4EAAF238C9ECB388247514 /* libPods-MohaeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MohaeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		784DBB9284FE2D03B8A406A2 /* libPods-MohaeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MohaeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8444E4D84DC4DCE21F4FA70F /* Pods-MohaeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8594E011B2022F042AA66F83 /* Pods_MohaeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohaeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F9E13BE5E3A8BAFC994D26 /* libPods-Mohae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mohae.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A82B30AAD2731A695EC7C1F /* Pods-MohaeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A286331B3821405F3C0A18E1 /* Pods-MohaeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeTests.release.xcconfig"; path = "Target Support Files/Pods-MohaeTests/Pods-MohaeTests.release.xcconfig"; sourceTree = "<group>"; };
-		BC006E212339DF3000C5F825 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		BC1066CC233B464400C241C1 /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		BC1066CE233B4CEF00C241C1 /* MapSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchCell.swift; sourceTree = "<group>"; };
-		BC1066D0233B794700C241C1 /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
+		BC1066D0233B794700C241C1 /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AgreeViewController.swift; sourceTree = "<group>"; };
+		BC44DB0C2361731300C82D80 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		BC44DB16236987F100C82D80 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BC53F44223713DB5001CAF5D /* NumberOfPeople.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberOfPeople.swift; sourceTree = "<group>"; };
+		BC53F44323713DB6001CAF5D /* SubSurvey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSurvey.swift; sourceTree = "<group>"; };
+		BC53F44423713DB6001CAF5D /* Feeling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
+		BC53F44523713DB6001CAF5D /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		BC53F44623713DB7001CAF5D /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		BC53F44723713DB7001CAF5D /* DataForAnalysis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataForAnalysis.swift; sourceTree = "<group>"; };
+		BC53F44823713DB7001CAF5D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BC53F44923713DB8001CAF5D /* Couple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
+		BC53F44A23713DB8001CAF5D /* Personality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Personality.swift; sourceTree = "<group>"; };
+		BC53F44B23713DB8001CAF5D /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		BC53F44C23713DB8001CAF5D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BC53F45823713DC5001CAF5D /* AnalysisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalysisController.swift; sourceTree = "<group>"; };
+		BC53F45923713DC6001CAF5D /* MoneyQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyQuestionController.swift; sourceTree = "<group>"; };
+		BC53F45A23713DC6001CAF5D /* WeatherQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherQuestionController.swift; sourceTree = "<group>"; };
+		BC53F45B23713DC7001CAF5D /* DataAnalysisController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAnalysisController.swift; sourceTree = "<group>"; };
+		BC53F45D23713DC7001CAF5D /* CoupleQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoupleQuestionController.swift; sourceTree = "<group>"; };
+		BC53F45E23713DC8001CAF5D /* PeopleQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleQuestionController.swift; sourceTree = "<group>"; };
+		BC53F45F23713DC8001CAF5D /* RecommendButtonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendButtonController.swift; sourceTree = "<group>"; };
+		BC53F46023713DC9001CAF5D /* TestSurveyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSurveyController.swift; sourceTree = "<group>"; };
+		BC53F46123713DC9001CAF5D /* RecommendingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendingController.swift; sourceTree = "<group>"; };
+		BC53F46223713DCA001CAF5D /* FeelingQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingQuestionController.swift; sourceTree = "<group>"; };
+		BC53F46E23713DD0001CAF5D /* CoupleQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoupleQuestionView.swift; sourceTree = "<group>"; };
+		BC53F46F23713DD1001CAF5D /* SubSurveyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSurveyCell.swift; sourceTree = "<group>"; };
+		BC53F47023713DD1001CAF5D /* MoneyQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyQuestionView.swift; sourceTree = "<group>"; };
+		BC53F47123713DD2001CAF5D /* FeelingQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingQuestionView.swift; sourceTree = "<group>"; };
+		BC53F47223713DD2001CAF5D /* WeatherQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherQuestionView.swift; sourceTree = "<group>"; };
+		BC53F47323713DD3001CAF5D /* PeopleQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleQuestionView.swift; sourceTree = "<group>"; };
+		BC53F48023714328001CAF5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC58B5B9235EBDF6002B5144 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BC8D4A6C22F9635B007C7F67 /* Mohae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mohae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC8D4A7122F9635B007C7F67 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		BC8D4A7422F9635B007C7F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC8D4A7622F9635D007C7F67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC8D4A7922F9635D007C7F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC8D4A7B22F9635D007C7F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D81077323BD88624AB16E559 /* Pods_Mohae.framework in Frameworks */,
+				3EB94FCB0F3E294F2C1A8CCF /* libPods-Mohae.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E144A9D11387C00661A22A /* Pods_MohaeTests.framework in Frameworks */,
+				24751D351A9334294A91E58D /* libPods-MohaeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97EC46BBCD4864325FB5EE9B /* Pods_MohaeUITests.framework in Frameworks */,
+				0F1A5ABC45AB717212BCFAE0 /* libPods-MohaeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,9 +169,9 @@
 		AA74E14B97318AF4CB5573C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				14F2DC33BEC75157508E6C18 /* Pods_Mohae.framework */,
-				054576D945ABD363AE3D6AE1 /* Pods_MohaeTests.framework */,
-				8594E011B2022F042AA66F83 /* Pods_MohaeUITests.framework */,
+				84F9E13BE5E3A8BAFC994D26 /* libPods-Mohae.a */,
+				3B4EAAF238C9ECB388247514 /* libPods-MohaeTests.a */,
+				784DBB9284FE2D03B8A406A2 /* libPods-MohaeUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,7 +179,14 @@
 		BC1066C7233B45FA00C241C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC53F46F23713DD1001CAF5D /* SubSurveyCell.swift */,
+				BC53F46E23713DD0001CAF5D /* CoupleQuestionView.swift */,
+				BC53F47323713DD3001CAF5D /* PeopleQuestionView.swift */,
+				BC53F47023713DD1001CAF5D /* MoneyQuestionView.swift */,
+				BC53F47223713DD2001CAF5D /* WeatherQuestionView.swift */,
+				BC53F47123713DD2001CAF5D /* FeelingQuestionView.swift */,
 				BC1066CE233B4CEF00C241C1 /* MapSearchCell.swift */,
+				BC44DB0C2361731300C82D80 /* LoadingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -132,7 +195,17 @@
 			isa = PBXGroup;
 			children = (
 				BC1066D0233B794700C241C1 /* AgreeViewController.swift */,
-				BC8D4A7122F9635B007C7F67 /* MapViewController.swift */,
+				BC44DB16236987F100C82D80 /* MapViewController.swift */,
+				BC53F45823713DC5001CAF5D /* AnalysisController.swift */,
+				BC53F45D23713DC7001CAF5D /* CoupleQuestionController.swift */,
+				BC53F45B23713DC7001CAF5D /* DataAnalysisController.swift */,
+				BC53F46223713DCA001CAF5D /* FeelingQuestionController.swift */,
+				BC53F45923713DC6001CAF5D /* MoneyQuestionController.swift */,
+				BC53F45E23713DC8001CAF5D /* PeopleQuestionController.swift */,
+				BC53F45F23713DC8001CAF5D /* RecommendButtonController.swift */,
+				BC53F46123713DC9001CAF5D /* RecommendingController.swift */,
+				BC53F46023713DC9001CAF5D /* TestSurveyController.swift */,
+				BC53F45A23713DC6001CAF5D /* WeatherQuestionController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +214,17 @@
 			isa = PBXGroup;
 			children = (
 				BC1066CC233B464400C241C1 /* MapSearch.swift */,
+				BC53F44C23713DB8001CAF5D /* User.swift */,
+				BC53F44323713DB6001CAF5D /* SubSurvey.swift */,
+				BC53F44723713DB7001CAF5D /* DataForAnalysis.swift */,
+				BC53F44823713DB7001CAF5D /* Category.swift */,
+				BC53F44923713DB8001CAF5D /* Couple.swift */,
+				BC53F44423713DB6001CAF5D /* Feeling.swift */,
+				BC53F44623713DB7001CAF5D /* Money.swift */,
+				BC53F44223713DB5001CAF5D /* NumberOfPeople.swift */,
+				BC53F44A23713DB8001CAF5D /* Personality.swift */,
+				BC53F44B23713DB8001CAF5D /* Time.swift */,
+				BC53F44523713DB6001CAF5D /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,10 +258,10 @@
 				BC1066C8233B460100C241C1 /* Controller */,
 				BC1066C7233B45FA00C241C1 /* View */,
 				BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */,
-				BC006E212339DF3000C5F825 /* PlacesViewController.swift */,
-				BC8D4A7322F9635B007C7F67 /* Main.storyboard */,
+				BC58B5B9235EBDF6002B5144 /* Extension.swift */,
 				BC8D4A7622F9635D007C7F67 /* Assets.xcassets */,
 				BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */,
+				BC53F48023714328001CAF5D /* GoogleService-Info.plist */,
 				BC8D4A7B22F9635D007C7F67 /* Info.plist */,
 			);
 			path = Mohae;
@@ -212,8 +296,7 @@
 				BC8D4A6822F9635B007C7F67 /* Sources */,
 				BC8D4A6922F9635B007C7F67 /* Frameworks */,
 				BC8D4A6A22F9635B007C7F67 /* Resources */,
-				BBD06E5503C21087A756CDC0 /* [CP] Copy Pods Resources */,
-				B77AC53D1B80345E58D2463D /* [CP] Embed Pods Frameworks */,
+				49CD611BD917BAA75CF25259 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,9 +393,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC8D4A7A22F9635D007C7F67 /* LaunchScreen.storyboard in Resources */,
 				BC8D4A7722F9635D007C7F67 /* Assets.xcassets in Resources */,
-				BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */,
+				BC44DB18236989EB00C82D80 /* LaunchScreen.storyboard in Resources */,
+				BC53F48123714329001CAF5D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +438,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		49CD611BD917BAA75CF25259 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		67FB1A17C6D310BE8CFEC1A3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,40 +475,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B77AC53D1B80345E58D2463D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BBD06E5503C21087A756CDC0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mohae/Pods-Mohae-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD509CFBA2599D655DF2D7AF /* [CP] Check Pods Manifest.lock */ = {
@@ -440,12 +506,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC006E222339DF3000C5F825 /* PlacesViewController.swift in Sources */,
-				BC8D4A7222F9635B007C7F67 /* MapViewController.swift in Sources */,
+				BC53F47623713DD3001CAF5D /* MoneyQuestionView.swift in Sources */,
+				BC53F45523713DB8001CAF5D /* Personality.swift in Sources */,
+				BC44DB0D2361731300C82D80 /* LoadingCell.swift in Sources */,
+				BC53F44F23713DB8001CAF5D /* Feeling.swift in Sources */,
+				BC53F44D23713DB8001CAF5D /* NumberOfPeople.swift in Sources */,
+				BC53F46823713DCA001CAF5D /* CoupleQuestionController.swift in Sources */,
+				BC53F47523713DD3001CAF5D /* SubSurveyCell.swift in Sources */,
+				BC53F45123713DB8001CAF5D /* Money.swift in Sources */,
+				BC53F47723713DD3001CAF5D /* FeelingQuestionView.swift in Sources */,
+				BC58B5BA235EBDF6002B5144 /* Extension.swift in Sources */,
+				BC53F46923713DCA001CAF5D /* PeopleQuestionController.swift in Sources */,
+				BC53F45623713DB8001CAF5D /* Time.swift in Sources */,
+				BC53F46D23713DCA001CAF5D /* FeelingQuestionController.swift in Sources */,
+				BC53F45023713DB8001CAF5D /* Weather.swift in Sources */,
 				BC1066CF233B4CEF00C241C1 /* MapSearchCell.swift in Sources */,
 				BC1066CD233B464400C241C1 /* MapSearch.swift in Sources */,
 				BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */,
+				BC53F44E23713DB8001CAF5D /* SubSurvey.swift in Sources */,
+				BC53F46623713DCA001CAF5D /* DataAnalysisController.swift in Sources */,
+				BC53F47423713DD3001CAF5D /* CoupleQuestionView.swift in Sources */,
+				BC53F46A23713DCA001CAF5D /* RecommendButtonController.swift in Sources */,
+				BC53F47823713DD3001CAF5D /* WeatherQuestionView.swift in Sources */,
+				BC53F46523713DCA001CAF5D /* WeatherQuestionController.swift in Sources */,
 				BC1066D1233B794700C241C1 /* AgreeViewController.swift in Sources */,
+				BC53F46423713DCA001CAF5D /* MoneyQuestionController.swift in Sources */,
+				BC53F45323713DB8001CAF5D /* Category.swift in Sources */,
+				BC53F47923713DD3001CAF5D /* PeopleQuestionView.swift in Sources */,
+				BC53F46C23713DCA001CAF5D /* RecommendingController.swift in Sources */,
+				BC53F45223713DB8001CAF5D /* DataForAnalysis.swift in Sources */,
+				BC53F46323713DCA001CAF5D /* AnalysisController.swift in Sources */,
+				BC53F46B23713DCA001CAF5D /* TestSurveyController.swift in Sources */,
+				BC44DB17236987F100C82D80 /* MapViewController.swift in Sources */,
+				BC53F45423713DB8001CAF5D /* Couple.swift in Sources */,
+				BC53F45723713DB8001CAF5D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,14 +575,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BC8D4A7322F9635B007C7F67 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC8D4A7422F9635B007C7F67 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BC8D4A7822F9635D007C7F67 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -9,23 +9,24 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var navigationController: UINavigationController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyB2PbwMxywvpSP8sbsIU8TA2g3sca9L7WQ")
         GMSPlacesClient.provideAPIKey("AIzaSyB2PbwMxywvpSP8sbsIU8TA2g3sca9L7WQ")
-        // Override point for customization after application launch.
-        
        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: AgreeViewController()) //---2
-        window?.makeKeyAndVisible() 
-        
+        FirebaseApp.configure()
+               
+               window = UIWindow(frame: UIScreen.main.bounds)
+               window?.makeKeyAndVisible()
+               
+               window?.rootViewController = UINavigationController(rootViewController: RecommendButtonController())
+               
         return true
     }
 
