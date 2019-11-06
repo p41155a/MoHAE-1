@@ -15,7 +15,6 @@ let cellId = "surveyCell"
 class SurveyViewController: UIViewController {
     
     var ref : DatabaseReference!
-    
     var delegate = AnalysisController()
     var mainSurveys = [MainSurvey]()
     var count = 0
@@ -39,6 +38,7 @@ class SurveyViewController: UIViewController {
     let sendButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("완료", for: .normal)
+        btn.tintColor = .white
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.addTarget(self, action: #selector(complete), for: .touchUpInside)
         
@@ -182,15 +182,12 @@ class SurveyViewController: UIViewController {
         let navController = UINavigationController(rootViewController: delegate) //네비게이션으로 analysiscontroller로 가자고 하는 화면
         present(navController, animated: true, completion: nil)
         
-        /* 테스트시 일일히 선택하지 않기 위한 주석 시작
-        /* ------------ 다음을 위한 선택 초기화 코드 --------- */
         self.ref = Database.database().reference()
         for i in 1 ... 39 {
             let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(i)")
             let childUpdate = ["value": 0]
             itemsRef.updateChildValues(childUpdate)
         }
-        테스트시 일일히 선택하지 않기 위한 주석 끝 */
     }
 }
 
@@ -284,7 +281,7 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
             }
             cell.button[i].tag = mainSurvey.id!
         }
-        cell.button[0].addTarget(self, action: #selector(clickReset), for: .touchUpInside)
+        cell.button[0].addTarget(self, action: #selector(clickButton1), for: .touchUpInside)
         cell.button[1].addTarget(self, action: #selector(clickButton2), for: .touchUpInside)
         cell.button[2].addTarget(self, action: #selector(clickButton3), for: .touchUpInside)
         cell.button[3].addTarget(self, action: #selector(clickButton4), for: .touchUpInside)
@@ -353,15 +350,5 @@ extension SurveyViewController: UICollectionViewDelegateFlowLayout, UICollection
         count = 0
         loadSurvey()
         print("reload")
-    }
-    // 테스트 초기화 코드
-    @objc func clickReset(sender: UIButton) {
-        sender.backgroundColor = .lightGray
-        self.ref = Database.database().reference()
-        for i in 1 ... 39 {
-            let itemsRef = self.ref.child("surveys").child("mainSurvey").child("question"+"\(i)")
-            let childUpdate = ["value": 5]
-            itemsRef.updateChildValues(childUpdate)
-        }
     }
 }
