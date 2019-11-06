@@ -28,7 +28,7 @@ class PeopleQuestionView: UIView {
         configure()
     }
     
-    override required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     

@@ -30,7 +30,7 @@ class FeelingQuestionView: UIView {
         configure()
     }
     
-    override required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     

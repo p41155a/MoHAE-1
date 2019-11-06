@@ -43,11 +43,10 @@ class WeatherQuestionController: UIViewController {
             let cloudyButton = weatherQuestion.cloudyButton
             let rainButton = weatherQuestion.rainButton
             let snowButton = weatherQuestion.snowButton
-            let disasterButton = weatherQuestion.disasterButton
             
             weatherQuestion.delegate = self
             
-            if let board = surveyBoard, let question = questionLabel, let sunnyBtn = sunnyButton, let cloudyBtn = cloudyButton, let rainBtn = rainButton, let snowBtn = snowButton, let disasterBtn = disasterButton {
+            if let board = surveyBoard, let question = questionLabel, let sunnyBtn = sunnyButton, let cloudyBtn = cloudyButton, let rainBtn = rainButton, let snowBtn = snowButton {
                 view.addSubview(board)
                 board.snp.makeConstraints { (make) in
                     make.centerX.equalTo(view.snp.centerX)
@@ -78,11 +77,6 @@ class WeatherQuestionController: UIViewController {
                 
                 snowBtn.snp.makeConstraints { (make) in
                     make.top.equalTo(rainBtn.snp.bottom).offset(20)
-                    make.centerX.equalTo(board.snp.centerX)
-                }
-                
-                disasterBtn.snp.makeConstraints { (make) in
-                    make.top.equalTo(snowBtn.snp.bottom).offset(20)
                     make.centerX.equalTo(board.snp.centerX)
                 }
             }
@@ -120,12 +114,6 @@ extension WeatherQuestionController: WeatherQuestionButtonDelegate {
     func touchSnow() {
         print("~~~ snow ~~~")
         changeView(insert: "눈")
-        print(data)
-    }
-    
-    func touchDisaster() {
-        print("OMG THIS IS DISASTER!!")
-        changeView(insert: "자연재해")
         print(data)
     }
 }

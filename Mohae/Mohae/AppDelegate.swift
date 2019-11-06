@@ -21,7 +21,7 @@ import Firebase
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = UINavigationController(rootViewController: RecommendingNoTwoController())
+        window?.rootViewController = UINavigationController(rootViewController: CoupleQuestionController())
         
         return true
     }

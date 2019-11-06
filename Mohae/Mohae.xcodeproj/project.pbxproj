@@ -19,16 +19,12 @@
 		5A246C58236AB1C9006F52BA /* DataAnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A246C57236AB1C9006F52BA /* DataAnalysisController.swift */; };
 		5A40C36E23099591001BA2BF /* RecommendButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C36D23099591001BA2BF /* RecommendButtonController.swift */; };
 		5A40C372230C0565001BA2BF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40C371230C0565001BA2BF /* User.swift */; };
-		5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A69944723277D4F009D67D9 /* AnalysisController.swift */; };
-		5A8FC7C52344C8ED00A33EB5 /* TestSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */; };
 		5AAEBF0B23055C55004116C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */; };
 		5AC5DFF523681629007BA547 /* CoupleQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5DFF423681629007BA547 /* CoupleQuestionView.swift */; };
 		5AC5DFF723681865007BA547 /* CoupleQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5DFF623681865007BA547 /* CoupleQuestionController.swift */; };
 		5AC7FF71231652E60013F798 /* SimpleCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */; };
-		5AC7FF7423165AF10013F798 /* SubSurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */; };
 		5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF752316674A0013F798 /* SubSurvey.swift */; };
 		5AD01693237034BB005B8CC2 /* RecommendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD01692237034BB005B8CC2 /* RecommendingController.swift */; };
-		5AD01695237041BE005B8CC2 /* DataForAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD01694237041BE005B8CC2 /* DataForAnalysis.swift */; };
 		5AD0169723707B4D005B8CC2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0169623707B4D005B8CC2 /* Category.swift */; };
 		5AD0169923707B59005B8CC2 /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0169823707B59005B8CC2 /* Couple.swift */; };
 		5AD0169B23707B62005B8CC2 /* Feeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0169A23707B62005B8CC2 /* Feeling.swift */; };
@@ -37,8 +33,6 @@
 		5AD016A123707B98005B8CC2 /* Personality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD016A023707B98005B8CC2 /* Personality.swift */; };
 		5AD016A323707B9F005B8CC2 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD016A223707B9F005B8CC2 /* Time.swift */; };
 		5AD016A523707BAB005B8CC2 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD016A423707BAB005B8CC2 /* Weather.swift */; };
-		5AD016A723708D02005B8CC2 /* RecommendingNoTwoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD016A623708D02005B8CC2 /* RecommendingNoTwoController.swift */; };
-		5AFF7AAD2313F7E30086BBF7 /* SubSurveyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF7AAC2313F7E30086BBF7 /* SubSurveyController.swift */; };
 		94E35FCD0BEC40AC0BD0B162 /* Pods_MohaeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433B4A67FAB17F7F259E52BC /* Pods_MohaeTests.framework */; };
 		BC8D4A7022F9635B007C7F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D4A6F22F9635B007C7F67 /* AppDelegate.swift */; };
 		BC8D4A7522F9635B007C7F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC8D4A7322F9635B007C7F67 /* Main.storyboard */; };
@@ -79,16 +73,12 @@
 		5A246C57236AB1C9006F52BA /* DataAnalysisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAnalysisController.swift; sourceTree = "<group>"; };
 		5A40C36D23099591001BA2BF /* RecommendButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendButtonController.swift; sourceTree = "<group>"; };
 		5A40C371230C0565001BA2BF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		5A69944723277D4F009D67D9 /* AnalysisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisController.swift; sourceTree = "<group>"; };
-		5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSurveyController.swift; sourceTree = "<group>"; };
 		5AAEBF0A23055C55004116C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5AC5DFF423681629007BA547 /* CoupleQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleQuestionView.swift; sourceTree = "<group>"; };
 		5AC5DFF623681865007BA547 /* CoupleQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleQuestionController.swift; sourceTree = "<group>"; };
 		5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleCheckbox.framework; path = Carthage/Build/iOS/SimpleCheckbox.framework; sourceTree = "<group>"; };
-		5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurveyCell.swift; sourceTree = "<group>"; };
 		5AC7FF752316674A0013F798 /* SubSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurvey.swift; sourceTree = "<group>"; };
 		5AD01692237034BB005B8CC2 /* RecommendingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendingController.swift; sourceTree = "<group>"; };
-		5AD01694237041BE005B8CC2 /* DataForAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForAnalysis.swift; sourceTree = "<group>"; };
 		5AD0169623707B4D005B8CC2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5AD0169823707B59005B8CC2 /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
 		5AD0169A23707B62005B8CC2 /* Feeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeling.swift; sourceTree = "<group>"; };
@@ -97,8 +87,6 @@
 		5AD016A023707B98005B8CC2 /* Personality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personality.swift; sourceTree = "<group>"; };
 		5AD016A223707B9F005B8CC2 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		5AD016A423707BAB005B8CC2 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		5AD016A623708D02005B8CC2 /* RecommendingNoTwoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendingNoTwoController.swift; sourceTree = "<group>"; };
-		5AFF7AAC2313F7E30086BBF7 /* SubSurveyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurveyController.swift; sourceTree = "<group>"; };
 		8FAA3A0DD477A475F039767B /* Pods-MohaeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF10575900FF460541359310 /* Pods-Mohae.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohae.debug.xcconfig"; path = "Target Support Files/Pods-Mohae/Pods-Mohae.debug.xcconfig"; sourceTree = "<group>"; };
 		B18F6C4420293A4ADD105DBE /* Pods-MohaeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MohaeUITests.release.xcconfig"; path = "Target Support Files/Pods-MohaeUITests/Pods-MohaeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,7 +135,6 @@
 		5A40C36A23099511001BA2BF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5AC7FF7323165AF10013F798 /* SubSurveyCell.swift */,
 				5AC5DFF423681629007BA547 /* CoupleQuestionView.swift */,
 				5A246C49236954A1006F52BA /* PeopleQuestionView.swift */,
 				5A246C4D23696068006F52BA /* MoneyQuestionView.swift */,
@@ -161,9 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				5A40C36D23099591001BA2BF /* RecommendButtonController.swift */,
-				5AFF7AAC2313F7E30086BBF7 /* SubSurveyController.swift */,
-				5A69944723277D4F009D67D9 /* AnalysisController.swift */,
-				5A8FC7C42344C8ED00A33EB5 /* TestSurveyController.swift */,
 				5AC5DFF623681865007BA547 /* CoupleQuestionController.swift */,
 				5A246C472369548B006F52BA /* PeopleQuestionController.swift */,
 				5A246C4B2369605B006F52BA /* MoneyQuestionController.swift */,
@@ -171,7 +155,6 @@
 				5A246C5323697B11006F52BA /* FeelingQuestionController.swift */,
 				5A246C57236AB1C9006F52BA /* DataAnalysisController.swift */,
 				5AD01692237034BB005B8CC2 /* RecommendingController.swift */,
-				5AD016A623708D02005B8CC2 /* RecommendingNoTwoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,7 +164,6 @@
 			children = (
 				5A40C371230C0565001BA2BF /* User.swift */,
 				5AC7FF752316674A0013F798 /* SubSurvey.swift */,
-				5AD01694237041BE005B8CC2 /* DataForAnalysis.swift */,
 				5AD0169623707B4D005B8CC2 /* Category.swift */,
 				5AD0169823707B59005B8CC2 /* Couple.swift */,
 				5AD0169A23707B62005B8CC2 /* Feeling.swift */,
@@ -518,18 +500,14 @@
 				5A246C5623697B21006F52BA /* FeelingQuestionView.swift in Sources */,
 				5A40C372230C0565001BA2BF /* User.swift in Sources */,
 				5A246C4E23696068006F52BA /* MoneyQuestionView.swift in Sources */,
-				5AD01695237041BE005B8CC2 /* DataForAnalysis.swift in Sources */,
 				5AC5DFF523681629007BA547 /* CoupleQuestionView.swift in Sources */,
-				5A8FC7C52344C8ED00A33EB5 /* TestSurveyController.swift in Sources */,
 				5A246C5223697211006F52BA /* WeatherQuestionView.swift in Sources */,
 				5AD016A523707BAB005B8CC2 /* Weather.swift in Sources */,
-				5A69944823277D4F009D67D9 /* AnalysisController.swift in Sources */,
 				5A246C5023697201006F52BA /* WeatherQuestionController.swift in Sources */,
 				5A246C482369548B006F52BA /* PeopleQuestionController.swift in Sources */,
 				5AC5DFF723681865007BA547 /* CoupleQuestionController.swift in Sources */,
 				5AD0169923707B59005B8CC2 /* Couple.swift in Sources */,
 				5AD01693237034BB005B8CC2 /* RecommendingController.swift in Sources */,
-				5AFF7AAD2313F7E30086BBF7 /* SubSurveyController.swift in Sources */,
 				5A246C5423697B11006F52BA /* FeelingQuestionController.swift in Sources */,
 				5AD016A323707B9F005B8CC2 /* Time.swift in Sources */,
 				5AD0169F23707B88005B8CC2 /* NumberOfPeople.swift in Sources */,
@@ -541,8 +519,6 @@
 				5AD016A123707B98005B8CC2 /* Personality.swift in Sources */,
 				5A246C58236AB1C9006F52BA /* DataAnalysisController.swift in Sources */,
 				5A246C4C2369605B006F52BA /* MoneyQuestionController.swift in Sources */,
-				5AD016A723708D02005B8CC2 /* RecommendingNoTwoController.swift in Sources */,
-				5AC7FF7423165AF10013F798 /* SubSurveyCell.swift in Sources */,
 				5AD0169723707B4D005B8CC2 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

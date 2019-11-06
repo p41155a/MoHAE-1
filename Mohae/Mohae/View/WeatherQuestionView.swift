@@ -13,7 +13,6 @@ protocol WeatherQuestionButtonDelegate {
     func touchCloudy()
     func touchRain()
     func touchSnow()
-    func touchDisaster()
 }
 
 class WeatherQuestionView: UIView {
@@ -24,7 +23,6 @@ class WeatherQuestionView: UIView {
     var cloudyButton: UIButton?
     var rainButton: UIButton?
     var snowButton: UIButton?
-    var disasterButton: UIButton?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +30,7 @@ class WeatherQuestionView: UIView {
         configure()
     }
     
-    override required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
@@ -43,7 +41,6 @@ class WeatherQuestionView: UIView {
         cloudyButton = UIButton(type: .system)
         rainButton = UIButton(type: .system)
         snowButton = UIButton(type: .system)
-        disasterButton = UIButton(type: .system)
         
         if let questionLabel = self.questionLabel {
             questionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -74,23 +71,16 @@ class WeatherQuestionView: UIView {
             snowBtn.addTarget(self, action: #selector(touchedSnow), for: .touchUpInside)
         }
         
-        if let disasterBtn = disasterButton {
-            disasterBtn.translatesAutoresizingMaskIntoConstraints = false
-            disasterBtn.setTitle("자연재해", for: .normal)
-            disasterBtn.addTarget(self, action: #selector(touchedDisaster), for: .touchUpInside)
-        }
-        
         if let screen = surveyScreen {
             screen.translatesAutoresizingMaskIntoConstraints = false
             screen.backgroundColor = .white
             
-            if let sunnyBtn = sunnyButton, let cloudyBtn = cloudyButton, let rainBtn = rainButton, let snowBtn = snowButton, let disasterBtn = disasterButton, let questionLabel = self.questionLabel {
+            if let sunnyBtn = sunnyButton, let cloudyBtn = cloudyButton, let rainBtn = rainButton, let snowBtn = snowButton, let questionLabel = self.questionLabel {
                 screen.addSubview(questionLabel)
                 screen.addSubview(sunnyBtn)
                 screen.addSubview(cloudyBtn)
                 screen.addSubview(rainBtn)
                 screen.addSubview(snowBtn)
-                screen.addSubview(disasterBtn)
             }
             
             self.addSubview(screen)
@@ -111,9 +101,5 @@ class WeatherQuestionView: UIView {
     
     @objc func touchedSnow() {
         delegate?.touchSnow()
-    }
-    
-    @objc func touchedDisaster() {
-        delegate?.touchDisaster()
     }
 }

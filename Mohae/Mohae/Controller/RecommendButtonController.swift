@@ -34,8 +34,8 @@ class RecommendButtonController: UIViewController {
     }
 
     @objc private func setButton() { // 현재 기분을 물어보는 질문지를 작성할 수 있는 화면으로 전환 되도록 작상헌다.
-        let subSurveyController = SubSurveyController()
-        let navController = UINavigationController(rootViewController: subSurveyController)
+        let coupleQuestionController = CoupleQuestionController()
+        let navController = UINavigationController(rootViewController: coupleQuestionController)
         present(navController, animated: true, completion: nil)
     }
 }

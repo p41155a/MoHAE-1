@@ -8,12 +8,27 @@
 
 import UIKit
 import SnapKit
+import Firebase
 
 class DataAnalysisController: UIViewController {
+    var count = 0
+    var ref: DatabaseReference!
+    
+    var categorys = [Category]()
+    var couples = [Couple]()
+    var feelings = [Feeling]()
+    var money = [Money]()
+    var numberOfPeople = [NumberOfPeople]()
+    var personality = [Personality]()
+    var time = [Time]()
+    var weather = [Weather]()
+    
     var data = [String]()
     var resultLabels = [UILabel]()
     var key = ["커플 : ", "인원 : ", "자금 : ", "날씨 : ", "기분 : ", "현재 시간 : "]
     var feelingQuestionController: FeelingQuestionController?
+    var recommendingController: RecommendingController?
+    var completedData = [String: String]()
     
     let formatter = DateFormatter()
     
@@ -36,10 +51,16 @@ class DataAnalysisController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        feelingQuestionController = FeelingQuestionController()
+        
+        view.backgroundColor = .white
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "뒤로", style: .plain, target: self, action: #selector(goBack))
         navigationItem.title = "입력 확인"
-        view.backgroundColor = .white
+        
+        feelingQuestionController = FeelingQuestionController()
+        recommendingController = RecommendingController()
+        
+        loadDB()
+        loadUserData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,12 +124,125 @@ class DataAnalysisController: UIViewController {
         }
     }
     
+    func loadUserData() {
+        ref = Database.database().reference().child("members")
+        
+    }
+    
+    func loadDB() {
+        print("satrt load DB")
+        ref = Database.database().reference().child("DataForAnalysis3")
+        ref.child("category").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            print(dictionary)
+            self.categorys.append(Category(dictionary: dictionary))
+            print("categorys added => \(String(describing: self.categorys[self.count].value))")
+            self.count = self.count + 1
+        }
+
+        ref.child("couple").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            print(dictionary)
+            self.couples.append(Couple(dictionary: dictionary))
+            print("couples added => \(String(describing: self.couples[0].value))")
+        }
+
+        ref.child("feeling").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            print(dictionary)
+            self.feelings.append(Feeling(dictionary: dictionary))
+            print("feelings added => \(String(describing: self.feelings[0].happy))")
+        }
+
+        ref.child("money").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            print(dictionary)
+            self.money.append(Money(dictionary: dictionary))
+            print("money added => \(String(describing: self.money[0].free))")
+        }
+
+        ref.child("numberOfPeople").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            print(dictionary)
+            self.numberOfPeople.append(NumberOfPeople(dictionary: dictionary))
+            print("numberOfPeople added => \(String(describing: self.numberOfPeople[0].oneToTwo))")
+        }
+
+        ref.child("personality").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            print(dictionary)
+            self.personality.append(Personality(dictionary: dictionary))
+            print("personality added => \(String(describing: self.personality[0].outsider))")
+        }
+
+        ref.child("time").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            print(dictionary)
+            self.time.append(Time(dictionary: dictionary))
+            print("time added => \(String(describing: self.time[0].am))")
+        }
+        
+        ref.child("weather").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            print(dictionary)
+            self.weather.append(Weather(dictionary: dictionary))
+            print("weather added => \(String(describing: self.weather[0].sunny))")
+        }
+    }
+    
+    func setDBData() {
+        if let recommending = recommendingController {
+            recommending.categorys = self.categorys
+            recommending.couples = self.couples
+            recommending.feelings = self.feelings
+            recommending.money = self.money
+            recommending.numberOfPeople = self.numberOfPeople
+            recommending.personality = self.personality
+            recommending.time = self.time
+            recommending.weather = self.weather
+        }
+    }
+    
+    func setNowData() {
+        completedData = ["couple": data[0], "numberOfPeople": data[1], "money": data[2], "weather": data[3], "feeling": data[4], "time": data[5]]
+        
+        if let recommending = recommendingController {
+            recommending.recivedData = completedData
+        }
+    }
+    
     @objc func complete() {
         print("complete")
-        let recommendingController = RecommendingController()
-        let navController = UINavigationController(rootViewController: recommendingController)
-        present(navController, animated: true, completion: nil)
+        setDBData()
+        setNowData()
+        if let recommending = recommendingController {
+            let navController = UINavigationController(rootViewController: recommending)
+            present(navController, animated: true, completion: nil)
+        }
     }
 }
-
-
+//var categorys = [Category]()
+//var couples = [Couple]()
+//var feelings = [Feeling]()
+//var money = [Money]()
+//var numberOfPeople = [NumberOfPeople]()
+//var personality = [Personality]()
+//var time = [Time]()
+//var weather = [Weather]()

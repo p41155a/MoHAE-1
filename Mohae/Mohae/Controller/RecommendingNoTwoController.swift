@@ -1,8 +1,8 @@
 //
-//  RecommendingNoTwoController.swift
+//  RecommendingController.swift
 //  Mohae
 //
-//  Created by 이주영 on 2019/11/05.
+//  Created by 이주영 on 2019/11/04.
 //  Copyright © 2019 권혁준. All rights reserved.
 //
 
@@ -12,48 +12,157 @@ import SnapKit
 
 class RecommendingNoTwoController: UIViewController {
     var ref: DatabaseReference!
-    var dataForAnalysis = [DataForAnalysis]()
+    var categorys = [Category]()
+    var couples = [Couple]()
+    var feelings = [Feeling]()
+    var money = [Money]()
+    var numberOfPeople = [NumberOfPeople]()
+    var personality = [Personality]()
+    var time = [Time]()
+    var weather = [Weather]()
+    var arr = ["category", "couple", "feeling", "money", "numberOfPeople", "personality", "time", "weather"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        loadDB()
+        for child in arr {
+            loadDB2(child: child)
+        }
     }
     
-    func loadDB() {
-        ref = Database.database().reference().child("DataForAnalysis2")
-        
-        ref.observe(.childAdded) { (snapshot) in
+    func loadDB2(child: String) {
+        ref = Database.database().reference().child("DataForAnalysis3")
+        ref.child(child).observe(.childAdded) { (snapshot) in
             guard let dictionary = snapshot.value as? [String: AnyObject] else {
                 return
             }
             
-            self.dataForAnalysis.append(DataForAnalysis(dictionary: dictionary))
-//            print("category data => \(self.dataForAnalysis[0].categoryValue)")
-//            print("couple data => \(self.dataForAnalysis[0].coupleValue)")
-//            print("happy data => \(self.dataForAnalysis[0].happy)")
-//            print("calm data => \(self.dataForAnalysis[0].calm)")
-//            print("sad data => \(self.dataForAnalysis[0].sad)")
-//            print("exciting data => \(self.dataForAnalysis[0].exciting)")
-//            print("oneToFive data => \(self.dataForAnalysis[0].oneToFive)")
-//            print("sixToTen data => \(self.dataForAnalysis[0].sixToTen)")
-//            print("free data => \(self.dataForAnalysis[0].free)")
-//            print("moreThan10 data => \(self.dataForAnalysis[0].moreThanTen)")
-//            print("oneToTwo data => \(self.dataForAnalysis[0].onetToTwo)")
-//            print("threeToFive data => \(self.dataForAnalysis[0].threeToFive)")
-//            print("moreThanSix data => \(self.dataForAnalysis[0].moreThanSix)")
-//            print("emotional data => \(self.dataForAnalysis[0].emotional)")
-//            print("outsider data => \(self.dataForAnalysis[0].outsider)")
-//            print("sensory data => \(self.dataForAnalysis[0].sensory)")
-//            print("am data => \(self.dataForAnalysis[0].am)")
-//            print("evening data => \(self.dataForAnalysis[0].evening)")
-//            print("launch data => \(self.dataForAnalysis[0].launch)")
-//            print("night data => \(self.dataForAnalysis[0].night)")
-//            print("pm data => \(self.dataForAnalysis[0].pm)")
-//            print("cloudy data => \(self.dataForAnalysis[0].cloudy)")
-//            print("rainy data => \(self.dataForAnalysis[0].rainy)")
-//            print("snow data => \(self.dataForAnalysis[0].snow)")
-//            print("sunny data => \(self.dataForAnalysis[0].sunny)")
+            switch child {
+            case "category":
+                self.categorys.append(Category(dictionary: dictionary))
+                print("category => \(String(describing: self.categorys[0].value))")
+                
+            case "couple":
+                self.couples.append(Couple(dictionary: dictionary))
+                print("couple => \(String(describing: self.couples[0].value))")
+                
+            case "feeling":
+                self.feelings.append(Feeling(dictionary: dictionary))
+                print("feeling => \(String(describing: self.feelings[0].happy))")
+                
+            case "money":
+                self.money.append(Money(dictionary: dictionary))
+                print("money => \(String(describing: self.money[0].free))")
+                
+            case "numberOfPeople":
+                self.numberOfPeople.append(NumberOfPeople(dictionary: dictionary))
+                print("numberOfPeople => \(String(describing: self.numberOfPeople[0].oneToTwo))")
+                
+            case "personality":
+                self.personality.append(Personality(dictionary: dictionary))
+                print("personality => \(String(describing: self.personality[0].emotional))")
+                
+            case "time":
+                self.time.append(Time(dictionary: dictionary))
+                print("time => \(String(describing: self.time[0].am))")
+                
+            case "weather":
+                self.weather.append(Weather(dictionary: dictionary))
+                print("weather => \(String(describing: self.weather[0].sunny))")
+                
+            default:
+                break
+            }
         }
+    }
+    
+    func loadDB() {
+        print("satrt load DB")
+        ref = Database.database().reference().child("DataForAnalysis3")
+        
+        ref.child("category").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.categorys.append(Category(dictionary: dictionary))
+            print("categorys added => \(String(describing: self.categorys[0].value))")
+        }
+        
+        ref.child("couple").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.couples.append(Couple(dictionary: dictionary))
+            print("couples added => \(String(describing: self.couples[0].value))")
+        }
+        
+        ref.child("feeling").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.feelings.append(Feeling(dictionary: dictionary))
+            print("feelings added => \(String(describing: self.feelings[0].happy))")
+        }
+        
+        ref.child("money").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.money.append(Money(dictionary: dictionary))
+            print("money added => \(String(describing: self.money[0].free))")
+        }
+        
+        ref.child("numberOfPeople").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.numberOfPeople.append(NumberOfPeople(dictionary: dictionary))
+            print("numberOfPeople added => \(String(describing: self.numberOfPeople[0].oneToTwo))")
+        }
+        
+        ref.child("personality").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.personality.append(Personality(dictionary: dictionary))
+            print("personality added => \(String(describing: self.personality[0].outsider))")
+        }
+        
+        ref.child("time").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.time.append(Time(dictionary: dictionary))
+            print("time added => \(String(describing: self.time[0].am))")
+        }
+        
+        print("time added => \(time)")
+        
+        ref.child("weather").observe(.childAdded) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.weather.append(Weather(dictionary: dictionary))
+            print("weather added => \(String(describing: self.weather[0].sunny))")
+        }
+    }
+    
+    func printData() {
+        print("categorys => \(categorys)")
+        print("couples => \(couples)")
+        print("feeling => \(feelings)")
+        print("money => \(money)")
+        print("number of people => \(numberOfPeople)")
+        print("personality => \(personality)")
+        print("time => \(time)")
+        print("weather => \(weather)")
     }
 }
