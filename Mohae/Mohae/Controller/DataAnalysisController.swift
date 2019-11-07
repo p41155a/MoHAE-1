@@ -33,11 +33,9 @@ class DataAnalysisController: UIViewController {
     var completedData = [String: String]()
     
     let attributedString = NSMutableAttributedString.init(string: "Apply UnderLining")
-    
-    let formatter = DateFormatter()
-    
     var timer = Timer()
-    var mtime = 0
+       var mtime = 0
+    let formatter = DateFormatter()
     
     let logoImage : UIImageView = {
         let logo = UIImageView()
@@ -95,19 +93,19 @@ class DataAnalysisController: UIViewController {
     }
     
     func startTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
-    }
-    
-    @objc func timeLimit(){
-          if mtime == 0 {
-              mtime += 1
-            } else {
-              //indicator를 멈추고 알러트함수를 호출하고 타이머를 멈춰준다.
-           self.completeButton.isHidden = false
-              timer.invalidate()
-              mtime = 0
-          }
-      }
+           timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeLimit), userInfo: nil, repeats: true)
+       }
+       
+       @objc func timeLimit(){
+             if mtime == 0 {
+                 mtime += 1
+               } else {
+                 //indicator를 멈추고 알러트함수를 호출하고 타이머를 멈춰준다.
+              self.completeButton.isHidden = false
+                 timer.invalidate()
+                 mtime = 0
+             }
+         }
     
     @objc func goBack() {
         self.data[4] = ""
@@ -171,7 +169,7 @@ class DataAnalysisController: UIViewController {
         }
         
         completeButton.snp.makeConstraints { (make) in
-            make.top.equalTo(view.snp.bottom).offset(-70)
+            make.top.equalTo(resultLabels[4].snp.bottom).offset(40)
             make.centerX.equalTo(view.snp.centerX)
             make.width.equalTo(150)
             make.height.equalTo(30)
@@ -297,7 +295,7 @@ class DataAnalysisController: UIViewController {
         setNowData()
         if let recommending = recommendingController {
            
-            navigationController?.pushViewController(recommending, animated: true)
+            self.navigationController?.pushViewController(recommending, animated: true)
         }
     }
 }

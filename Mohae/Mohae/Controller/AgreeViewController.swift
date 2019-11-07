@@ -73,10 +73,10 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.setHidesBackButton (true, animated : true)
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         //title을 정해준다
         title = "당신의 선택"
-        self.navigationItem.setHidesBackButton (true, animated : true);
         //구글 place api를 사용하기 위해서 추가
         placesClient = GMSPlacesClient.shared()
         setup()

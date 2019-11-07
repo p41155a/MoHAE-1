@@ -40,6 +40,7 @@ class RecommendingController: UIViewController {
     // 사용자가 현재 답한 데이터들이 들어가는 변수, 배열
     var processedCoupleData: Int!
     var processedTimeData: [Int]!
+    
     // 로그인된 사용자의 성격 넣기
     // 고유 ID를 사용해서 personality 값 가저오기
     
@@ -81,13 +82,10 @@ class RecommendingController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.navigationItem.setHidesBackButton (true, animated : true);
         print("여기 받았어요!! => \(recivedData)")
         print("성격도 받았어요!! => \(String(describing: recivedPersonality))")
         print("현재 시각은요!! -> \(String(describing: myTime))")
     }
-    
-    
     
     func reciveData() {
         recivedCouple = recivedData["couple"]
@@ -309,6 +307,18 @@ class RecommendingController: UIViewController {
         }
 
     }
+    
+    func errorAlert(style : UIAlertController.Style){
+        let alert = UIAlertController(title: "아쉬워요", message:"지금 놀만한 곳이 없는거 같아요", preferredStyle: .alert)
+        let success = UIAlertAction(title: "확인", style: .default) { (action) in
+          if let viewControllers = self.navigationController?.viewControllers {
+            if viewControllers.count > 5{
+                self.navigationController?.popToViewController(viewControllers[viewControllers.count - 6], animated: true)
+                }
+            }
+        }
+    }
+    
     //PC방 -> 커플:예 인원:1~2 돈:1~5 날씨:맑음 기분:행복 시간:무관 성격:
     func compareWithKeyword() {
         print("start Function")
@@ -358,29 +368,15 @@ class RecommendingController: UIViewController {
         }
         
         if final.isEmpty {
-            final.append("집")
+            errorAlert(style: .alert)
         }
-    }
-    
-    func errorAlert(style : UIAlertController.Style){
-        let alert = UIAlertController(title: "아쉬워요", message:"지금 놀만한 곳이 없는거 같아요", preferredStyle: .alert)
-        let success = UIAlertAction(title: "확인", style: .default) { (action) in
-              if let viewControllers = self.navigationController?.viewControllers {
-                if viewControllers.count > 7{
-                    self.navigationController?.popToViewController(viewControllers[viewControllers.count - 7], animated: true)
-                }
-            }
-        }
-        alert.addAction(success)
-        self.present(alert, animated: true, completion: nil)
     }
     
     func sendFinalData(send: [String]) {
         if let agreeView = agreeViewController {
             agreeView.search2 = self.final.randomElement()
-            //     navigationController?.pushViewController(agreeView, animated: true)
-
-            navigationController?.pushViewController(agreeView, animated: true)
+//            navigationController?.pushViewController(agreeView, animated: true)
+           self.navigationController?.pushViewController(agreeView, animated: true)
         }
     }
 }
