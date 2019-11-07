@@ -9,9 +9,9 @@
 import UIKit
 import SnapKit
 import Firebase
+import CoreLocation
 
-
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, CLLocationManagerDelegate {
   
 
      var mainLogo = UILabel()
@@ -19,6 +19,19 @@ class LoginViewController: UIViewController {
      var passwordField = UITextField()
      var loginButton1 = UIButton()
      var signInButton = UIButton()
+    var locationManager:CLLocationManager?
+    
+    override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+        
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            //위치가 업데이트될때마다
+            if let coor = manager.location?.coordinate{
+                print("latitude" + String(coor.latitude) + "/ longitude" + String(coor.longitude))
+            }
+        }
 
   private let loginButton: KOLoginButton = {
     let button = KOLoginButton()
@@ -133,6 +146,8 @@ class LoginViewController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
+    navigationController?.isNavigationBarHidden = true
+    
     self.view.addSubview(emailField)
     self.view.addSubview(passwordField)
     self.view.addSubview(loginButton1)
@@ -151,6 +166,15 @@ class LoginViewController: UIViewController {
 
   }
     
+    override func loadView() {
+        super.loadView()
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization() //권한 요청
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.startUpdatingLocation()
+    }
+   
 
     
   //카카오 로그인시 구현되는 
@@ -195,9 +219,9 @@ class LoginViewController: UIViewController {
                             if let dictionary = snapshot.value as? [String: AnyObject] {
                                 let isinit = dictionary["isinit"] as? Int
                                 if(isinit == 1){
-                                    self.present(RecommendButtonController(), animated: true, completion: nil)
+                                    self.navigationController?.pushViewController(RecommendButtonController(), animated: true)
                                 }else{
-                                    self.present(SurveyViewController(), animated: true, completion: nil)
+                                  self.navigationController?.pushViewController(SurveyViewController(), animated: true)
                                 }
                             }
                         }, withCancel: nil)

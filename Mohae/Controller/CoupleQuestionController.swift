@@ -16,6 +16,8 @@ class CoupleQuestionController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = false
+           
         coupleQuestionView = CoupleQuestionView()
         peopleQuestionController = PeopleQuestionController()
         setView()

@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,12 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        GMSServices.provideAPIKey("AIzaSyB2PbwMxywvpSP8sbsIU8TA2g3sca9L7WQ")
+        GMSPlacesClient.provideAPIKey("AIzaSyB2PbwMxywvpSP8sbsIU8TA2g3sca9L7WQ")
+        
         FirebaseApp.configure()
         
         let loginVC = LoginViewController()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = loginVC
         window?.makeKeyAndVisible()
+        window?.rootViewController = UINavigationController(rootViewController: loginVC)
        // window?.makeKeyAndVisible()
     //window?.rootViewController = UINavigationController(rootViewController: SurveyViewController())
         

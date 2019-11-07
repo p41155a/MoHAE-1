@@ -137,8 +137,12 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
     func errorAlert(style : UIAlertController.Style){
            let alert = UIAlertController(title: "연결 에러", message:"인터넷 연결을 확인해주세요", preferredStyle: .alert)
            let success = UIAlertAction(title: "확인", style: .default) { (action) in
-               //success를 눌렀을 때 MapViewController로 이동하면서 데이터를 전해준다.
-                self.navigationController?.popViewController(animated: true)
+                     //뷰의 네비게이션 이동을 카운터로 세서 이동이 2개 초과일때 첫번째 뷰로 이동하게 만들어주는 소스
+               if let viewControllers = self.navigationController?.viewControllers {
+                     if viewControllers.count > 2{
+                         self.navigationController?.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+                     }
+                 }
            }
            alert.addAction(success)
            self.present(alert, animated: true, completion: nil)
@@ -146,7 +150,7 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
     //alert창을 나오게 하는 함수
     func showAlert(style : UIAlertController.Style, result : String){
         let alert = UIAlertController(title: "모해의 추천!!!", message: result + "는 어때?", preferredStyle: .alert)
-        let success = UIAlertAction(title: "너무 좋죠", style: .default) { (action) in
+        let success = UIAlertAction(title: "좋아요", style: .default) { (action) in
             //success를 눌렀을 때 MapViewController로 이동하면서 데이터를 전해준다.
             let view = MapViewController()
             if(self.locationManager != nil && (self.json != nil)  && self.jsonCount != nil ){
@@ -158,7 +162,7 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
                 self.errorAlert(style: .alert)
             }
         }
-        let cancel = UIAlertAction(title: "시러요", style: .cancel){ (action) in
+        let cancel = UIAlertAction(title: "싫어요", style: .cancel){ (action) in
             self.navigationController?.popViewController(animated: true)
         }
         
