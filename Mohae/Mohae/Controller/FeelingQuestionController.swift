@@ -89,7 +89,7 @@ class FeelingQuestionController: UIViewController {
         let dateFormatter = DateFormatter()
         let timestampDate = NSDate(timeIntervalSince1970: TimeInterval(truncating: time))
         
-        dateFormatter.dateFormat = "hh:mm:ss a"
+        dateFormatter.dateFormat = "hh a"
         
         return dateFormatter.string(from: timestampDate as Date)
     }

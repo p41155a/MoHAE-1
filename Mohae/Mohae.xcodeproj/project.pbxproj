@@ -23,7 +23,6 @@
 		5AC5DFF523681629007BA547 /* CoupleQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5DFF423681629007BA547 /* CoupleQuestionView.swift */; };
 		5AC5DFF723681865007BA547 /* CoupleQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5DFF623681865007BA547 /* CoupleQuestionController.swift */; };
 		5AC7FF71231652E60013F798 /* SimpleCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */; };
-		5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7FF752316674A0013F798 /* SubSurvey.swift */; };
 		5AD01693237034BB005B8CC2 /* RecommendingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD01692237034BB005B8CC2 /* RecommendingController.swift */; };
 		5AD0169723707B4D005B8CC2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0169623707B4D005B8CC2 /* Category.swift */; };
 		5AD0169923707B59005B8CC2 /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0169823707B59005B8CC2 /* Couple.swift */; };
@@ -77,7 +76,6 @@
 		5AC5DFF423681629007BA547 /* CoupleQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleQuestionView.swift; sourceTree = "<group>"; };
 		5AC5DFF623681865007BA547 /* CoupleQuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleQuestionController.swift; sourceTree = "<group>"; };
 		5AC7FF70231652E60013F798 /* SimpleCheckbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleCheckbox.framework; path = Carthage/Build/iOS/SimpleCheckbox.framework; sourceTree = "<group>"; };
-		5AC7FF752316674A0013F798 /* SubSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSurvey.swift; sourceTree = "<group>"; };
 		5AD01692237034BB005B8CC2 /* RecommendingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendingController.swift; sourceTree = "<group>"; };
 		5AD0169623707B4D005B8CC2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5AD0169823707B59005B8CC2 /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				5A40C371230C0565001BA2BF /* User.swift */,
-				5AC7FF752316674A0013F798 /* SubSurvey.swift */,
 				5AD0169623707B4D005B8CC2 /* Category.swift */,
 				5AD0169823707B59005B8CC2 /* Couple.swift */,
 				5AD0169A23707B62005B8CC2 /* Feeling.swift */,
@@ -496,7 +493,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AC7FF762316674A0013F798 /* SubSurvey.swift in Sources */,
 				5A246C5623697B21006F52BA /* FeelingQuestionView.swift in Sources */,
 				5A40C372230C0565001BA2BF /* User.swift in Sources */,
 				5A246C4E23696068006F52BA /* MoneyQuestionView.swift in Sources */,

@@ -13,6 +13,9 @@ import Firebase
 class DataAnalysisController: UIViewController {
     var count = 0
     var ref: DatabaseReference!
+    var userRef: DatabaseReference!
+    var user: User?
+    var userPersonality = [String: Int]()
     
     var categorys = [Category]()
     var couples = [Couple]()
@@ -60,7 +63,7 @@ class DataAnalysisController: UIViewController {
         recommendingController = RecommendingController()
         
         loadDB()
-        loadUserData()
+        loadUserInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -124,13 +127,25 @@ class DataAnalysisController: UIViewController {
         }
     }
     
-    func loadUserData() {
-        ref = Database.database().reference().child("members")
+    func loadUserInfo() {
+//        guard let uid = Auth.auth().currentUser?.uid else {
+//            return
+//        } //현재 로그인한 사용자의 고유 아이디
         
+        userRef = Database.database().reference().child("users").child("1hVFUb3AatdyrUyP19P4iUJsWYX2").child("personality")
+        
+        userRef.observe(.value) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            self.user = User(dictionary: dictionary)
+        }
     }
     
     func loadDB() {
         print("satrt load DB")
+        
         ref = Database.database().reference().child("DataForAnalysis3")
         ref.child("category").observe(.childAdded) { (snapshot) in
             guard let dictionary = snapshot.value as? [String: AnyObject] else {
@@ -139,8 +154,6 @@ class DataAnalysisController: UIViewController {
             
             print(dictionary)
             self.categorys.append(Category(dictionary: dictionary))
-            print("categorys added => \(String(describing: self.categorys[self.count].value))")
-            self.count = self.count + 1
         }
 
         ref.child("couple").observe(.childAdded) { (snapshot) in
@@ -149,7 +162,6 @@ class DataAnalysisController: UIViewController {
             }
             print(dictionary)
             self.couples.append(Couple(dictionary: dictionary))
-            print("couples added => \(String(describing: self.couples[0].value))")
         }
 
         ref.child("feeling").observe(.childAdded) { (snapshot) in
@@ -158,7 +170,6 @@ class DataAnalysisController: UIViewController {
             }
             print(dictionary)
             self.feelings.append(Feeling(dictionary: dictionary))
-            print("feelings added => \(String(describing: self.feelings[0].happy))")
         }
 
         ref.child("money").observe(.childAdded) { (snapshot) in
@@ -167,7 +178,6 @@ class DataAnalysisController: UIViewController {
             }
             print(dictionary)
             self.money.append(Money(dictionary: dictionary))
-            print("money added => \(String(describing: self.money[0].free))")
         }
 
         ref.child("numberOfPeople").observe(.childAdded) { (snapshot) in
@@ -176,7 +186,6 @@ class DataAnalysisController: UIViewController {
             }
             print(dictionary)
             self.numberOfPeople.append(NumberOfPeople(dictionary: dictionary))
-            print("numberOfPeople added => \(String(describing: self.numberOfPeople[0].oneToTwo))")
         }
 
         ref.child("personality").observe(.childAdded) { (snapshot) in
@@ -185,7 +194,6 @@ class DataAnalysisController: UIViewController {
             }
             print(dictionary)
             self.personality.append(Personality(dictionary: dictionary))
-            print("personality added => \(String(describing: self.personality[0].outsider))")
         }
 
         ref.child("time").observe(.childAdded) { (snapshot) in
@@ -194,7 +202,6 @@ class DataAnalysisController: UIViewController {
             }
             print(dictionary)
             self.time.append(Time(dictionary: dictionary))
-            print("time added => \(String(describing: self.time[0].am))")
         }
         
         ref.child("weather").observe(.childAdded) { (snapshot) in
@@ -203,7 +210,6 @@ class DataAnalysisController: UIViewController {
             }
             print(dictionary)
             self.weather.append(Weather(dictionary: dictionary))
-            print("weather added => \(String(describing: self.weather[0].sunny))")
         }
     }
     
@@ -217,14 +223,20 @@ class DataAnalysisController: UIViewController {
             recommending.personality = self.personality
             recommending.time = self.time
             recommending.weather = self.weather
+            
         }
     }
     
     func setNowData() {
         completedData = ["couple": data[0], "numberOfPeople": data[1], "money": data[2], "weather": data[3], "feeling": data[4], "time": data[5]]
         
+        if let user = self.user {
+            userPersonality = ["outsider": user.outsider!, "sensory": user.sensory!, "emotional": user.emotional!]
+        }
+       
         if let recommending = recommendingController {
             recommending.recivedData = completedData
+            recommending.recivedPersonality = userPersonality
         }
     }
     
@@ -238,11 +250,3 @@ class DataAnalysisController: UIViewController {
         }
     }
 }
-//var categorys = [Category]()
-//var couples = [Couple]()
-//var feelings = [Feeling]()
-//var money = [Money]()
-//var numberOfPeople = [NumberOfPeople]()
-//var personality = [Personality]()
-//var time = [Time]()
-//var weather = [Weather]()
