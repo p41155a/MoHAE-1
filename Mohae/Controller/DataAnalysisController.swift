@@ -177,11 +177,11 @@ class DataAnalysisController: UIViewController {
     }
     
     func loadUserInfo() {
-    //        guard let uid = Auth.auth().currentUser?.uid else {
-    //            return
-    //        } //현재 로그인한 사용자의 고유 아이디
-            
-            userRef = Database.database().reference().child("users").child("1hVFUb3AatdyrUyP19P4iUJsWYX2").child("personality")
+            guard let uid = Auth.auth().currentUser?.uid else {
+                return
+            } //현재 로그인한 사용자의 고유 아이디
+            print(uid)
+            userRef = Database.database().reference().child("users").child("uid").child("personality")
             
             userRef.observe(.value) { (snapshot) in
                 guard let dictionary = snapshot.value as? [String: AnyObject] else {

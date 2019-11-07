@@ -139,8 +139,8 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
            let success = UIAlertAction(title: "확인", style: .default) { (action) in
                      //뷰의 네비게이션 이동을 카운터로 세서 이동이 2개 초과일때 첫번째 뷰로 이동하게 만들어주는 소스
                if let viewControllers = self.navigationController?.viewControllers {
-                     if viewControllers.count > 2{
-                         self.navigationController?.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+                     if viewControllers.count > 8{
+                         self.navigationController?.popToViewController(viewControllers[viewControllers.count - 9], animated: true)
                      }
                  }
            }
@@ -163,7 +163,11 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
         let cancel = UIAlertAction(title: "싫어요", style: .cancel){ (action) in
-            self.navigationController?.popViewController(animated: true)
+             if let viewControllers = self.navigationController?.viewControllers {
+                                if viewControllers.count > 8{
+                                    self.navigationController?.popToViewController(viewControllers[viewControllers.count - 9], animated: true)
+                                }
+                            }
         }
         
         alert.addAction(success)

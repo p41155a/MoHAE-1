@@ -308,16 +308,22 @@ class RecommendingController: UIViewController {
 
     }
     
-    func errorAlert(style : UIAlertController.Style){
-        let alert = UIAlertController(title: "아쉬워요", message:"지금 놀만한 곳이 없는거 같아요", preferredStyle: .alert)
-        let success = UIAlertAction(title: "확인", style: .default) { (action) in
-          if let viewControllers = self.navigationController?.viewControllers {
-            if viewControllers.count > 5{
-                self.navigationController?.popToViewController(viewControllers[viewControllers.count - 6], animated: true)
-                }
-            }
-        }
-    }
+
+    //alert창을 나오게 하는 함수
+       func showAlert(style : UIAlertController.Style){
+        let alert = UIAlertController(title: "죄송합니다.", message: "추천할 만한 장소가 없어요ㅠ", preferredStyle: .alert)
+           let success = UIAlertAction(title: "돌아가기", style: .default) { (action) in
+               //success를 눌렀을 때 MapViewController로 이동하면서 데이터를 전해준다.
+              if let viewControllers = self.navigationController?.viewControllers {
+                         if viewControllers.count > 6{
+                        self.navigationController?.popToViewController(viewControllers[viewControllers.count - 8], animated: true)
+                             }
+                         }
+               }
+           alert.addAction(success)
+           //alert함수를 화면에 보여준다.
+           self.present(alert, animated: true, completion: nil)
+       }
     
     //PC방 -> 커플:예 인원:1~2 돈:1~5 날씨:맑음 기분:행복 시간:무관 성격:
     func compareWithKeyword() {
@@ -368,12 +374,13 @@ class RecommendingController: UIViewController {
         }
         
         if final.isEmpty {
-            errorAlert(style: .alert)
+            showAlert(style: .alert)
         }
     }
     
     func sendFinalData(send: [String]) {
         if let agreeView = agreeViewController {
+            print(self.final.randomElement())
             agreeView.search2 = self.final.randomElement()
 //            navigationController?.pushViewController(agreeView, animated: true)
            self.navigationController?.pushViewController(agreeView, animated: true)
