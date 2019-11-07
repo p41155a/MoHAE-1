@@ -15,6 +15,7 @@ import SnapKit
 //22.Movie, 23.Museum, 24.Music, 25.PC, 26.Park, 27.Pet_store, 28.Shoes_store, 29.Shopping
 //30.Spa, 31.Sporte, 32.University, 33.Wine, 34. Yoga, 35.Zoo, 36.furniture_store
 class RecommendingController: UIViewController {
+    var agreeViewController: AgreeViewController?
     var recivedData = [String: String]() //사용자가 현재 답한 데이터들이 모두 들어갈 딕셔너리
     
     //DB에서 받아오는 데이터들이 들어가는 배열
@@ -38,10 +39,6 @@ class RecommendingController: UIViewController {
     
     // 사용자가 현재 답한 데이터들이 들어가는 변수, 배열
     var processedCoupleData: Int!
-    var processedNumberOfPeopleData: [Int]!
-    var processedMoneyData: [Int]!
-    var processedWeatherData: [Int]!
-    var processedFeelingData: [Int]!
     var processedTimeData: [Int]!
     
     // 로그인된 사용자의 성격 넣기
@@ -73,12 +70,13 @@ class RecommendingController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        agreeViewController = AgreeViewController()
         reciveData()
         resettingTime()
         setRecivedData()
         compare()
         compareWithKeyword()
+        sendFinalData(send: final)
         print("마지막 상태는 => \(final)")
     }
     
@@ -164,44 +162,6 @@ class RecommendingController: UIViewController {
         } else {
             processedCoupleData = 2
         }
-        
-//        if recivedNumberOfPeople == "1 ~ 2 명" {
-//            processedNumberOfPeopleData = [1, 0, 0]
-//        } else if recivedNumberOfPeople == "3 ~ 5 명" {
-//            processedNumberOfPeopleData = [0, 1, 0]
-//        } else if recivedNumberOfPeople == "6 명 이상" {
-//            processedNumberOfPeopleData = [0, 0, 1]
-//        }
-//
-//        if recivedMoney == "1 ~ 5 만 원" {
-//            processedMoneyData = [1, 0, 0, 0]
-//        } else if recivedMoney == "6 ~ 10 만 원" {
-//            processedMoneyData = [0, 1, 0, 0]
-//        } else if recivedMoney == "무료" {
-//            processedMoneyData = [0, 0, 1, 0]
-//        } else if recivedMoney == "10 만 원 이상" {
-//            processedMoneyData = [0, 0, 0, 1]
-//        }
-//
-//        if recivedWeather == "흐림" {
-//            processedWeatherData = [1, 0, 0, 0]
-//        } else if recivedWeather == "비" {
-//            processedWeatherData = [0, 1, 0, 0]
-//        } else if recivedWeather == "눈" {
-//            processedWeatherData = [0, 0, 1, 0]
-//        } else if recivedWeather == "맑음" {
-//            processedWeatherData = [0, 0, 0, 1]
-//        }
-//
-//        if recivedFeeling == "차분" {
-//            processedFeelingData = [1, 0, 0, 0]
-//        } else if recivedFeeling == "흥분" {
-//            processedFeelingData = [0, 1, 0, 0]
-//        } else if recivedFeeling == "행복" {
-//            processedFeelingData = [0, 0, 1, 0]
-//        } else if recivedFeeling == "슬픔" {
-//            processedFeelingData = [0, 0, 0, 1]
-//        }
         
         if myTime == "오전" {
             processedTimeData = [1, 0, 0, 0, 0]
@@ -344,7 +304,6 @@ class RecommendingController: UIViewController {
                     }
                 }
             }
-            resultTime[1] = "수족관"
         }
 
     }
@@ -395,6 +354,18 @@ class RecommendingController: UIViewController {
             count = 0
             print(final)
         }
-        print("end Function")
+        
+        if final.isEmpty {
+            final.append("집")
+        }
+    }
+    
+    func sendFinalData(send: [String]) {
+        if let agreeView = agreeViewController {
+            agreeView.search2 = self.final.randomElement()
+//            navigationController?.pushViewController(agreeView, animated: true)
+            let navController = UINavigationController(rootViewController: agreeView)
+            present(navController, animated: true, completion: nil)
+        }
     }
 }
