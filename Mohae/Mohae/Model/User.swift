@@ -8,7 +8,18 @@
 
 import Foundation
 
-class User {
+class User: NSObject {
     var name: String?
     var email: String?
+    var outsider: Int?
+    var sensory: Int?
+    var emotional: Int?
+    
+    init(dictionary: [String: AnyObject]) {
+        super.init()
+        
+        outsider = dictionary["outsider"] as? Int
+        sensory = dictionary["sensory"] as? Int
+        emotional = dictionary["emotional"] as? Int
+    }
 }

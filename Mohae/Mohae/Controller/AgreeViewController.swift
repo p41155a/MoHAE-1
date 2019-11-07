@@ -40,7 +40,7 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
     
     let url2 = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
     let radiusType2 = "&language=ko&rankby=distance&keyword="
-    let search2 = "bank"
+    var search2: String!
     let key2 = "&key="
     //activity indiactor
     lazy var indicator : UIActivityIndicatorView = {
@@ -184,7 +184,7 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             //indicator를 멈추고 알러트함수를 호출하고 타이머를 멈춰준다.
             self.indicator.stopAnimating()
-            showAlert(style: .alert, result: search)
+            showAlert(style: .alert, result: search2)
             timer.invalidate()
             time = 0
         }
