@@ -40,7 +40,7 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
     
     let url2 = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
     let radiusType2 = "&language=ko&rankby=distance&keyword="
-    let search2 = "bank"
+    var search2: String!
     let key2 = "&key="
     //activity indiactor
     lazy var indicator : UIActivityIndicatorView = {
@@ -76,6 +76,7 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         //title을 정해준다
         title = "당신의 선택"
+        self.navigationItem.setHidesBackButton (true, animated : true);
         //구글 place api를 사용하기 위해서 추가
         placesClient = GMSPlacesClient.shared()
         setup()
@@ -184,7 +185,7 @@ class AgreeViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             //indicator를 멈추고 알러트함수를 호출하고 타이머를 멈춰준다.
             self.indicator.stopAnimating()
-            showAlert(style: .alert, result: search)
+            showAlert(style: .alert, result: search2)
             timer.invalidate()
             time = 0
         }
